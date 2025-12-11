@@ -1,3 +1,8 @@
+"use client";
+
+import Link from "next/link";
+import { FaFacebookF, FaTwitter, FaInstagram, FaLinkedinIn } from "react-icons/fa";
+
 export default function Footer() {
   return (
     <footer className="bg-black text-white pt-20">
@@ -16,7 +21,7 @@ export default function Footer() {
           {/* MAIN FOOTER CONTENT */}
           <div className="relative z-10 grid md:grid-cols-2 lg:grid-cols-4 gap-12">
 
-            {/* COLUMN 1 — Brand Intro */}
+            {/* COLUMN 1 */}
             <div className="space-y-5">
               <h3 className="text-3xl font-extrabold tracking-tight">COOKMYTECH</h3>
               <p className="text-gray-400 text-base leading-relaxed max-w-xs">
@@ -26,71 +31,47 @@ export default function Footer() {
                 Empowering the ecosystem of: Cookmypapers, CookmyAI, 
                 CookmyWebsite, CookmyMedia & more.
               </p>
-              <button className="px-6 py-3 bg-white text-black rounded-full hover:bg-gray-200 transition font-semibold shadow-md">
-                Start Your Project
-              </button>
+
+              <Link href="/contact">
+                <button className="px-6 py-3 bg-white text-black rounded-full hover:bg-gray-200 transition font-semibold shadow-md">
+                  Start Your Project
+                </button>
+              </Link>
             </div>
 
-            {/* COLUMN 2 — Products */}
+            {/* COLUMN 2 – Products */}
             <div>
               <h4 className="text-xl font-bold mb-6">Products</h4>
               <ul className="space-y-3 text-gray-400">
-                {[
-                  "CookMyWebsite – Website Builder",
-                  "CookMyAI – AI Tools",
-                  "CookMyPapers – Documentation Services",
-                  "CookMyMedia – Branding & Media",
-                  "CookMyStore – E-Commerce Tools",
-                ].map((item, i) => (
-                  <li
-                    key={i}
-                    className="hover:text-white hover:translate-x-1 transition cursor-pointer"
-                  >
-                    {item}
-                  </li>
-                ))}
+                <li><Link href="/products" className="hover:text-white hover:translate-x-1 transition">CookMyWebsite – Website Builder</Link></li>
+                <li><Link href="/products" className="hover:text-white hover:translate-x-1 transition">CookMyAI – AI Tools</Link></li>
+                <li><Link href="/products" className="hover:text-white hover:translate-x-1 transition">CookMyPapers – Documentation Services</Link></li>
+                <li><Link href="/products" className="hover:text-white hover:translate-x-1 transition">CookMyMedia – Branding & Media</Link></li>
+                <li><Link href="/products" className="hover:text-white hover:translate-x-1 transition">CookMyStore – E-Commerce Tools</Link></li>
               </ul>
             </div>
 
-            {/* COLUMN 3 — Company */}
+            {/* COLUMN 3 – Company */}
             <div>
               <h4 className="text-xl font-bold mb-6">Company</h4>
               <ul className="space-y-3 text-gray-400">
-                {[
-                  "About Us",
-                  "Careers",
-                  "Partnerships",
-                  "Founder – Pankaj Verma",
-                  "Contact Us",
-                ].map((item, i) => (
-                  <li
-                    key={i}
-                    className="hover:text-white hover:translate-x-1 transition cursor-pointer"
-                  >
-                    {item}
-                  </li>
-                ))}
+                <li><Link href="/about" className="hover:text-white hover:translate-x-1 transition">About Us</Link></li>
+                <li><Link href="/careers" className="hover:text-white hover:translate-x-1 transition">Careers</Link></li>
+                <li><Link href="/founder" className="hover:text-white hover:translate-x-1 transition">Founder – Pankaj Verma</Link></li>
+                <li><Link href="/contact" className="hover:text-white hover:translate-x-1 transition">Contact Us</Link></li>
+                <li><Link href="/donate" className="hover:text-white hover:translate-x-1 transition">Donate</Link></li>
               </ul>
             </div>
 
-            {/* COLUMN 4 — Resources */}
+            {/* COLUMN 4 – Resources */}
             <div>
               <h4 className="text-xl font-bold mb-6">Resources</h4>
               <ul className="space-y-3 text-gray-400">
-                {[
-                  "Documentation",
-                  "API Access",
-                  "Tutorials",
-                  "Community",
-                  "Support Center",
-                ].map((item, i) => (
-                  <li
-                    key={i}
-                    className="hover:text-white hover:translate-x-1 transition cursor-pointer"
-                  >
-                    {item}
-                  </li>
-                ))}
+                <li><Link href="/privacy-policy" className="hover:text-white hover:translate-x-1 transition">Privacy Policy</Link></li>
+                <li><Link href="/terms-and-conditions" className="hover:text-white hover:translate-x-1 transition">Terms & Conditions</Link></li>
+                <li><Link href="/refund-policy" className="hover:text-white hover:translate-x-1 transition">Cancellation & Refund Policy</Link></li>
+                <li><Link href="/shipping" className="hover:text-white hover:translate-x-1 transition">Shipping & Delivery</Link></li>
+                <li><Link href="/contact" className="hover:text-white hover:translate-x-1 transition">Support Center</Link></li>
               </ul>
             </div>
           </div>
@@ -100,7 +81,7 @@ export default function Footer() {
 
           {/* BOTTOM FOOTER SECTION */}
           <div className="relative z-10 flex flex-col md:flex-row justify-between items-center gap-6">
-            
+
             <p className="text-gray-500 text-sm">
               © {new Date().getFullYear()} Cookmytech Pvt. Ltd.  
               | Software Solutions Company in Noida, India
@@ -108,19 +89,29 @@ export default function Footer() {
 
             {/* SOCIAL ICONS */}
             <div className="flex gap-4">
-              {[
-                "facebook",
-                "twitter",
-                "instagram",
-                "linkedin",
-              ].map((platform, i) => (
-                <div
-                  key={i}
-                  className="w-10 h-10 bg-gray-900 hover:bg-gray-700 rounded-full transition cursor-pointer flex items-center justify-center"
-                >
-                  <span className="text-gray-300 text-xs capitalize">{platform}</span>
+              <Link href="https://facebook.com" target="_blank">
+                <div className="w-10 h-10 bg-gray-900 hover:bg-gray-700 rounded-full flex items-center justify-center transition">
+                  <FaFacebookF className="text-gray-300 text-lg" />
                 </div>
-              ))}
+              </Link>
+
+              <Link href="https://twitter.com" target="_blank">
+                <div className="w-10 h-10 bg-gray-900 hover:bg-gray-700 rounded-full flex items-center justify-center transition">
+                  <FaTwitter className="text-gray-300 text-lg" />
+                </div>
+              </Link>
+
+              <Link href="https://instagram.com" target="_blank">
+                <div className="w-10 h-10 bg-gray-900 hover:bg-gray-700 rounded-full flex items-center justify-center transition">
+                  <FaInstagram className="text-gray-300 text-lg" />
+                </div>
+              </Link>
+
+              <Link href="https://linkedin.com" target="_blank">
+                <div className="w-10 h-10 bg-gray-900 hover:bg-gray-700 rounded-full flex items-center justify-center transition">
+                  <FaLinkedinIn className="text-gray-300 text-lg" />
+                </div>
+              </Link>
             </div>
 
           </div>
