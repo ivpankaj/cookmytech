@@ -45,7 +45,9 @@ export const metadata: Metadata = {
 
   creator: "Pankaj Verma",
   publisher: "Cookmytech",
-
+  icons: {
+    icon: "/favicon.ico", 
+  },
   openGraph: {
     title: "Cookmytech – Software Solutions & Website Development in Noida",
     description:
