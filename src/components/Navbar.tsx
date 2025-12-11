@@ -1,4 +1,5 @@
 "use client";
+
 import { useState } from "react";
 import Link from "next/link";
 import { IoMenu, IoClose } from "react-icons/io5";
@@ -12,6 +13,7 @@ export default function Navbar() {
     { name: "Business", href: "/business" },
     { name: "Products", href: "/products" },
     { name: "Contact", href: "/contact" },
+    { name: "Donate", href: "/donate" },
   ];
 
   return (
@@ -89,10 +91,7 @@ export default function Navbar() {
         `}
       >
         {/* Close Button */}
-        <button
-          className="text-4xl mb-8"
-          onClick={() => setOpen(false)}
-        >
+        <button className="text-4xl mb-8" onClick={() => setOpen(false)}>
           <IoClose />
         </button>
 

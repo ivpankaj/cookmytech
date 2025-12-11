@@ -1,27 +1,38 @@
-
 import Navbar from "@/components/Navbar";
+
+export const metadata = {
+  title: "Contact Cookmytech | Business Enquiries, Support & Collaboration",
+  description:
+    "Contact Cookmytech for website development, AI solutions, SaaS tools, cloud deployment, media services and enterprise software development.",
+  keywords: [
+    "contact cookmytech",
+    "software company contact Noida",
+    "hire software developers",
+    "AI solution provider India",
+    "website development enquiry",
+  ],
+};
+
 
 export default function ContactPage() {
   return (
     <div className="font-bold min-h-screen bg-black text-white">
       <Navbar />
 
-    <div className="mt-20 flex justify-center">
-
-</div>
-
       {/* Hero Section */}
       <div className="container mx-auto px-4 md:px-8 lg:px-16 py-16 md:py-24">
         <div className="grid lg:grid-cols-2 gap-12 items-center">
+          
+          {/* Left Content */}
           <div className="space-y-6 md:space-y-8">
             <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold leading-tight">
-              Let's build something amazing together.
+              Let’s Build Something Amazing Together.
             </h1>
 
-            <p className="text-lg md:text-xl text-gray-600 leading-relaxed max-w-xl">
-              Whether you want a website, AI tool, media production, research
-              paper, cloud deployment or a full digital transformation — our
-              team is ready to help you.
+            <p className="text-lg md:text-xl text-gray-400 leading-relaxed max-w-xl">
+              Whether you need a custom website, SaaS platform, AI tool,
+              automation system, cloud deployment, research support or a full digital 
+              transformation — Cookmytech is here to help you bring your ideas to life.
             </p>
 
             <div className="flex flex-col sm:flex-row gap-4 pt-4">
@@ -37,6 +48,8 @@ export default function ContactPage() {
           {/* Hero Visual */}
           <div className="relative">
             <div className="relative bg-gradient-to-br from-purple-400 to-pink-500 rounded-3xl p-16 overflow-hidden">
+              
+              {/* Grid Background */}
               <div className="absolute inset-0 opacity-20">
                 <div className="grid grid-cols-12 gap-2 h-full">
                   {[...Array(144)].map((_, i) => (
@@ -46,6 +59,8 @@ export default function ContactPage() {
               </div>
 
               <div className="relative z-10 flex justify-center items-center min-h-[400px]">
+                
+                {/* Card */}
                 <div className="bg-white w-64 rounded-3xl p-6 shadow-2xl hover:scale-105 transition">
                   <div className="space-y-4">
                     <div className="w-full h-32 bg-gradient-to-br from-purple-500 to-pink-500 rounded-2xl"></div>
@@ -57,11 +72,13 @@ export default function ContactPage() {
                   </div>
                 </div>
 
+                {/* Floating Shapes */}
                 <div className="absolute -top-10 -left-8 w-28 h-40 bg-gradient-to-b from-yellow-400 to-orange-500 rounded-2xl transform -rotate-12 opacity-70"></div>
                 <div className="absolute -bottom-10 -right-8 w-28 h-40 bg-gradient-to-b from-blue-400 to-purple-500 rounded-2xl transform rotate-12 opacity-70"></div>
               </div>
             </div>
           </div>
+
         </div>
       </div>
 
@@ -72,6 +89,7 @@ export default function ContactPage() {
         </h2>
 
         <div className="grid lg:grid-cols-2 gap-16">
+          
           {/* FORM */}
           <div className="bg-gray-900 rounded-3xl p-10 shadow-xl space-y-6">
             <div>
@@ -117,10 +135,10 @@ export default function ContactPage() {
             </button>
           </div>
 
-          {/* Right Section - Contact Info Cards */}
+          {/* CONTACT INFO CARDS */}
           <div className="space-y-10">
 
-            {/* Card 1 */}
+            {/* BUSINESS EMAIL */}
             <div className="bg-gradient-to-br from-blue-400 to-cyan-500 rounded-3xl p-8 relative overflow-hidden">
               <div className="absolute inset-0 opacity-25">
                 <div className="grid grid-cols-12 gap-2 h-full">
@@ -132,14 +150,14 @@ export default function ContactPage() {
 
               <div className="relative z-10 space-y-3">
                 <h3 className="text-3xl font-bold">Business Enquiries</h3>
-                <p className="text-gray-900 text-lg">We respond within 1 hour.</p>
+                <p className="text-gray-900 text-lg">We respond fast — usually within minutes.</p>
                 <p className="text-black font-semibold text-xl mt-4">
-                  contact@cookmygroup.com
+                  contact@cookmytech.com
                 </p>
               </div>
             </div>
 
-            {/* Card 2 */}
+            {/* PHONE */}
             <div className="bg-gradient-to-br from-lime-300 to-lime-400 rounded-3xl p-8 relative overflow-hidden">
               <div className="absolute inset-0 opacity-25">
                 <div className="grid grid-cols-12 gap-2 h-full">
@@ -151,14 +169,14 @@ export default function ContactPage() {
 
               <div className="relative z-10 space-y-3">
                 <h3 className="text-3xl font-bold text-black">Call Us</h3>
-                <p className="text-black text-lg">Mon–Sat • 10AM to 8PM</p>
+                <p className="text-black text-lg">Mon–Sat • 10 AM to 8 PM</p>
                 <p className="text-black font-semibold text-xl mt-4">
-                  +91 98989 98989
+                  +91 98765 43210
                 </p>
               </div>
             </div>
 
-            {/* Card 3 */}
+            {/* ADDRESS */}
             <div className="bg-gradient-to-br from-orange-400 to-amber-500 rounded-3xl p-8 relative overflow-hidden">
               <div className="absolute inset-0 opacity-25">
                 <div className="grid grid-cols-12 gap-2 h-full">
@@ -171,7 +189,7 @@ export default function ContactPage() {
               <div className="relative z-10 space-y-3">
                 <h3 className="text-3xl font-bold">Office Address</h3>
                 <p className="text-black text-lg">
-                  CookMy Group HQ <br />
+                  Cookmytech Headquarters <br />
                   Sector 62, Noida <br />
                   Uttar Pradesh, India
                 </p>
@@ -185,6 +203,8 @@ export default function ContactPage() {
       {/* CTA Section */}
       <div className="container mx-auto px-4 md:px-8 lg:px-16 py-24">
         <div className="bg-gradient-to-br from-purple-300 to-pink-400 p-16 rounded-3xl relative overflow-hidden">
+          
+          {/* Grid Overlay */}
           <div className="absolute inset-0 opacity-30">
             <div className="grid grid-cols-12 gap-2 h-full">
               {[...Array(144)].map((_, i) => (
@@ -193,24 +213,26 @@ export default function ContactPage() {
             </div>
           </div>
 
+          {/* Content */}
           <div className="relative text-center space-y-6 max-w-3xl mx-auto">
             <h2 className="text-5xl md:text-6xl text-black font-bold">
               We're Ready When You Are.
             </h2>
             <p className="text-xl text-black">
-              Let’s talk about your project — no charges for consultation.
+              Let’s talk about your project — free consultation, no commitments.
             </p>
 
             <button className="bg-black hover:bg-gray-900 text-white px-12 py-4 rounded-full font-semibold text-xl shadow-lg">
               Book a Free Call
             </button>
           </div>
+
         </div>
       </div>
 
       {/* Footer */}
       <div className="container mx-auto px-4 md:px-8 lg:px-16 py-16 border-t border-gray-900 text-center">
-        <p className="text-gray-600">© 2025 CookMy Group. All rights reserved.</p>
+        <p className="text-gray-600">© 2025 Cookmytech. All rights reserved.</p>
       </div>
     </div>
   );
