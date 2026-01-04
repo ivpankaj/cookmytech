@@ -1,10 +1,8 @@
 "use client";
 
 import Navbar from "@/components/Navbar";
+import Image from "next/image";
 import { useState } from "react";
-
-
-
 
 export default function ProductPage() {
   const [selectedCategory, setSelectedCategory] = useState("all");
@@ -164,64 +162,15 @@ export default function ProductPage() {
           </div>
 
           {/* Right Content - Visual */}
-          <div className="relative">
-            <div className="relative bg-gradient-to-br from-purple-400 to-pink-500 rounded-3xl p-8 md:p-12 lg:p-16 overflow-hidden">
-              <div className="absolute inset-0 opacity-20">
-                <div className="grid grid-cols-12 gap-2 h-full">
-                  {[...Array(144)].map((_, i) => (
-                    <div key={i} className="border border-purple-300"></div>
-                  ))}
-                </div>
-              </div>
-
-              <div className="relative z-10 flex items-center justify-center min-h-[400px] md:min-h-[500px]">
-                <div className="absolute top-8 left-8 w-20 h-24 md:w-24 md:h-32 bg-white rounded-2xl transform -rotate-12 opacity-80 shadow-2xl p-3 flex flex-col items-center justify-center">
-                  <div className="text-2xl md:text-3xl mb-1">🎨</div>
-                  <div className="text-xs text-black">Templates</div>
-                </div>
-                <div className="absolute bottom-8 right-8 w-20 h-24 md:w-24 md:h-32 bg-white rounded-2xl transform rotate-12 opacity-80 shadow-2xl p-3 flex flex-col items-center justify-center">
-                  <div className="text-2xl md:text-3xl mb-1">🤖</div>
-                  <div className="text-xs text-black">AI Tools</div>
-                </div>
-                <div className="absolute top-1/4 right-12 w-16 h-20 md:w-20 md:h-24 bg-white rounded-2xl transform rotate-6 opacity-80 shadow-2xl p-2 flex flex-col items-center justify-center">
-                  <div className="text-xl md:text-2xl mb-1">📚</div>
-                  <div className="text-xs text-black text-center">Courses</div>
-                </div>
-
-                <div className="relative bg-white rounded-3xl p-6 shadow-2xl w-56 md:w-64 transform hover:scale-105 transition-transform duration-300">
-                  <div className="space-y-4">
-                    <div className="text-center">
-                      <div className="w-full h-32 bg-gradient-to-br from-purple-500 to-pink-500 rounded-2xl flex items-center justify-center text-5xl mb-3">
-                        ⭐
-                      </div>
-                      <div className="text-sm font-bold text-black">
-                        Premium Products
-                      </div>
-                    </div>
-                    <div className="space-y-2">
-                      <div className="bg-purple-100 rounded-xl p-3 flex justify-between items-center">
-                        <div className="text-xs font-medium text-black">
-                          Templates
-                        </div>
-                        <div className="text-xs text-purple-600">$49</div>
-                      </div>
-                      <div className="bg-pink-100 rounded-xl p-3 flex justify-between items-center">
-                        <div className="text-xs font-medium text-black">
-                          Tools
-                        </div>
-                        <div className="text-xs text-pink-600">$79</div>
-                      </div>
-                      <div className="bg-indigo-100 rounded-xl p-3 flex justify-between items-center">
-                        <div className="text-xs font-medium text-black">
-                          Courses
-                        </div>
-                        <div className="text-xs text-indigo-600">$129</div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
+          <div className="relative flex justify-center lg:justify-end">
+            <Image
+              src="/product1.svg"
+              alt="Cookmytech software solutions illustration"
+              width={500}
+              height={500}
+              priority
+              className="w-full max-w-md lg:max-w-lg"
+            />
           </div>
         </div>
       </div>

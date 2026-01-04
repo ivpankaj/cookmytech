@@ -1,14 +1,18 @@
 "use client";
 
 import Link from "next/link";
-import { FaFacebookF, FaTwitter, FaInstagram, FaLinkedinIn } from "react-icons/fa";
+import {
+  FaFacebookF,
+  FaTwitter,
+  FaInstagram,
+  FaLinkedinIn,
+} from "react-icons/fa";
 
 export default function Footer() {
   return (
     <footer className="bg-black text-white pt-20">
       <div className="container mx-auto px-4 md:px-10 lg:px-16">
         <div className="relative bg-linear-to-br from-gray-600 to-gray-800 rounded-3xl p-12 md:p-16 overflow-hidden border border-white/10">
-
           {/* GRID BACKGROUND */}
           <div className="absolute inset-0 opacity-10">
             <div className="grid grid-cols-12 gap-2 h-full">
@@ -18,108 +22,158 @@ export default function Footer() {
             </div>
           </div>
 
-          {/* MAIN FOOTER CONTENT */}
-          <div className="relative z-10 grid md:grid-cols-2 lg:grid-cols-4 gap-12">
+          {/* MAIN CONTENT */}
+          <div className="relative z-10 grid md:grid-cols-2 lg:grid-cols-4 gap-14">
+            {/* BRAND */}
+            <div className="space-y-6">
+              <h3 className="text-4xl font-extrabold tracking-tight">
+                COOKMYTECH
+              </h3>
 
-            {/* COLUMN 1 */}
-            <div className="space-y-5">
-              <h3 className="text-3xl font-extrabold tracking-tight">COOKMYTECH</h3>
-              <p className="text-gray-400 text-base leading-relaxed max-w-xs">
-                Cookmytech is a Noida-based software solutions company offering 
-                AI tools, SaaS products, website development, automation, branding 
-                and enterprise-grade digital services.  
-                Empowering the ecosystem of: Cookmypapers, CookmyAI, 
-                CookmyWebsite, CookmyMedia & more.
+              <p className="text-gray-300 text-base leading-relaxed max-w-xs">
+                Cookmytech is a Noida-based software solutions company offering
+                AI tools, SaaS products, website development, automation,
+                branding and enterprise-grade digital services.
               </p>
 
               <Link href="/contact">
-                <button className="px-6 py-3 bg-white text-black rounded-full hover:bg-gray-200 transition font-semibold shadow-md">
+                <button
+                  className="
+                  px-7 py-3
+                  bg-white text-black
+                  rounded-full
+                  font-extrabold tracking-wide
+                  transition-all duration-300
+                  hover:scale-105 hover:bg-gray-200
+                  active:scale-95
+                  shadow-lg
+                "
+                >
                   Start Your Project
                 </button>
               </Link>
             </div>
 
-            {/* COLUMN 2 – Products */}
-            <div>
-              <h4 className="text-xl font-bold mb-6">Products</h4>
-              <ul className="space-y-3 text-gray-400">
-                <li><Link href="/products" className="hover:text-white hover:translate-x-1 transition">CookMyWebsite – Website Builder</Link></li>
-                <li><Link href="/products" className="hover:text-white hover:translate-x-1 transition">CookMyAI – AI Tools</Link></li>
-                <li><Link href="/products" className="hover:text-white hover:translate-x-1 transition">CookMyPapers – Documentation Services</Link></li>
-                <li><Link href="/products" className="hover:text-white hover:translate-x-1 transition">CookMyMedia – Branding & Media</Link></li>
-                <li><Link href="/products" className="hover:text-white hover:translate-x-1 transition">CookMyStore – E-Commerce Tools</Link></li>
-              </ul>
-            </div>
+            {/* PRODUCTS */}
+            <FooterColumn title="Products">
+              <FooterLink href="/products">
+                CookMyWebsite – Website Builder
+              </FooterLink>
+              <FooterLink href="/products">CookMyAI – AI Tools</FooterLink>
+              <FooterLink href="/products">
+                CookMyPapers – Documentation
+              </FooterLink>
+              <FooterLink href="/products">CookMyMedia – Branding</FooterLink>
+              <FooterLink href="/products">CookMyStore – E-Commerce</FooterLink>
+            </FooterColumn>
 
-            {/* COLUMN 3 – Company */}
-            <div>
-              <h4 className="text-xl font-bold mb-6">Company</h4>
-              <ul className="space-y-3 text-gray-400">
-                <li><Link href="/about" className="hover:text-white hover:translate-x-1 transition">About Us</Link></li>
-                <li><Link href="/careers" className="hover:text-white hover:translate-x-1 transition">Careers</Link></li>
-                <li><Link href="/founder" className="hover:text-white hover:translate-x-1 transition">Founder – Pankaj Verma</Link></li>
-                <li><Link href="/contact" className="hover:text-white hover:translate-x-1 transition">Contact Us</Link></li>
-                <li><Link href="/donate" className="hover:text-white hover:translate-x-1 transition">Donate</Link></li>
-              </ul>
-            </div>
+            {/* COMPANY */}
+            <FooterColumn title="Company">
+              <FooterLink href="/about">About Us</FooterLink>
+              <FooterLink href="/careers">Careers</FooterLink>
+              <FooterLink href="https://ivpankaj.online">
+                Founder – Pankaj Verma
+              </FooterLink>
 
-            {/* COLUMN 4 – Resources */}
-            <div>
-              <h4 className="text-xl font-bold mb-6">Resources</h4>
-              <ul className="space-y-3 text-gray-400">
-                <li><Link href="/privacy-policy" className="hover:text-white hover:translate-x-1 transition">Privacy Policy</Link></li>
-                <li><Link href="/terms-and-conditions" className="hover:text-white hover:translate-x-1 transition">Terms & Conditions</Link></li>
-                <li><Link href="/refund-policy" className="hover:text-white hover:translate-x-1 transition">Cancellation & Refund Policy</Link></li>
-                <li><Link href="/shipping" className="hover:text-white hover:translate-x-1 transition">Shipping & Delivery</Link></li>
-                <li><Link href="/contact" className="hover:text-white hover:translate-x-1 transition">Support Center</Link></li>
-              </ul>
-            </div>
+              <FooterLink href="/contact">Contact Us</FooterLink>
+              <FooterLink href="/donate">Donate</FooterLink>
+            </FooterColumn>
+
+            {/* RESOURCES */}
+            <FooterColumn title="Resources">
+              <FooterLink href="/privacy-policy">Privacy Policy</FooterLink>
+              <FooterLink href="/terms-and-conditions">
+                Terms & Conditions
+              </FooterLink>
+              <FooterLink href="/refund-policy">Refund Policy</FooterLink>
+              <FooterLink href="/shipping">Shipping & Delivery</FooterLink>
+              <FooterLink href="/contact">Support Center</FooterLink>
+            </FooterColumn>
           </div>
 
           {/* DIVIDER */}
-          <div className="relative z-10 border-t border-gray-700/50 mt-12 pt-8"></div>
+          <div className="relative z-10 border-t border-gray-700/60 mt-14 pt-8"></div>
 
-          {/* BOTTOM FOOTER SECTION */}
+          {/* BOTTOM */}
           <div className="relative z-10 flex flex-col md:flex-row justify-between items-center gap-6">
-
-            <p className="text-gray-500 text-sm">
-              © {new Date().getFullYear()} Cookmytech Pvt. Ltd.  
-              | Software Solutions Company in Noida, India
+            <p className="text-gray-400 text-sm font-medium">
+              © {new Date().getFullYear()} Cookmytech Pvt. Ltd. | Noida, India
             </p>
 
-            {/* SOCIAL ICONS */}
+            {/* SOCIALS */}
             <div className="flex gap-4">
-              <Link href="https://facebook.com" target="_blank">
-                <div className="w-10 h-10 bg-gray-900 hover:bg-gray-700 rounded-full flex items-center justify-center transition">
-                  <FaFacebookF className="text-gray-300 text-lg" />
-                </div>
-              </Link>
-
-              <Link href="https://twitter.com" target="_blank">
-                <div className="w-10 h-10 bg-gray-900 hover:bg-gray-700 rounded-full flex items-center justify-center transition">
-                  <FaTwitter className="text-gray-300 text-lg" />
-                </div>
-              </Link>
-
-              <Link href="https://instagram.com" target="_blank">
-                <div className="w-10 h-10 bg-gray-900 hover:bg-gray-700 rounded-full flex items-center justify-center transition">
-                  <FaInstagram className="text-gray-300 text-lg" />
-                </div>
-              </Link>
-
-              <Link href="https://linkedin.com" target="_blank">
-                <div className="w-10 h-10 bg-gray-900 hover:bg-gray-700 rounded-full flex items-center justify-center transition">
-                  <FaLinkedinIn className="text-gray-300 text-lg" />
-                </div>
-              </Link>
+              <SocialIcon href="https://facebook.com">
+                <FaFacebookF />
+              </SocialIcon>
+              <SocialIcon href="https://twitter.com">
+                <FaTwitter />
+              </SocialIcon>
+              <SocialIcon href="https://instagram.com">
+                <FaInstagram />
+              </SocialIcon>
+              <SocialIcon href="https://linkedin.com">
+                <FaLinkedinIn />
+              </SocialIcon>
             </div>
-
           </div>
-
         </div>
       </div>
 
-      <div className="h-10"></div>
+      <div className="h-10" />
     </footer>
+  );
+}
+
+/* ---------- SMALL REUSABLE COMPONENTS ---------- */
+
+function FooterColumn({ title, children }: any) {
+  return (
+    <div>
+      <h4 className="text-xl font-extrabold mb-6 tracking-wide">{title}</h4>
+      <ul className="space-y-4">{children}</ul>
+    </div>
+  );
+}
+
+function FooterLink({ href, children }: any) {
+  return (
+    <li>
+      <Link
+        href={href}
+        className="
+          relative inline-block
+          text-gray-300 font-semibold
+          transition-all duration-300
+          hover:text-white hover:translate-x-2
+          after:absolute after:left-0 after:-bottom-1
+          after:h-[2px] after:w-0 after:bg-white
+          after:transition-all after:duration-300
+          hover:after:w-full
+        "
+      >
+        {children}
+      </Link>
+    </li>
+  );
+}
+
+function SocialIcon({ href, children }: any) {
+  return (
+    <Link href={href} target="_blank">
+      <div
+        className="
+        w-11 h-11
+        bg-gray-900
+        rounded-full
+        flex items-center justify-center
+        text-gray-300 text-lg
+        transition-all duration-300
+        hover:bg-gray-700 hover:scale-110
+        active:scale-95
+      "
+      >
+        {children}
+      </div>
+    </Link>
   );
 }

@@ -1,4 +1,5 @@
 import Navbar from "@/components/Navbar";
+import Image from "next/image";
 
 export const metadata = {
   title: "Support Cookmytech | Donate to Empower Future Innovations",
@@ -42,36 +43,17 @@ export default function DonatePage() {
           </div>
 
           {/* Right Visualization */}
-          <div className="relative">
-            <div className="relative bg-gradient-to-br from-lime-200 to-lime-400 rounded-3xl p-16 overflow-hidden">
-              
-              {/* Grid Overlay */}
-              <div className="absolute inset-0 opacity-25">
-                <div className="grid grid-cols-12 gap-2 h-full">
-                  {[...Array(144)].map((_, i) => (
-                    <div key={i} className="border border-lime-500"></div>
-                  ))}
-                </div>
-              </div>
+        <div className="relative flex justify-center lg:justify-end">
+  <Image
+    src="/donate.svg"
+    alt="Cookmytech software solutions illustration"
+    width={500}
+    height={500}
+    priority
+    className="w-full max-w-md lg:max-w-lg"
+  />
+</div>
 
-              {/* Card */}
-              <div className="relative z-10 flex justify-center min-h-[400px]">
-                <div className="bg-white w-64 rounded-3xl p-6 shadow-2xl hover:scale-105 transition">
-                  <div className="space-y-4">
-                    <div className="w-full h-32 bg-gradient-to-br from-blue-500 to-green-500 rounded-2xl"></div>
-                    <div className="h-3 bg-gray-300 rounded"></div>
-                    <div className="h-3 bg-gray-300 rounded w-3/4"></div>
-                    <p className="text-center text-black font-medium mt-2">Support Cookmytech</p>
-                  </div>
-                </div>
-
-                {/* Floating Boxes */}
-                <div className="absolute -top-10 -left-10 w-28 h-40 bg-gradient-to-b from-green-400 to-lime-500 rounded-2xl transform -rotate-12 opacity-70"></div>
-                <div className="absolute -bottom-10 -right-10 w-28 h-40 bg-gradient-to-b from-blue-400 to-cyan-500 rounded-2xl transform rotate-12 opacity-70"></div>
-              </div>
-
-            </div>
-          </div>
 
         </div>
       </div>
