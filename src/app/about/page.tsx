@@ -52,7 +52,7 @@ export default function AboutPage() {
                 target="_blank"
                 className="inline-block w-full sm:w-auto"
               >
-                <button className="bg-white text-black px-8 py-4 rounded-full font-bold cursor-pointer hover:bg-gray-200 shadow-lg">
+                <button className="border cursor-pointer border-white px-8 py-4 rounded-full font-semibold hover:bg-gray-900">
                   Know More About Founder
                 </button>
               </a>
@@ -230,7 +230,7 @@ export default function AboutPage() {
               href="mailto:cookmytech@gmail.com"
               className="inline-block w-full sm:w-auto"
             >
-              <button className="bg-white text-black px-10 py-4 rounded-full hover:bg-gray-200 shadow-lg cursor-pointer">
+              <button className="border cursor-pointer border-white px-8 py-4 rounded-full font-semibold hover:bg-gray-900">
                 View Careers
               </button>
             </a>

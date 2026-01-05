@@ -56,15 +56,19 @@ export default function Footer() {
 
             {/* PRODUCTS */}
             <FooterColumn title="Products">
-              <FooterLink href="/products">
+              <FooterLink
+                href="https://website.cookmytech.site"
+                target="_blank"
+              >
                 CookMyWebsite – Website Builder
               </FooterLink>
-              <FooterLink href="/products">CookMyAI – AI Tools</FooterLink>
-              <FooterLink href="/products">
+              <FooterLink href="https://ai.cookmytech.site" target="_blank">
+                CookMyAI – AI Tools
+              </FooterLink>
+              <FooterLink href="https://study.cookmytech.site" target="_blank">
                 CookMyPapers – Documentation
               </FooterLink>
-              <FooterLink href="/products">CookMyMedia – Branding</FooterLink>
-              <FooterLink href="/products">CookMyStore – E-Commerce</FooterLink>
+              {/* <FooterLink href="/products">CookMyMedia – Branding</FooterLink> */}
             </FooterColumn>
 
             {/* COMPANY */}
@@ -102,16 +106,16 @@ export default function Footer() {
 
             {/* SOCIALS */}
             <div className="flex gap-4">
-              <SocialIcon href="https://facebook.com">
+              <SocialIcon href="https://www.facebook.com/share/1Sq2vo2EHz/">
                 <FaFacebookF />
               </SocialIcon>
-              <SocialIcon href="https://twitter.com">
+              <SocialIcon href="https://x.com/cookmytech">
                 <FaTwitter />
               </SocialIcon>
-              <SocialIcon href="https://instagram.com">
+              <SocialIcon href="https://www.instagram.com/cookmytech">
                 <FaInstagram />
               </SocialIcon>
-              <SocialIcon href="https://linkedin.com">
+              <SocialIcon href="https://www.linkedin.com/company/cookmytech">
                 <FaLinkedinIn />
               </SocialIcon>
             </div>
@@ -135,24 +139,17 @@ function FooterColumn({ title, children }: any) {
   );
 }
 
-function FooterLink({ href, children }: any) {
+function FooterLink({ href, children, target }: any) {
   return (
     <li>
-      <Link
+      <a
         href={href}
-        className="
-          relative inline-block
-          text-gray-300 font-semibold
-          transition-all duration-300
-          hover:text-white hover:translate-x-2
-          after:absolute after:left-0 after:-bottom-1
-          after:h-[2px] after:w-0 after:bg-white
-          after:transition-all after:duration-300
-          hover:after:w-full
-        "
+        target={target}
+        rel={target === "_blank" ? "noopener noreferrer" : undefined}
+        className="text-gray-300 hover:text-white cursor-pointer"
       >
         {children}
-      </Link>
+      </a>
     </li>
   );
 }

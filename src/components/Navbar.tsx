@@ -73,7 +73,7 @@ export default function Navbar() {
 
         {/* Mobile Icon */}
         <button
-          className="lg:hidden text-4xl transition-transform active:scale-90"
+          className="lg:hidden text-4xl transition-transform active:scale-90 text-black"
           onClick={() => setOpen(true)}
         >
           <IoMenu />
@@ -83,7 +83,7 @@ export default function Navbar() {
       {/* Mobile Menu */}
       <div
         className={`fixed top-0 right-0 h-full w-full
-          bg-white/90 backdrop-blur-xl
+          bg-black/90 backdrop-blur-xl
           z-50 p-8
           transition-all duration-300
           ${open ? "translate-x-0 opacity-100" : "translate-x-full opacity-0"}

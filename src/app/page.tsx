@@ -47,10 +47,11 @@ export default function LandingPage() {
 
             {/* CTA Buttons */}
             <div className="flex flex-col sm:flex-row gap-4 items-start sm:items-center pt-4">
-             <Link href="/products">
-              <button className="bg-white rounded-lg px-6 py-3 md:px-8 md:py-4 text-gray-900 text-base md:text-lg shadow-md cursor-pointer font-semibold hover:bg-gray-200 transition">
-                Explore Our Products
-              </button></Link>
+              <Link href="/products">
+                <button className="w-full sm:w-auto bg-black hover:bg-gray-900 text-white px-8 md:px-10 py-3 md:py-4 rounded-full font-semibold text-base md:text-lg transition shadow-lg whitespace-nowrap border border-white cursor-pointer">
+                  Explore Our Products
+                </button>
+              </Link>
 
               <button className="w-full sm:w-auto bg-black hover:bg-gray-900 text-white px-8 md:px-10 py-3 md:py-4 rounded-full font-semibold text-base md:text-lg transition shadow-lg whitespace-nowrap border border-white cursor-pointer">
                 Get Started for Free
@@ -59,17 +60,16 @@ export default function LandingPage() {
           </div>
 
           {/* Right Content - Tech Illustration */}
-        <div className="relative flex justify-center lg:justify-end">
-  <Image
-    src="/header.svg"
-    alt="Cookmytech software solutions illustration"
-    width={500}
-    height={500}
-    priority
-    className="w-full max-w-md lg:max-w-lg"
-  />
-</div>
-
+          <div className="relative flex justify-center lg:justify-end">
+            <Image
+              src="/header.svg"
+              alt="Cookmytech software solutions illustration"
+              width={500}
+              height={500}
+              priority
+              className="w-full max-w-md lg:max-w-lg"
+            />
+          </div>
         </div>
       </div>
     </div>
