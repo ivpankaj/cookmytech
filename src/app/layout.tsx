@@ -2,6 +2,8 @@ import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 import Footer from "@/components/Footer";
+import JsonLd from "@/components/JsonLd";
+import Script from "next/script";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -46,7 +48,7 @@ export const metadata: Metadata = {
   creator: "Pankaj Verma",
   publisher: "Cookmytech",
   icons: {
-    icon: "/favicon.ico", 
+    icon: "/favicon.ico",
   },
   openGraph: {
     title: "Cookmytech – Software Solutions & Website Development in Noida",
@@ -58,7 +60,7 @@ export const metadata: Metadata = {
     type: "website",
     images: [
       {
-        url: "https://cookmytech.site/og-image.png",
+        url: "/og-image.png",
         width: 1200,
         height: 630,
         alt: "Cookmytech Software Solutions",
@@ -71,7 +73,7 @@ export const metadata: Metadata = {
     title: "Cookmytech | Leading Software Solutions in Noida",
     description:
       "Software development, website building, AI solutions & SaaS services by Cookmytech.",
-    images: ["https://cookmytech.site/og-image.png"],
+    images: ["/og-image.png"],
   },
 
   robots: {
@@ -80,12 +82,20 @@ export const metadata: Metadata = {
     googleBot: {
       index: true,
       follow: true,
+      'max-video-preview': -1,
+      'max-image-preview': 'large',
+      'max-snippet': -1,
     },
   },
 
   alternates: {
-    canonical: "https://cookmytech.site",
+    canonical: "./",
   },
+  verification: {
+    google: "cFZmG_ZDsn2CRz9dEiRh5_lKBRooRgVaQkyaiTsPj5U",
+  },
+  category: 'technology',
+  metadataBase: new URL('https://cookmytech.site'),
 };
 
 export default function RootLayout({
@@ -96,6 +106,23 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={`${geistSans.variable} ${geistMono.variable} antialiased`}>
+        <Script
+          strategy="afterInteractive"
+          src="https://www.googletagmanager.com/gtag/js?id=G-24GS1YENM0"
+        />
+        <Script
+          id="google-analytics"
+          strategy="afterInteractive"
+        >
+          {`
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+
+            gtag('config', 'G-24GS1YENM0');
+          `}
+        </Script>
+        <JsonLd />
         {children}
         <Footer />
       </body>

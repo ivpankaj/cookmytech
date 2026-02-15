@@ -1,0 +1,250 @@
+[debug] [2026-02-15T08:50:09.689Z] ----------------------------------------------------------------------
+[debug] [2026-02-15T08:50:09.693Z] Command:       C:\Program Files\nodejs\node.exe C:\Users\Admin\AppData\Roaming\npm\node_modules\firebase-tools\lib\bin\firebase.js deploy
+[debug] [2026-02-15T08:50:09.693Z] CLI Version:   15.5.1
+[debug] [2026-02-15T08:50:09.693Z] Platform:      win32
+[debug] [2026-02-15T08:50:09.694Z] Node Version:  v24.12.0
+[debug] [2026-02-15T08:50:09.694Z] Time:          Sun Feb 15 2026 14:20:09 GMT+0530 (India Standard Time)
+[debug] [2026-02-15T08:50:09.694Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2026-02-15T08:50:11.197Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2026-02-15T08:50:11.197Z] > authorizing via signed-in user (imvpankaj@gmail.com)
+[debug] [2026-02-15T08:50:11.197Z] [iam] checking project cookmytech for permissions ["firebase.projects.get","firebasehosting.sites.update"]
+[debug] [2026-02-15T08:50:11.198Z] Checked if tokens are valid: true, expires at: 1771148997695
+[debug] [2026-02-15T08:50:11.198Z] Checked if tokens are valid: true, expires at: 1771148997695
+[debug] [2026-02-15T08:50:11.199Z] >>> [apiv2][query] POST https://cloudresourcemanager.googleapis.com/v1/projects/cookmytech:testIamPermissions [none]
+[debug] [2026-02-15T08:50:11.199Z] >>> [apiv2][(partial)header] POST https://cloudresourcemanager.googleapis.com/v1/projects/cookmytech:testIamPermissions  x-goog-user-project=cookmytech
+[debug] [2026-02-15T08:50:11.200Z] >>> [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/cookmytech:testIamPermissions {"permissions":["firebase.projects.get","firebasehosting.sites.update"]}
+[debug] [2026-02-15T08:50:26.376Z] *** [apiv2] error from fetch(https://cloudresourcemanager.googleapis.com/v1/projects/cookmytech:testIamPermissions, {"headers":{},"method":"POST","body":"{\"permissions\":[\"firebase.projects.get\",\"firebasehosting.sites.update\"]}"}): FetchError: request to https://cloudresourcemanager.googleapis.com/v1/projects/cookmytech:testIamPermissions failed, reason: socket hang up
+[debug] [2026-02-15T08:50:26.377Z] [iam] error while checking permissions, command may fail: Failed to make request to https://cloudresourcemanager.googleapis.com/v1/projects/cookmytech:testIamPermissions
+[debug] [2026-02-15T08:50:26.378Z] Checked if tokens are valid: true, expires at: 1771148997695
+[debug] [2026-02-15T08:50:26.378Z] Checked if tokens are valid: true, expires at: 1771148997695
+[debug] [2026-02-15T08:50:26.379Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/cookmytech [none]
+[debug] [2026-02-15T08:50:37.953Z] *** [apiv2] error from fetch(https://firebase.googleapis.com/v1beta1/projects/cookmytech, {"headers":{},"method":"GET","signal":{"reason":""}}): FetchError: request to https://firebase.googleapis.com/v1beta1/projects/cookmytech failed, reason: getaddrinfo ENOTFOUND firebase.googleapis.com
+[debug] [2026-02-15T08:50:37.954Z] Failed to make request to https://firebase.googleapis.com/v1beta1/projects/cookmytech (original: request to https://firebase.googleapis.com/v1beta1/projects/cookmytech failed, reason: getaddrinfo ENOTFOUND firebase.googleapis.com)
+[debug] [2026-02-15T08:50:42.972Z] Error: Timed out.
+    at Timeout._onTimeout (C:\Users\Admin\AppData\Roaming\npm\node_modules\firebase-tools\lib\utils.js:308:49)
+    at listOnTimeout (node:internal/timers:605:17)
+    at process.processTimers (node:internal/timers:541:7)
+[error] 
+[error] Error: An unexpected error has occurred.
+[debug] [2026-02-15T08:50:46.820Z] ----------------------------------------------------------------------
+[debug] [2026-02-15T08:50:46.823Z] Command:       C:\Program Files\nodejs\node.exe C:\Users\Admin\AppData\Roaming\npm\node_modules\firebase-tools\lib\bin\firebase.js deploy
+[debug] [2026-02-15T08:50:46.823Z] CLI Version:   15.5.1
+[debug] [2026-02-15T08:50:46.823Z] Platform:      win32
+[debug] [2026-02-15T08:50:46.823Z] Node Version:  v24.12.0
+[debug] [2026-02-15T08:50:46.824Z] Time:          Sun Feb 15 2026 14:20:46 GMT+0530 (India Standard Time)
+[debug] [2026-02-15T08:50:46.824Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2026-02-15T08:50:48.321Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2026-02-15T08:50:48.321Z] > authorizing via signed-in user (imvpankaj@gmail.com)
+[debug] [2026-02-15T08:50:48.322Z] [iam] checking project cookmytech for permissions ["firebase.projects.get","firebasehosting.sites.update"]
+[debug] [2026-02-15T08:50:48.323Z] Checked if tokens are valid: true, expires at: 1771148997695
+[debug] [2026-02-15T08:50:48.323Z] Checked if tokens are valid: true, expires at: 1771148997695
+[debug] [2026-02-15T08:50:48.324Z] >>> [apiv2][query] POST https://cloudresourcemanager.googleapis.com/v1/projects/cookmytech:testIamPermissions [none]
+[debug] [2026-02-15T08:50:48.324Z] >>> [apiv2][(partial)header] POST https://cloudresourcemanager.googleapis.com/v1/projects/cookmytech:testIamPermissions  x-goog-user-project=cookmytech
+[debug] [2026-02-15T08:50:48.324Z] >>> [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/cookmytech:testIamPermissions {"permissions":["firebase.projects.get","firebasehosting.sites.update"]}
+[debug] [2026-02-15T08:50:58.491Z] *** [apiv2] error from fetch(https://cloudresourcemanager.googleapis.com/v1/projects/cookmytech:testIamPermissions, {"headers":{},"method":"POST","body":"{\"permissions\":[\"firebase.projects.get\",\"firebasehosting.sites.update\"]}"}): FetchError: request to https://cloudresourcemanager.googleapis.com/v1/projects/cookmytech:testIamPermissions failed, reason: Client network socket disconnected before secure TLS connection was established
+[debug] [2026-02-15T08:50:58.492Z] [iam] error while checking permissions, command may fail: Failed to make request to https://cloudresourcemanager.googleapis.com/v1/projects/cookmytech:testIamPermissions
+[debug] [2026-02-15T08:50:58.493Z] Checked if tokens are valid: true, expires at: 1771148997695
+[debug] [2026-02-15T08:50:58.493Z] Checked if tokens are valid: true, expires at: 1771148997695
+[debug] [2026-02-15T08:50:58.494Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/cookmytech [none]
+[debug] [2026-02-15T08:51:08.597Z] *** [apiv2] error from fetch(https://firebase.googleapis.com/v1beta1/projects/cookmytech, {"headers":{},"method":"GET","signal":{"reason":""}}): FetchError: request to https://firebase.googleapis.com/v1beta1/projects/cookmytech failed, reason: Client network socket disconnected before secure TLS connection was established
+[debug] [2026-02-15T08:51:08.598Z] Failed to make request to https://firebase.googleapis.com/v1beta1/projects/cookmytech (original: request to https://firebase.googleapis.com/v1beta1/projects/cookmytech failed, reason: Client network socket disconnected before secure TLS connection was established)
+[debug] [2026-02-15T08:51:13.609Z] Error: Timed out.
+    at Timeout._onTimeout (C:\Users\Admin\AppData\Roaming\npm\node_modules\firebase-tools\lib\utils.js:308:49)
+    at listOnTimeout (node:internal/timers:605:17)
+    at process.processTimers (node:internal/timers:541:7)
+[error] 
+[error] Error: An unexpected error has occurred.
+[debug] [2026-02-15T08:51:35.867Z] ----------------------------------------------------------------------
+[debug] [2026-02-15T08:51:35.871Z] Command:       C:\Program Files\nodejs\node.exe C:\Users\Admin\AppData\Roaming\npm\node_modules\firebase-tools\lib\bin\firebase.js init
+[debug] [2026-02-15T08:51:35.871Z] CLI Version:   15.5.1
+[debug] [2026-02-15T08:51:35.871Z] Platform:      win32
+[debug] [2026-02-15T08:51:35.871Z] Node Version:  v24.12.0
+[debug] [2026-02-15T08:51:35.872Z] Time:          Sun Feb 15 2026 14:21:35 GMT+0530 (India Standard Time)
+[debug] [2026-02-15T08:51:35.872Z] ----------------------------------------------------------------------
+[debug] 
+[info] 
+     ######## #### ########  ######## ########     ###     ######  ########
+     ##        ##  ##     ## ##       ##     ##  ##   ##  ##       ##
+     ######    ##  ########  ######   ########  #########  ######  ######
+     ##        ##  ##    ##  ##       ##     ## ##     ##       ## ##
+     ##       #### ##     ## ######## ########  ##     ##  ######  ########
+
+You're about to initialize a Firebase project in this directory:
+
+  C:\personal projects\cookmytech
+
+Before we get started, keep in mind:
+
+  * You are currently outside your home directory
+  * You are initializing within an existing Firebase project directory
+
+[info] 
+=== Project Setup
+[info] 
+[info] First, let's associate this project directory with a Firebase project.
+[info] You can create multiple project aliases by running firebase use --add, 
+[info] 
+[debug] [2026-02-15T08:51:56.814Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2026-02-15T08:51:56.814Z] > authorizing via signed-in user (imvpankaj@gmail.com)
+[debug] [2026-02-15T08:51:56.816Z] Checked if tokens are valid: true, expires at: 1771148997695
+[debug] [2026-02-15T08:51:56.817Z] Checked if tokens are valid: true, expires at: 1771148997695
+[debug] [2026-02-15T08:51:56.819Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/cookmytech [none]
+[debug] [2026-02-15T08:52:06.984Z] *** [apiv2] error from fetch(https://firebase.googleapis.com/v1beta1/projects/cookmytech, {"headers":{},"method":"GET","signal":{"reason":""}}): FetchError: request to https://firebase.googleapis.com/v1beta1/projects/cookmytech failed, reason: Client network socket disconnected before secure TLS connection was established
+[debug] [2026-02-15T08:52:06.985Z] Failed to make request to https://firebase.googleapis.com/v1beta1/projects/cookmytech (original: request to https://firebase.googleapis.com/v1beta1/projects/cookmytech failed, reason: Client network socket disconnected before secure TLS connection was established)
+[debug] [2026-02-15T08:52:12.013Z] Error: Timed out.
+    at Timeout._onTimeout (C:\Users\Admin\AppData\Roaming\npm\node_modules\firebase-tools\lib\utils.js:308:49)
+    at listOnTimeout (node:internal/timers:605:17)
+    at process.processTimers (node:internal/timers:541:7)
+[error] 
+[error] Error: An unexpected error has occurred.
+[debug] [2026-02-15T08:52:17.040Z] ----------------------------------------------------------------------
+[debug] [2026-02-15T08:52:17.043Z] Command:       C:\Program Files\nodejs\node.exe C:\Users\Admin\AppData\Roaming\npm\node_modules\firebase-tools\lib\bin\firebase.js init
+[debug] [2026-02-15T08:52:17.043Z] CLI Version:   15.5.1
+[debug] [2026-02-15T08:52:17.044Z] Platform:      win32
+[debug] [2026-02-15T08:52:17.044Z] Node Version:  v24.12.0
+[debug] [2026-02-15T08:52:17.044Z] Time:          Sun Feb 15 2026 14:22:17 GMT+0530 (India Standard Time)
+[debug] [2026-02-15T08:52:17.044Z] ----------------------------------------------------------------------
+[debug] 
+[info] 
+     ######## #### ########  ######## ########     ###     ######  ########
+     ##        ##  ##     ## ##       ##     ##  ##   ##  ##       ##
+     ######    ##  ########  ######   ########  #########  ######  ######
+     ##        ##  ##    ##  ##       ##     ## ##     ##       ## ##
+     ##       #### ##     ## ######## ########  ##     ##  ######  ########
+
+You're about to initialize a Firebase project in this directory:
+
+  C:\personal projects\cookmytech
+
+Before we get started, keep in mind:
+
+  * You are currently outside your home directory
+  * You are initializing within an existing Firebase project directory
+
+[info] 
+=== Project Setup
+[info] 
+[info] First, let's associate this project directory with a Firebase project.
+[info] You can create multiple project aliases by running firebase use --add, 
+[info] 
+[debug] [2026-02-15T08:52:23.838Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2026-02-15T08:52:23.838Z] > authorizing via signed-in user (imvpankaj@gmail.com)
+[debug] [2026-02-15T08:52:23.840Z] Checked if tokens are valid: true, expires at: 1771148997695
+[debug] [2026-02-15T08:52:23.841Z] Checked if tokens are valid: true, expires at: 1771148997695
+[debug] [2026-02-15T08:52:23.843Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/cookmytech [none]
+[debug] [2026-02-15T08:52:33.976Z] *** [apiv2] error from fetch(https://firebase.googleapis.com/v1beta1/projects/cookmytech, {"headers":{},"method":"GET","signal":{"reason":""}}): FetchError: request to https://firebase.googleapis.com/v1beta1/projects/cookmytech failed, reason: Client network socket disconnected before secure TLS connection was established
+[debug] [2026-02-15T08:52:33.976Z] Failed to make request to https://firebase.googleapis.com/v1beta1/projects/cookmytech (original: request to https://firebase.googleapis.com/v1beta1/projects/cookmytech failed, reason: Client network socket disconnected before secure TLS connection was established)
+[debug] [2026-02-15T08:52:38.990Z] Error: Timed out.
+    at Timeout._onTimeout (C:\Users\Admin\AppData\Roaming\npm\node_modules\firebase-tools\lib\utils.js:308:49)
+    at listOnTimeout (node:internal/timers:605:17)
+    at process.processTimers (node:internal/timers:541:7)
+[error] 
+[error] Error: An unexpected error has occurred.
+[debug] [2026-02-15T08:52:54.104Z] ----------------------------------------------------------------------
+[debug] [2026-02-15T08:52:54.109Z] Command:       C:\Program Files\nodejs\node.exe C:\Users\Admin\AppData\Roaming\npm\node_modules\firebase-tools\lib\bin\firebase.js use cookmytech
+[debug] [2026-02-15T08:52:54.110Z] CLI Version:   15.5.1
+[debug] [2026-02-15T08:52:54.110Z] Platform:      win32
+[debug] [2026-02-15T08:52:54.110Z] Node Version:  v24.12.0
+[debug] [2026-02-15T08:52:54.111Z] Time:          Sun Feb 15 2026 14:22:54 GMT+0530 (India Standard Time)
+[debug] [2026-02-15T08:52:54.111Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2026-02-15T08:52:54.369Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2026-02-15T08:52:54.370Z] > authorizing via signed-in user (imvpankaj@gmail.com)
+[debug] [2026-02-15T08:52:54.371Z] Checked if tokens are valid: true, expires at: 1771148997695
+[debug] [2026-02-15T08:52:54.371Z] Checked if tokens are valid: true, expires at: 1771148997695
+[debug] [2026-02-15T08:52:54.372Z] >>> [apiv2][query] GET https://serviceusage.googleapis.com/v1/projects/cookmytech/services/cloudresourcemanager.googleapis.com [none]
+[debug] [2026-02-15T08:52:54.373Z] >>> [apiv2][(partial)header] GET https://serviceusage.googleapis.com/v1/projects/cookmytech/services/cloudresourcemanager.googleapis.com  x-goog-user-project=cookmytech
+[debug] [2026-02-15T08:53:05.993Z] *** [apiv2] error from fetch(https://serviceusage.googleapis.com/v1/projects/cookmytech/services/cloudresourcemanager.googleapis.com, {"headers":{},"method":"GET"}): FetchError: request to https://serviceusage.googleapis.com/v1/projects/cookmytech/services/cloudresourcemanager.googleapis.com failed, reason: getaddrinfo ENOTFOUND serviceusage.googleapis.com
+[debug] [2026-02-15T08:53:05.994Z] Unable to check that https://cloudresourcemanager.googleapis.com is enabled on cookmytech. Calls to it will fail if it is not enabled
+[debug] [2026-02-15T08:53:05.995Z] Checked if tokens are valid: true, expires at: 1771148997695
+[debug] [2026-02-15T08:53:05.995Z] Checked if tokens are valid: true, expires at: 1771148997695
+[debug] [2026-02-15T08:53:05.996Z] >>> [apiv2][query] GET https://cloudresourcemanager.googleapis.com/v1/projects/cookmytech [none]
+[debug] [2026-02-15T08:53:27.658Z] *** [apiv2] error from fetch(https://cloudresourcemanager.googleapis.com/v1/projects/cookmytech, {"headers":{},"method":"GET"}): FetchError: request to https://cloudresourcemanager.googleapis.com/v1/projects/cookmytech failed, reason: Client network socket disconnected before secure TLS connection was established
+[debug] [2026-02-15T08:53:32.677Z] Error: Timed out.
+    at Timeout._onTimeout (C:\Users\Admin\AppData\Roaming\npm\node_modules\firebase-tools\lib\utils.js:308:49)
+    at listOnTimeout (node:internal/timers:605:17)
+    at process.processTimers (node:internal/timers:541:7)
+[error] 
+[error] Error: An unexpected error has occurred.
+[debug] [2026-02-15T08:54:11.121Z] ----------------------------------------------------------------------
+[debug] [2026-02-15T08:54:11.124Z] Command:       C:\Program Files\nodejs\node.exe C:\Users\Admin\AppData\Roaming\npm\node_modules\firebase-tools\lib\bin\firebase.js use cookmytech
+[debug] [2026-02-15T08:54:11.124Z] CLI Version:   15.5.1
+[debug] [2026-02-15T08:54:11.124Z] Platform:      win32
+[debug] [2026-02-15T08:54:11.125Z] Node Version:  v24.12.0
+[debug] [2026-02-15T08:54:11.125Z] Time:          Sun Feb 15 2026 14:24:11 GMT+0530 (India Standard Time)
+[debug] [2026-02-15T08:54:11.125Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2026-02-15T08:54:11.322Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2026-02-15T08:54:11.322Z] > authorizing via signed-in user (imvpankaj@gmail.com)
+[debug] [2026-02-15T08:54:11.324Z] Checked if tokens are valid: true, expires at: 1771148997695
+[debug] [2026-02-15T08:54:11.324Z] Checked if tokens are valid: true, expires at: 1771148997695
+[debug] [2026-02-15T08:54:11.325Z] >>> [apiv2][query] GET https://serviceusage.googleapis.com/v1/projects/cookmytech/services/cloudresourcemanager.googleapis.com [none]
+[debug] [2026-02-15T08:54:11.325Z] >>> [apiv2][(partial)header] GET https://serviceusage.googleapis.com/v1/projects/cookmytech/services/cloudresourcemanager.googleapis.com  x-goog-user-project=cookmytech
+[debug] [2026-02-15T08:54:21.517Z] *** [apiv2] error from fetch(https://serviceusage.googleapis.com/v1/projects/cookmytech/services/cloudresourcemanager.googleapis.com, {"headers":{},"method":"GET"}): FetchError: request to https://serviceusage.googleapis.com/v1/projects/cookmytech/services/cloudresourcemanager.googleapis.com failed, reason: socket hang up
+[debug] [2026-02-15T08:54:21.518Z] Unable to check that https://cloudresourcemanager.googleapis.com is enabled on cookmytech. Calls to it will fail if it is not enabled
+[debug] [2026-02-15T08:54:21.519Z] Checked if tokens are valid: true, expires at: 1771148997695
+[debug] [2026-02-15T08:54:21.520Z] Checked if tokens are valid: true, expires at: 1771148997695
+[debug] [2026-02-15T08:54:21.520Z] >>> [apiv2][query] GET https://cloudresourcemanager.googleapis.com/v1/projects/cookmytech [none]
+[debug] [2026-02-15T08:54:31.590Z] *** [apiv2] error from fetch(https://cloudresourcemanager.googleapis.com/v1/projects/cookmytech, {"headers":{},"method":"GET"}): FetchError: request to https://cloudresourcemanager.googleapis.com/v1/projects/cookmytech failed, reason: socket hang up
+[debug] [2026-02-15T08:54:36.610Z] Error: Timed out.
+    at Timeout._onTimeout (C:\Users\Admin\AppData\Roaming\npm\node_modules\firebase-tools\lib\utils.js:308:49)
+    at listOnTimeout (node:internal/timers:605:17)
+    at process.processTimers (node:internal/timers:541:7)
+[error] 
+[error] Error: An unexpected error has occurred.
+[debug] [2026-02-15T08:54:46.721Z] ----------------------------------------------------------------------
+[debug] [2026-02-15T08:54:46.724Z] Command:       C:\Program Files\nodejs\node.exe C:\Users\Admin\AppData\Roaming\npm\node_modules\firebase-tools\lib\bin\firebase.js use cookmytech
+[debug] [2026-02-15T08:54:46.724Z] CLI Version:   15.5.1
+[debug] [2026-02-15T08:54:46.724Z] Platform:      win32
+[debug] [2026-02-15T08:54:46.724Z] Node Version:  v24.12.0
+[debug] [2026-02-15T08:54:46.724Z] Time:          Sun Feb 15 2026 14:24:46 GMT+0530 (India Standard Time)
+[debug] [2026-02-15T08:54:46.725Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2026-02-15T08:54:46.935Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2026-02-15T08:54:46.935Z] > authorizing via signed-in user (imvpankaj@gmail.com)
+[debug] [2026-02-15T08:54:46.936Z] Checked if tokens are valid: true, expires at: 1771148997695
+[debug] [2026-02-15T08:54:46.937Z] Checked if tokens are valid: true, expires at: 1771148997695
+[debug] [2026-02-15T08:54:46.938Z] >>> [apiv2][query] GET https://serviceusage.googleapis.com/v1/projects/cookmytech/services/cloudresourcemanager.googleapis.com [none]
+[debug] [2026-02-15T08:54:46.938Z] >>> [apiv2][(partial)header] GET https://serviceusage.googleapis.com/v1/projects/cookmytech/services/cloudresourcemanager.googleapis.com  x-goog-user-project=cookmytech
+[debug] [2026-02-15T08:54:57.032Z] *** [apiv2] error from fetch(https://serviceusage.googleapis.com/v1/projects/cookmytech/services/cloudresourcemanager.googleapis.com, {"headers":{},"method":"GET"}): FetchError: request to https://serviceusage.googleapis.com/v1/projects/cookmytech/services/cloudresourcemanager.googleapis.com failed, reason: socket hang up
+[debug] [2026-02-15T08:54:57.033Z] Unable to check that https://cloudresourcemanager.googleapis.com is enabled on cookmytech. Calls to it will fail if it is not enabled
+[debug] [2026-02-15T08:54:57.034Z] Checked if tokens are valid: true, expires at: 1771148997695
+[debug] [2026-02-15T08:54:57.034Z] Checked if tokens are valid: true, expires at: 1771148997695
+[debug] [2026-02-15T08:54:57.034Z] >>> [apiv2][query] GET https://cloudresourcemanager.googleapis.com/v1/projects/cookmytech [none]
+[debug] [2026-02-15T08:55:06.799Z] <<< [apiv2][status] GET https://cloudresourcemanager.googleapis.com/v1/projects/cookmytech 200
+[debug] [2026-02-15T08:55:06.799Z] <<< [apiv2][body] GET https://cloudresourcemanager.googleapis.com/v1/projects/cookmytech {"projectNumber":"984972201120","projectId":"cookmytech","lifecycleState":"ACTIVE","name":"cookmytech","labels":{"firebase":"enabled","firebase-core":"disabled"},"createTime":"2025-11-18T06:34:53.356785Z"}
+[info] Now using project cookmytech
+[debug] [2026-02-15T08:55:16.827Z] Error: Timed out.
+    at Timeout._onTimeout (C:\Users\Admin\AppData\Roaming\npm\node_modules\firebase-tools\lib\utils.js:308:49)
+    at listOnTimeout (node:internal/timers:605:17)
+    at process.processTimers (node:internal/timers:541:7)
+[error] 
+[error] Error: An unexpected error has occurred.
+[debug] [2026-02-15T08:55:20.972Z] ----------------------------------------------------------------------
+[debug] [2026-02-15T08:55:20.975Z] Command:       C:\Program Files\nodejs\node.exe C:\Users\Admin\AppData\Roaming\npm\node_modules\firebase-tools\lib\bin\firebase.js use cookmytech
+[debug] [2026-02-15T08:55:20.976Z] CLI Version:   15.5.1
+[debug] [2026-02-15T08:55:20.976Z] Platform:      win32
+[debug] [2026-02-15T08:55:20.976Z] Node Version:  v24.12.0
+[debug] [2026-02-15T08:55:20.976Z] Time:          Sun Feb 15 2026 14:25:20 GMT+0530 (India Standard Time)
+[debug] [2026-02-15T08:55:20.976Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2026-02-15T08:55:21.200Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2026-02-15T08:55:21.200Z] > authorizing via signed-in user (imvpankaj@gmail.com)
+[debug] [2026-02-15T08:55:21.202Z] Checked if tokens are valid: true, expires at: 1771148997695
+[debug] [2026-02-15T08:55:21.202Z] Checked if tokens are valid: true, expires at: 1771148997695
+[debug] [2026-02-15T08:55:21.203Z] >>> [apiv2][query] GET https://serviceusage.googleapis.com/v1/projects/cookmytech/services/cloudresourcemanager.googleapis.com [none]
+[debug] [2026-02-15T08:55:21.203Z] >>> [apiv2][(partial)header] GET https://serviceusage.googleapis.com/v1/projects/cookmytech/services/cloudresourcemanager.googleapis.com  x-goog-user-project=cookmytech
+[debug] [2026-02-15T08:55:31.751Z] *** [apiv2] error from fetch(https://serviceusage.googleapis.com/v1/projects/cookmytech/services/cloudresourcemanager.googleapis.com, {"headers":{},"method":"GET"}): FetchError: request to https://serviceusage.googleapis.com/v1/projects/cookmytech/services/cloudresourcemanager.googleapis.com failed, reason: Client network socket disconnected before secure TLS connection was established
+[debug] [2026-02-15T08:55:31.751Z] Unable to check that https://cloudresourcemanager.googleapis.com is enabled on cookmytech. Calls to it will fail if it is not enabled
+[debug] [2026-02-15T08:55:31.752Z] Checked if tokens are valid: true, expires at: 1771148997695
+[debug] [2026-02-15T08:55:31.752Z] Checked if tokens are valid: true, expires at: 1771148997695
+[debug] [2026-02-15T08:55:31.752Z] >>> [apiv2][query] GET https://cloudresourcemanager.googleapis.com/v1/projects/cookmytech [none]
+[debug] [2026-02-15T08:55:43.251Z] *** [apiv2] error from fetch(https://cloudresourcemanager.googleapis.com/v1/projects/cookmytech, {"headers":{},"method":"GET"}): FetchError: request to https://cloudresourcemanager.googleapis.com/v1/projects/cookmytech failed, reason: getaddrinfo ENOTFOUND cloudresourcemanager.googleapis.com
+[debug] [2026-02-15T08:55:48.267Z] Error: Timed out.
+    at Timeout._onTimeout (C:\Users\Admin\AppData\Roaming\npm\node_modules\firebase-tools\lib\utils.js:308:49)
+    at listOnTimeout (node:internal/timers:605:17)
+    at process.processTimers (node:internal/timers:541:7)
+[error] 
+[error] Error: An unexpected error has occurred.
