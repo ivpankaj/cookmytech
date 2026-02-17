@@ -125,6 +125,22 @@ export default function RootLayout({
             gtag('config', 'G-24GS1YENM0');
           `}
         </Script>
+        <Script
+          strategy="afterInteractive"
+          src="https://www.googletagmanager.com/gtag/js?id=G-7K5K6B0VTE"
+        />
+        <Script
+          id="google-analytics-new"
+          strategy="afterInteractive"
+        >
+          {`
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+
+            gtag('config', 'G-7K5K6B0VTE');
+          `}
+        </Script>
         <JsonLd />
         {children}
         <Footer />
