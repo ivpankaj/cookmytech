@@ -92,7 +92,10 @@ export const metadata: Metadata = {
     canonical: "./",
   },
   verification: {
-    google: "cFZmG_ZDsn2CRz9dEiRh5_lKBRooRgVaQkyaiTsPj5U",
+    google: [
+      "cFZmG_ZDsn2CRz9dEiRh5_lKBRooRgVaQkyaiTsPj5U",
+      "HkYS3evi3jqymwePJIQD6Ym4GZGNKhG28ZPB_K1ZfsY",
+    ],
   },
   category: 'technology',
   metadataBase: new URL('https://cookmytech.site'),
