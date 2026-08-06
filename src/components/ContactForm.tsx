@@ -23,61 +23,46 @@ export default function ContactForm() {
     });
   };
 
-  const handleSubmit = async (e: FormEvent) => {
+  const handleSubmit = (e: FormEvent) => {
     e.preventDefault();
-    setLoading(true);
+    
+    const payload = { ...formData };
+    
+    // Instantly show success UI and reset form
+    setSubmitted(true);
+    setFormData({ name: "", email: "", project: "", message: "" });
     setErrorMsg("");
 
-    try {
-      // Send directly from client browser to FormSubmit service targeting imvpankaj@gmail.com
-      const res = await fetch("https://formsubmit.co/ajax/imvpankaj@gmail.com", {
+    // Send email asynchronously in the background
+    fetch("https://formsubmit.co/ajax/imvpankaj@gmail.com", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+        Accept: "application/json",
+      },
+      body: JSON.stringify({
+        _subject: `[CookMyTech Inquiry] New message from ${payload.name}`,
+        _template: "table",
+        _captcha: "false",
+        Name: payload.name,
+        Email: payload.email,
+        "Project Type": payload.project || "Not specified",
+        Message: payload.message,
+        SubmittedAt: new Date().toLocaleString(),
+      }),
+    }).catch(() => {
+      // Fallback background attempt to local API route
+      fetch("/api/contact", {
         method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-          Accept: "application/json",
-        },
-        body: JSON.stringify({
-          _subject: `[CookMyTech Inquiry] New message from ${formData.name}`,
-          _template: "table",
-          _captcha: "false",
-          Name: formData.name,
-          Email: formData.email,
-          "Project Type": formData.project || "Not specified",
-          Message: formData.message,
-          SubmittedAt: new Date().toLocaleString(),
-        }),
-      });
-
-      if (res.ok) {
-        setSubmitted(true);
-        setFormData({ name: "", email: "", project: "", message: "" });
-      } else {
-        // Fallback to local API route if external service fails
-        const localRes = await fetch("/api/contact", {
-          method: "POST",
-          headers: { "Content-Type": "application/json" },
-          body: JSON.stringify(formData),
-        });
-
-        if (localRes.ok) {
-          setSubmitted(true);
-          setFormData({ name: "", email: "", project: "", message: "" });
-        } else {
-          setErrorMsg("Failed to send message. Please try again.");
-        }
-      }
-    } catch (err) {
-      console.error(err);
-      setErrorMsg("An unexpected error occurred. Please try again.");
-    } finally {
-      setLoading(false);
-    }
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(payload),
+      }).catch(console.error);
+    });
   };
 
   const socialLinks = [
     { label: "Gmail", slug: "gmail", href: "mailto:imvpankaj@gmail.com" },
     { label: "LinkedIn", slug: "linkedin", href: "https://linkedin.com/company/cookmytech" },
-    { label: "GitHub", slug: "github", href: "https://github.com/cookmytech" },
     { label: "X", slug: "x", href: "https://x.com/cookmytech" },
   ];
 

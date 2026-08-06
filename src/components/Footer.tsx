@@ -52,7 +52,7 @@ export default function Footer() {
                 className="h-12 w-12 object-contain bg-black border border-white/20 p-1"
               />
               <span className="font-display text-2xl tracking-tight font-extrabold text-white">
-                COOK<span className="bg-white text-black px-1.5 py-0.5 ml-0.5">MY</span>TECH
+              COOKMYTECH
               </span>
             </div>
 
@@ -60,10 +60,6 @@ export default function Footer() {
               Full-Stack & AI Software Engineering Studio. We design, architect, and ship high-scale web applications, LLM agent pipelines, and resilient cloud systems.
             </p>
 
-            <div className="inline-flex items-center gap-2 text.xs border border-green-500/40 text-green-400 bg-green-950/40 px-3 py-1.5 uppercase tracking-wider text-[11px]">
-              <span className="w-2 h-2 rounded-full bg-green-400 animate-pulse" />
-              <span>Systems Operational // Accepting Projects</span>
-            </div>
           </div>
 
           {/* NAVIGATION (2 cols) */}

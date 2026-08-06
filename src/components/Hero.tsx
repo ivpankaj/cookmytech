@@ -21,7 +21,7 @@ export default function Hero() {
           <div>
             <div className="text-xs uppercase tracking-widest mb-8 fade-up fade-up-delay-1">
               <span className="bg-black text-white px-2 py-0.5 mr-2 font-bold">
-                EST. 2024
+                EST. 2026
               </span>
               Full-Stack & AI Software Engineering Studio
             </div>
