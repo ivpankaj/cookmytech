@@ -1,18 +1,19 @@
 "use client";
 
 import React from "react";
+import Link from "next/link";
 import TechIcon from "./TechIcon";
 
 export default function Footer() {
   const currentYear = new Date().getFullYear();
 
   const navLinks = [
-    { label: "Services", href: "#services" },
-    { label: "Why Us", href: "#why-us" },
-    { label: "Process", href: "#process" },
-    { label: "Tech Stack", href: "#stack" },
-    { label: "FAQ", href: "#faq" },
-    { label: "Contact", href: "#contact" },
+    { label: "Services", href: "/#services" },
+    { label: "Why Us", href: "/#why-us" },
+    { label: "Process", href: "/#process" },
+    { label: "Tech Stack", href: "/#stack" },
+    { label: "FAQ", href: "/#faq" },
+    { label: "Contact", href: "/#contact" },
   ];
 
   const capabilities = [
@@ -79,6 +80,31 @@ export default function Footer() {
                 </li>
               ))}
             </ul>
+
+            <h3 className="text-xs uppercase tracking-widest text-gray-500 font-bold pt-2">
+              // Sitemaps
+            </h3>
+            <ul className="space-y-2 text-xs text-gray-300">
+              <li>
+                <Link
+                  href="/html-sitemap"
+                  className="hover:text-white hover:underline transition-colors"
+                >
+                  HTML Sitemap
+                </Link>
+              </li>
+              <li>
+                <a
+                  href="/sitemap.xml"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="hover:text-white hover:underline transition-colors inline-flex items-center gap-1"
+                >
+                  <span>XML Sitemap</span>
+                  <span className="text-[10px] text-gray-500">↗</span>
+                </a>
+              </li>
+            </ul>
           </div>
 
           {/* CAPABILITIES (3 cols) */}
@@ -121,9 +147,23 @@ export default function Footer() {
       </div>
 
       {/* BOTTOM BAR */}
-      <div className="max-w-screen-xl mx-auto px-6 py-6 flex flex-col sm:flex-row justify-between items-center gap-4 text-xs text-gray-500">
-        <div>
-          © {currentYear} CookMyTech. All rights reserved.
+      <div className="max-w-screen-xl mx-auto px-6 py-6 flex flex-col md:flex-row justify-between items-center gap-4 text-xs text-gray-500">
+        <div className="flex flex-wrap items-center gap-3">
+          <span>© {currentYear} CookMyTech. All rights reserved.</span>
+          <span className="text-gray-800 font-bold">|</span>
+          <Link href="/html-sitemap" className="hover:text-white underline underline-offset-2">
+            HTML Sitemap
+          </Link>
+          <span className="text-gray-800 font-bold">•</span>
+          <a
+            href="/sitemap.xml"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="hover:text-white underline underline-offset-2 inline-flex items-center gap-0.5"
+          >
+            <span>XML Sitemap</span>
+            <span className="text-[10px]">↗</span>
+          </a>
         </div>
 
         <div className="uppercase tracking-widest text-[11px] text-gray-400">
@@ -141,3 +181,4 @@ export default function Footer() {
     </footer>
   );
 }
+

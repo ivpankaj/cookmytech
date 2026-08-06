@@ -1,6 +1,7 @@
 "use client";
 
 import { useEffect, useState } from "react";
+import Link from "next/link";
 
 export default function Navbar() {
   const [scrollY, setScrollY] = useState(0);
@@ -13,12 +14,12 @@ export default function Navbar() {
   }, []);
 
   const navItems = [
-    { label: "Services", href: "#services" },
-    { label: "Why Us", href: "#why-us" },
-    { label: "Process", href: "#process" },
-    { label: "Stack", href: "#stack" },
-    { label: "FAQ", href: "#faq" },
-    { label: "Contact", href: "#contact" },
+    { label: "Services", href: "/#services" },
+    { label: "Why Us", href: "/#why-us" },
+    { label: "Process", href: "/#process" },
+    { label: "Stack", href: "/#stack" },
+    { label: "FAQ", href: "/#faq" },
+    { label: "Contact", href: "/#contact" },
   ];
 
   return (
@@ -28,8 +29,8 @@ export default function Navbar() {
     >
       <nav aria-label="Main Navigation">
         <div className="max-w-screen-xl mx-auto px-6 h-14 flex items-center justify-between">
-          <a
-            href="#"
+          <Link
+            href="/"
             className="flex items-center hover:opacity-90 transition-opacity"
             aria-label="CookMyTech Home"
           >
@@ -40,26 +41,26 @@ export default function Navbar() {
               height={40}
               className="h-10 w-10 object-contain bg-black border border-black"
             />
-          </a>
+          </Link>
 
           <div className="hidden md:flex items-center gap-8 text-xs uppercase tracking-widest font-mono">
             {navItems.map((item) => (
-              <a
+              <Link
                 key={item.label}
                 href={item.href}
                 className="nav-link text-black hover:text-gray-700 transition-colors"
               >
                 {item.label}
-              </a>
+              </Link>
             ))}
           </div>
 
-          <a
-            href="#contact"
+          <Link
+            href="/#contact"
             className="hidden md:inline-block bg-black text-white text-xs uppercase tracking-widest px-5 py-2 border border-black hover:bg-white hover:text-black transition-colors duration-150 font-mono"
           >
             Start a Project
-          </a>
+          </Link>
 
           <button
             className="md:hidden flex flex-col gap-1.5 p-2 focus:outline-none focus:ring-2 focus:ring-black"
@@ -88,25 +89,26 @@ export default function Navbar() {
         {menuOpen && (
           <div className="md:hidden border-t border-black bg-white font-mono">
             {navItems.map((item) => (
-              <a
+              <Link
                 key={item.label}
                 href={item.href}
                 onClick={() => setMenuOpen(false)}
                 className="block px-6 py-4 text-xs uppercase tracking-widest border-b border-black hover:bg-black hover:text-white transition-colors"
               >
                 {item.label}
-              </a>
+              </Link>
             ))}
-            <a
-              href="#contact"
+            <Link
+              href="/#contact"
               onClick={() => setMenuOpen(false)}
               className="block px-6 py-4 text-xs uppercase tracking-widest bg-black text-white text-center hover:bg-gray-900 transition-colors"
             >
               Start a Project →
-            </a>
+            </Link>
           </div>
         )}
       </nav>
     </header>
   );
 }
+

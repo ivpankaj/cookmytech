@@ -1,5 +1,6 @@
 import type { Metadata, Viewport } from "next";
 import { Syne, JetBrains_Mono } from "next/font/google";
+import Analytics from "@/components/Analytics";
 import "./globals.css";
 
 const syne = Syne({
@@ -82,6 +83,9 @@ export const metadata: Metadata = {
     creator: "@cookmytech",
     images: ["/logo.png"],
   },
+  verification: {
+    google: process.env.NEXT_PUBLIC_GOOGLE_SITE_VERIFICATION || undefined,
+  },
   robots: {
     index: true,
     follow: true,
@@ -115,8 +119,10 @@ export default function RootLayout({
       className={`${syne.variable} ${jetbrainsMono.variable} h-full antialiased`}
     >
       <body className="min-h-full flex flex-col bg-white text-black font-mono">
+        <Analytics />
         {children}
       </body>
     </html>
   );
 }
+
