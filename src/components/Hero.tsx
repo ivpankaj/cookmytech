@@ -1,17 +1,18 @@
 import React from "react";
+import Link from "next/link";
 
 export default function Hero() {
   const stats = [
     { val: "40+", label: "Projects Shipped" },
-    { val: "< 48h", label: "First Commit" },
+    { val: "< 48h", label: "First Commit SLA" },
     { val: "99.9%", label: "Uptime SLA" },
-    { val: "0", label: "Missed Deadlines" },
+    { val: "100%", label: "IP Ownership" },
   ];
 
   const ongoingProjects = [
-    { label: "AI SaaS Platform", status: "IN PROGRESS", pct: 72 },
-    { label: "E-commerce Engine", status: "REVIEW", pct: 95 },
-    { label: "LLM Agent Pipeline", status: "SHIPPED", pct: 100 },
+    { label: "AI Agent & RAG Pipeline", status: "SHIPPED", pct: 100 },
+    { label: "Multi-Tenant AI SaaS", status: "IN PROGRESS", pct: 78 },
+    { label: "High-Load E-Commerce Core", status: "SHIPPED", pct: 100 },
   ];
 
   return (
@@ -23,14 +24,15 @@ export default function Hero() {
               <span className="bg-black text-white px-2 py-0.5 mr-2 font-bold">
                 EST. 2026
               </span>
-              Full-Stack & AI Software Engineering Studio
+              AI & Full-Stack Software Engineering Studio
             </div>
+            
             <h1
               className="font-display leading-none mb-8 fade-up fade-up-delay-2"
               style={{ fontWeight: 800 }}
             >
               <span className="block text-[clamp(2rem,4.5vw,4.5rem)] tracking-tight mb-2">
-                WE BUILD
+                AI & FULL-STACK
               </span>
               <span className="block text-[clamp(1.8rem,4.1vw,4.1rem)] tracking-tighter bg-black inline-block px-3.5 py-1 mb-2 max-w-full">
                 {[
@@ -42,7 +44,6 @@ export default function Hero() {
                   { char: "A", color: "#64D2FF" },
                   { char: "R", color: "#0A84FF" },
                   { char: "E", color: "#5E5CE6" },
-                  { char: "S", color: "#BF5AF2" },
                 ].map((item, index) => (
                   <span key={index} style={{ color: item.color }}>
                     {item.char}
@@ -50,34 +51,35 @@ export default function Hero() {
                 ))}
               </span>
               <span className="block text-[clamp(2rem,4.5vw,4.5rem)] tracking-tight">
-                THAT SHIP.
+                DEVELOPMENT STUDIO.
               </span>
             </h1>
-            <p className="text-sm leading-relaxed max-w-lg text-gray-700 fade-up fade-up-delay-3 mb-12">
-              Production-grade web apps and AI-powered software engineered by senior specialists who build for high load, zero downtime, and long-term maintainability.
+
+            <p className="text-sm leading-relaxed max-w-xl text-gray-700 fade-up fade-up-delay-3 mb-8">
+              CookMyTech is a specialized software development studio. We build production-ready AI software, autonomous AI agents, enterprise RAG systems, custom SaaS platforms, MERN & Next.js applications, and scalable cloud architectures for startups, founders, and growing businesses worldwide.
             </p>
           </div>
 
           <div className="flex flex-col sm:flex-row gap-4 fade-up fade-up-delay-4 mb-8 lg:mb-0">
-            <a
-              href="#contact"
+            <Link
+              href="/contact"
               className="bg-black text-white text-xs uppercase tracking-widest px-8 py-4 border border-black hover:bg-white hover:text-black transition-colors duration-150 text-center font-bold"
             >
-              Cook Something →
-            </a>
-            <a
-              href="#services"
+              Start Your Project →
+            </Link>
+            <Link
+              href="/services"
               className="bg-white text-black text-xs uppercase tracking-widest px-8 py-4 border border-black hover:bg-black hover:text-white transition-colors duration-150 text-center font-bold"
             >
-              See Services
-            </a>
+              Explore 19 Services
+            </Link>
           </div>
         </div>
 
         <div className="lg:col-span-4 lg:pl-12 flex flex-col justify-end mt-12 lg:mt-0">
           <div className="border border-black p-6 mb-6 bg-gray-50">
             <h2 className="text-xs uppercase tracking-widest text-gray-500 mb-4 font-bold">
-              Currently cooking
+              // Currently cooking
             </h2>
             <div className="space-y-4">
               {ongoingProjects.map((item) => (

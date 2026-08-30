@@ -14,12 +14,11 @@ export default function Navbar() {
   }, []);
 
   const navItems = [
-    { label: "Services", href: "/#services" },
-    { label: "Why Us", href: "/#why-us" },
-    { label: "Process", href: "/#process" },
-    { label: "Stack", href: "/#stack" },
-    { label: "FAQ", href: "/#faq" },
-    { label: "Contact", href: "/#contact" },
+    { label: "Services", href: "/services" },
+    { label: "Case Studies", href: "/case-studies" },
+    { label: "About", href: "/about" },
+    { label: "Guides", href: "/blog" },
+    { label: "Contact", href: "/contact" },
   ];
 
   return (
@@ -31,7 +30,7 @@ export default function Navbar() {
         <div className="max-w-screen-xl mx-auto px-6 h-14 flex items-center justify-between">
           <Link
             href="/"
-            className="flex items-center hover:opacity-90 transition-opacity"
+            className="flex items-center gap-2 hover:opacity-90 transition-opacity"
             aria-label="CookMyTech Home"
           >
             <img
@@ -41,9 +40,12 @@ export default function Navbar() {
               height={40}
               className="h-10 w-10 object-contain bg-black border border-black"
             />
+            <span className="font-display font-extrabold text-sm tracking-tight hidden sm:inline-block">
+              COOKMYTECH
+            </span>
           </Link>
 
-          <div className="hidden md:flex items-center gap-8 text-xs uppercase tracking-widest font-mono">
+          <div className="hidden md:flex items-center gap-6 text-xs uppercase tracking-widest font-mono">
             {navItems.map((item) => (
               <Link
                 key={item.label}
@@ -56,8 +58,8 @@ export default function Navbar() {
           </div>
 
           <Link
-            href="/#contact"
-            className="hidden md:inline-block bg-black text-white text-xs uppercase tracking-widest px-5 py-2 border border-black hover:bg-white hover:text-black transition-colors duration-150 font-mono"
+            href="/contact"
+            className="hidden md:inline-block bg-black text-white text-xs uppercase tracking-widest px-5 py-2 border border-black hover:bg-white hover:text-black transition-colors duration-150 font-mono font-bold"
           >
             Start a Project
           </Link>
@@ -99,9 +101,9 @@ export default function Navbar() {
               </Link>
             ))}
             <Link
-              href="/#contact"
+              href="/contact"
               onClick={() => setMenuOpen(false)}
-              className="block px-6 py-4 text-xs uppercase tracking-widest bg-black text-white text-center hover:bg-gray-900 transition-colors"
+              className="block px-6 py-4 text-xs uppercase tracking-widest bg-black text-white text-center hover:bg-gray-900 transition-colors font-bold"
             >
               Start a Project →
             </Link>
@@ -111,4 +113,3 @@ export default function Navbar() {
     </header>
   );
 }
-

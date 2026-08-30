@@ -7,22 +7,24 @@ import TechIcon from "./TechIcon";
 export default function Footer() {
   const currentYear = new Date().getFullYear();
 
-  const navLinks = [
-    { label: "Services", href: "/#services" },
-    { label: "Why Us", href: "/#why-us" },
-    { label: "Process", href: "/#process" },
-    { label: "Tech Stack", href: "/#stack" },
-    { label: "FAQ", href: "/#faq" },
-    { label: "Contact", href: "/#contact" },
+  const primaryServices = [
+    { label: "AI Development", href: "/services/ai-development" },
+    { label: "AI Agent Development", href: "/services/ai-agent-development" },
+    { label: "RAG Systems", href: "/services/rag-development" },
+    { label: "SaaS Development", href: "/services/saas-development" },
+    { label: "Full-Stack Web Apps", href: "/services/full-stack-development" },
+    { label: "MERN Stack Development", href: "/services/mern-stack-development" },
+    { label: "Next.js Development", href: "/services/nextjs-development" },
+    { label: "Custom Software", href: "/services/custom-software-development" },
   ];
 
-  const capabilities = [
-    "Production Web Apps",
-    "AI SaaS & LLM Products",
-    "RAG & Agent Pipelines",
-    "System Architecture",
-    "High-Concurrency APIs",
-    "Cloud Infrastructure",
+  const companyLinks = [
+    { label: "Services Hub", href: "/services" },
+    { label: "Industries", href: "/industries" },
+    { label: "Case Studies", href: "/case-studies" },
+    { label: "Technical Guides", href: "/blog" },
+    { label: "About CookMyTech", href: "/about" },
+    { label: "Contact Us", href: "/contact" },
   ];
 
   const socials = [
@@ -42,8 +44,8 @@ export default function Footer() {
       <div className="max-w-screen-xl mx-auto px-6 pt-16 pb-12 border-b border-gray-800">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-12 gap-12">
           
-          {/* BRAND COLUMN (5 cols) */}
-          <div className="lg:col-span-5 space-y-6">
+          {/* BRAND COLUMN (4 cols) */}
+          <div className="lg:col-span-4 space-y-6">
             <div className="flex items-center gap-3">
               <img
                 src="/logo.png"
@@ -53,70 +55,52 @@ export default function Footer() {
                 className="h-12 w-12 object-contain bg-black border border-white/20 p-1"
               />
               <span className="font-display text-2xl tracking-tight font-extrabold text-white">
-              COOKMYTECH
+                COOKMYTECH
               </span>
             </div>
 
             <p className="text-xs leading-relaxed text-gray-400 max-w-sm">
-              Full-Stack & AI Software Engineering Studio. We design, architect, and ship high-scale web applications, LLM agent pipelines, and resilient cloud systems.
+              AI & Full-Stack Software Engineering Studio. We design, architect, and ship production-grade web applications, autonomous AI agents, enterprise RAG systems, and resilient cloud architectures.
             </p>
 
+            <div className="text-xs text-gray-500">
+              <span className="text-white font-bold">Email:</span> imvpankaj@gmail.com
+            </div>
           </div>
 
-          {/* NAVIGATION (2 cols) */}
+          {/* CORE SERVICES (4 cols) */}
+          <div className="lg:col-span-4 space-y-4">
+            <h3 className="text-xs uppercase tracking-widest text-gray-500 font-bold">
+              // Commercial Services
+            </h3>
+            <ul className="grid grid-cols-1 sm:grid-cols-2 gap-2 text-xs text-gray-300">
+              {primaryServices.map((service) => (
+                <li key={service.label}>
+                  <Link
+                    href={service.href}
+                    className="hover:text-white hover:underline transition-colors block py-0.5"
+                  >
+                    {service.label}
+                  </Link>
+                </li>
+              ))}
+            </ul>
+          </div>
+
+          {/* COMPANY & RESOURCES (2 cols) */}
           <div className="lg:col-span-2 space-y-4">
             <h3 className="text-xs uppercase tracking-widest text-gray-500 font-bold">
               // Navigation
             </h3>
-            <ul className="space-y-2.5 text-xs text-gray-300">
-              {navLinks.map((item) => (
+            <ul className="space-y-2 text-xs text-gray-300">
+              {companyLinks.map((item) => (
                 <li key={item.label}>
-                  <a
+                  <Link
                     href={item.href}
                     className="hover:text-white hover:underline transition-colors"
                   >
                     {item.label}
-                  </a>
-                </li>
-              ))}
-            </ul>
-
-            <h3 className="text-xs uppercase tracking-widest text-gray-500 font-bold pt-2">
-              // Sitemaps
-            </h3>
-            <ul className="space-y-2 text-xs text-gray-300">
-              <li>
-                <Link
-                  href="/html-sitemap"
-                  className="hover:text-white hover:underline transition-colors"
-                >
-                  HTML Sitemap
-                </Link>
-              </li>
-              <li>
-                <a
-                  href="/sitemap.xml"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="hover:text-white hover:underline transition-colors inline-flex items-center gap-1"
-                >
-                  <span>XML Sitemap</span>
-                  <span className="text-[10px] text-gray-500">↗</span>
-                </a>
-              </li>
-            </ul>
-          </div>
-
-          {/* CAPABILITIES (3 cols) */}
-          <div className="lg:col-span-3 space-y-4">
-            <h3 className="text-xs uppercase tracking-widest text-gray-500 font-bold">
-              // Capabilities
-            </h3>
-            <ul className="space-y-2.5 text-xs text-gray-300">
-              {capabilities.map((cap) => (
-                <li key={cap} className="flex items-center gap-2">
-                  <span className="text-gray-600">→</span>
-                  <span>{cap}</span>
+                  </Link>
                 </li>
               ))}
             </ul>
@@ -164,10 +148,20 @@ export default function Footer() {
             <span>XML Sitemap</span>
             <span className="text-[10px]">↗</span>
           </a>
+          <span className="text-gray-800 font-bold">•</span>
+          <a
+            href="/robots.txt"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="hover:text-white underline underline-offset-2 inline-flex items-center gap-0.5"
+          >
+            <span>Robots.txt</span>
+            <span className="text-[10px]">↗</span>
+          </a>
         </div>
 
         <div className="uppercase tracking-widest text-[11px] text-gray-400">
-          Built at 100% heat<span className="cursor-blink ml-0.5" aria-hidden="true">_</span>
+          Built for top technical performance<span className="cursor-blink ml-0.5" aria-hidden="true">_</span>
         </div>
 
         <button
@@ -181,4 +175,3 @@ export default function Footer() {
     </footer>
   );
 }
-

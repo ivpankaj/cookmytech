@@ -1,156 +1,40 @@
 import React from "react";
+import {
+  generateOrganizationSchema,
+  generateWebSiteSchema,
+  generateFaqSchema,
+  generateBreadcrumbSchema,
+} from "@/lib/schema";
 
 export default function JsonLd() {
-  const siteUrl =
-    process.env.NEXT_PUBLIC_SITE_URL ||
-    process.env.SITE_URL ||
-    "https://www.cookmytech.site";
-
-  const organizationSchema = {
-    "@context": "https://schema.org",
-    "@type": "ProfessionalService",
-    "@id": `${siteUrl}/#organization`,
-    name: "CookMyTech",
-    url: siteUrl,
-    logo: `${siteUrl}/logo.png`,
-    image: `${siteUrl}/logo.png`,
-    description:
-      "CookMyTech is a premier full-stack engineering studio specializing in production web applications, AI-powered products, system architecture, and API integration.",
-    foundingDate: "2024",
-    priceRange: "$$$",
-    address: {
-      "@type": "PostalAddress",
-      addressCountry: "Worldwide",
+  const organizationSchema = generateOrganizationSchema();
+  const websiteSchema = generateWebSiteSchema();
+  const faqSchema = generateFaqSchema([
+    {
+      question: "What services does CookMyTech offer?",
+      answer:
+        "CookMyTech is an AI & full-stack software development studio providing custom AI software development, AI agent engineering, enterprise RAG systems, full-stack web applications, SaaS platform development, MERN stack solutions, Next.js applications, high-concurrency APIs, and cloud system architecture.",
     },
-    contactPoint: {
-      "@type": "ContactPoint",
-      email: "hello@cookmytech.com",
-      contactType: "customer service",
-      availableLanguage: ["English"],
+    {
+      question: "How fast can CookMyTech deliver the first code commit or MVP?",
+      answer:
+        "CookMyTech guarantees the first code commit within 48 hours of project onboarding with fixed-scope and transparent engineering sprints.",
     },
-    sameAs: [
-      "https://github.com/cookmytech",
-      "https://linkedin.com/company/cookmytech",
-      "https://x.com/cookmytech",
-    ],
-    knowsAbout: [
-      "Full-Stack Web Development",
-      "AI Product Engineering",
-      "LLM Integration",
-      "Next.js Development",
-      "System Architecture",
-      "API Development",
-      "Cloud Infrastructure",
-    ],
-    hasOfferCatalog: {
-      "@type": "OfferCatalog",
-      name: "Engineering Services",
-      itemListElement: [
-        {
-          "@type": "Offer",
-          itemOffered: {
-            "@type": "Service",
-            name: "Production Web Apps",
-            description:
-              "End-to-end engineering for production web applications that ship fast, scale hard, and survive real traffic.",
-          },
-        },
-        {
-          "@type": "Offer",
-          itemOffered: {
-            "@type": "Service",
-            name: "AI-Powered Products",
-            description:
-              "LLM integrations, RAG pipelines, and custom AI agents built directly into your software products.",
-          },
-        },
-        {
-          "@type": "Offer",
-          itemOffered: {
-            "@type": "Service",
-            name: "System Architecture",
-            description:
-              "High-scale microservices, event-driven backends, and containerized cloud infrastructure built for 10x growth.",
-          },
-        },
-        {
-          "@type": "Offer",
-          itemOffered: {
-            "@type": "Service",
-            name: "API & Integrations",
-            description:
-              "Clean, documented REST & GraphQL APIs, webhooks, and third-party SaaS integrations.",
-          },
-        },
-      ],
+    {
+      question: "Do clients own all intellectual property and source code?",
+      answer:
+        "Yes, 100%. Clients retain full ownership of all source code, IP, repositories, cloud infrastructure, and documentation with zero vendor lock-in.",
     },
-  };
-
-  const websiteSchema = {
-    "@context": "https://schema.org",
-    "@type": "WebSite",
-    "@id": `${siteUrl}/#website`,
-    url: siteUrl,
-    name: "CookMyTech",
-    description:
-      "Production-grade web apps and AI-powered software engineering studio.",
-    publisher: {
-      "@id": `${siteUrl}/#organization`,
+    {
+      question: "What technologies does CookMyTech specialize in?",
+      answer:
+        "Our core stack includes Next.js, React, TypeScript, Node.js, Python, PostgreSQL, Redis, AWS, Google Cloud, Docker, Kubernetes, OpenAI, LangChain, Pinecone, Express, and MongoDB.",
     },
-    inLanguage: "en-US",
-  };
+  ]);
 
-  const faqSchema = {
-    "@context": "https://schema.org",
-    "@type": "FAQPage",
-    mainEntity: [
-      {
-        "@type": "Question",
-        name: "What services does CookMyTech offer?",
-        acceptedAnswer: {
-          "@type": "Answer",
-          text: "CookMyTech provides full-stack production web application development, custom AI & LLM product integration, cloud system architecture, and API integration services.",
-        },
-      },
-      {
-        "@type": "Question",
-        name: "How fast can CookMyTech deliver the first commit or MVP?",
-        acceptedAnswer: {
-          "@type": "Answer",
-          text: "CookMyTech guarantees the first code commit within 48 hours of project onboarding with fixed-scope and transparent engineering sprints.",
-        },
-      },
-      {
-        "@type": "Question",
-        name: "Do clients own all the intellectual property and code?",
-        acceptedAnswer: {
-          "@type": "Answer",
-          text: "Yes, 100%. Clients retain full ownership of all source code, IP, repositories, and cloud infrastructure with zero vendor lock-in.",
-        },
-      },
-      {
-        "@type": "Question",
-        name: "What technologies does CookMyTech specialize in?",
-        acceptedAnswer: {
-          "@type": "Answer",
-          text: "Our core stack includes Next.js, React, TypeScript, Node.js, Python, PostgreSQL, Redis, AWS, GCP, Docker, Kubernetes, OpenAI, LangChain, Pinecone, and Prisma.",
-        },
-      },
-    ],
-  };
-
-  const breadcrumbSchema = {
-    "@context": "https://schema.org",
-    "@type": "BreadcrumbList",
-    itemListElement: [
-      {
-        "@type": "ListItem",
-        position: 1,
-        name: "Home",
-        item: siteUrl,
-      },
-    ],
-  };
+  const breadcrumbSchema = generateBreadcrumbSchema([
+    { name: "Home", item: "/" },
+  ]);
 
   return (
     <>

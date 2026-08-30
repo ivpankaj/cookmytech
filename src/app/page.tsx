@@ -1,3 +1,4 @@
+import { constructMetadata } from "@/lib/metadata";
 import JsonLd from "@/components/JsonLd";
 import Navbar from "@/components/Navbar";
 import Hero from "@/components/Hero";
@@ -10,6 +11,24 @@ import ProjectCarousel from "@/components/ProjectCarousel";
 import FaqSection from "@/components/FaqSection";
 import ContactForm from "@/components/ContactForm";
 import Footer from "@/components/Footer";
+
+export const metadata = constructMetadata({
+  title: "AI & Full-Stack Software Development Studio",
+  description:
+    "CookMyTech is a premier AI & full-stack software development studio. We build custom AI software, autonomous AI agents, enterprise RAG applications, SaaS platforms, Next.js apps, MERN stack solutions, and cloud architectures.",
+  path: "/",
+  keywords: [
+    "CookMyTech",
+    "AI Development Studio",
+    "Full-Stack Development Studio",
+    "AI Software Engineering",
+    "SaaS Development Company",
+    "AI Agent Development",
+    "RAG Systems",
+    "Next.js Development",
+    "MERN Stack Studio",
+  ],
+});
 
 export default function CookMyTechLanding() {
   return (
@@ -31,11 +50,11 @@ export default function CookMyTechLanding() {
           >
             <div className="max-w-screen-xl mx-auto px-6">
               <h2
-                className="font-display text-[clamp(2rem,8vw,7rem)] font-bold leading-none mb-8"
+                className="font-display text-[clamp(2rem,8vw,6rem)] font-bold leading-none mb-8"
                 style={{ fontWeight: 800 }}
               >
-                <span className="block">READY TO</span>
-                <span className="block text-gray-500">START COOKING?</span>
+                <span className="block">READY TO BUILD YOUR</span>
+                <span className="block text-gray-500">SOFTWARE PRODUCT?</span>
               </h2>
               <p className="text-sm text-gray-400 mb-10 max-w-md mx-auto leading-relaxed">
                 Send us your project specifications. Our senior engineering team will respond within 24 hours with an actionable technical plan and fixed estimate.
