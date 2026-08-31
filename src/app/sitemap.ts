@@ -49,6 +49,8 @@ export default function sitemap(): MetadataRoute.Sitemap {
     "/case-studies/streaming-event-analytics",
 
     // Technical Blog & Guides
+    "/blog/nextjs-16-turbopack-production-architecture-guide",
+    "/blog/autonomous-ai-agents-langchain-langgraph-guide",
     "/blog/ai-software-development-cost-guide",
     "/blog/how-to-build-an-ai-saas-product",
     "/blog/ai-agent-vs-traditional-automation",

@@ -22,7 +22,7 @@ export default function Footer() {
     { label: "Services Hub", href: "/services" },
     { label: "Industries", href: "/industries" },
     { label: "Case Studies", href: "/case-studies" },
-    { label: "Technical Guides", href: "/blog" },
+    { label: "Blog", href: "/blog" },
     { label: "About CookMyTech", href: "/about" },
     { label: "Contact Us", href: "/contact" },
   ];

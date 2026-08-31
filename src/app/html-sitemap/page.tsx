@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import Link from "next/link";
+import { blogPostsData } from "@/app/blog/page";
 
 export const metadata: Metadata = {
   title: "HTML Sitemap",
@@ -209,6 +210,45 @@ export default function HtmlSitemapPage() {
                 </li>
               ))}
             </ul>
+          </div>
+        </div>
+
+        {/* BLOG ARTICLES SECTION */}
+        <div className="border border-black p-6 mb-12 space-y-6">
+          <div className="flex items-center justify-between border-b border-black pb-3">
+            <h2 className="font-display text-xl font-bold uppercase">
+              // Technical Blog Articles & Guides ({blogPostsData.length})
+            </h2>
+            <Link
+              href="/blog"
+              className="text-xs uppercase tracking-widest bg-black text-white px-3 py-1 font-bold hover:bg-gray-800 transition-colors"
+            >
+              View All Blog Cards →
+            </Link>
+          </div>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+            {blogPostsData.map((post) => (
+              <div key={post.slug} className="p-4 border border-gray-200 bg-gray-50 flex flex-col justify-between">
+                <div>
+                  <div className="flex justify-between items-center mb-2">
+                    <span className="text-[10px] bg-black text-white px-2 py-0.5 font-bold uppercase">
+                      {post.category}
+                    </span>
+                    <span className="text-[11px] text-gray-500 font-mono">{post.readTime}</span>
+                  </div>
+                  <Link href={`/blog/${post.slug}`} className="font-bold text-sm hover:underline block mb-1">
+                    {post.title}
+                  </Link>
+                  <p className="text-xs text-gray-600 line-clamp-2">{post.description}</p>
+                </div>
+                <div className="mt-3 text-[11px] text-gray-400 font-mono flex justify-between items-center border-t stroke-gray-200 pt-2">
+                  <span>{post.date}</span>
+                  <Link href={`/blog/${post.slug}`} className="font-bold underline text-black">
+                    Read Post →
+                  </Link>
+                </div>
+              </div>
+            ))}
           </div>
         </div>
 

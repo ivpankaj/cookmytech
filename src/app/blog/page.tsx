@@ -30,6 +30,24 @@ export interface BlogPostItem {
 
 export const blogPostsData: BlogPostItem[] = [
   {
+    slug: "nextjs-16-turbopack-production-architecture-guide",
+    category: "NEXT.JS ARCHITECTURE",
+    title: "Next.js 16 & Turbopack Production Architecture: Scaling High-Concurrency Web Applications in 2026",
+    description:
+      "A comprehensive 15-minute engineering guide on optimizing Next.js 16 App Router, Turbopack bundling, Partial Prerendering (PPR), dynamic caching, and zero-CLS layout strategies.",
+    date: "2026-08-30",
+    readTime: "15 min read",
+  },
+  {
+    slug: "autonomous-ai-agents-langchain-langgraph-guide",
+    category: "AI AGENT ENGINEERING",
+    title: "Building Production Autonomous AI Agents with LangGraph & Multi-Agent Orchestration",
+    description:
+      "An in-depth 18-minute technical deep dive into building deterministic multi-agent loops, state management, tool calling error recovery, and vector memory synchronization.",
+    date: "2026-08-28",
+    readTime: "18 min read",
+  },
+  {
     slug: "ai-software-development-cost-guide",
     category: "AI ENGINEERING",
     title: "How Much Does AI Software Development Cost in 2026?",
