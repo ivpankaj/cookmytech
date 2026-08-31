@@ -24,7 +24,8 @@ export function generateOrganizationSchema() {
     },
     contactPoint: {
       "@type": "ContactPoint",
-      email: "imvpankaj@gmail.com",
+      email: "hello@cookmytech.site",
+      telephone: "+918929517046",
       contactType: "customer service",
       availableLanguage: ["English"],
     },

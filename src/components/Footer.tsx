@@ -28,7 +28,7 @@ export default function Footer() {
   ];
 
   const socials = [
-    { label: "Gmail", slug: "gmail", href: "mailto:imvpankaj@gmail.com" },
+    { label: "Email", slug: "gmail", href: "mailto:hello@cookmytech.site" },
     { label: "LinkedIn", slug: "linkedin", href: "https://linkedin.com/company/cookmytech" },
     { label: "GitHub", slug: "github", href: "https://github.com/cookmytech" },
     { label: "X", slug: "x", href: "https://x.com/cookmytech" },
@@ -63,8 +63,19 @@ export default function Footer() {
               AI & Full-Stack Software Engineering Studio. We design, architect, and ship production-grade web applications, autonomous AI agents, enterprise RAG systems, and resilient cloud architectures.
             </p>
 
-            <div className="text-xs text-gray-500">
-              <span className="text-white font-bold">Email:</span> imvpankaj@gmail.com
+            <div className="text-xs text-gray-400 space-y-1">
+              <div>
+                <span className="text-white font-bold">Email:</span>{" "}
+                <a href="mailto:hello@cookmytech.site" className="hover:text-white underline">
+                  hello@cookmytech.site
+                </a>
+              </div>
+              <div>
+                <span className="text-white font-bold">Phone:</span>{" "}
+                <a href="tel:+918929517046" className="hover:text-white underline">
+                  +918929517046
+                </a>
+              </div>
             </div>
           </div>
 

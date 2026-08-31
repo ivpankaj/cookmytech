@@ -34,7 +34,7 @@ export default function ContactForm() {
     setErrorMsg("");
 
     // Send email asynchronously in the background
-    fetch("https://formsubmit.co/ajax/imvpankaj@gmail.com", {
+    fetch("https://formsubmit.co/ajax/hello@cookmytech.site", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
@@ -61,7 +61,7 @@ export default function ContactForm() {
   };
 
   const socialLinks = [
-    { label: "Gmail", slug: "gmail", href: "mailto:imvpankaj@gmail.com" },
+    { label: "Email", slug: "gmail", href: "mailto:hello@cookmytech.site" },
     { label: "LinkedIn", slug: "linkedin", href: "https://linkedin.com/company/cookmytech" },
     { label: "X", slug: "x", href: "https://x.com/cookmytech" },
   ];
@@ -203,7 +203,8 @@ export default function ContactForm() {
 
               <div className="space-y-0">
                 {[
-                  { label: "Direct Email", value: "imvpankaj@gmail.com" },
+                  { label: "Direct Email", value: "hello@cookmytech.site" },
+                  { label: "Direct Phone", value: "+918929517046" },
                   { label: "Response Time", value: "< 24 hours" },
                   { label: "Availability", value: "Accepting projects now" },
                   { label: "Location", value: "Remote / Worldwide" },
