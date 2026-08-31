@@ -30,7 +30,6 @@ export default function Footer() {
   const socials = [
     { label: "Email", slug: "gmail", href: "mailto:hello@cookmytech.site" },
     { label: "LinkedIn", slug: "linkedin", href: "https://linkedin.com/company/cookmytech" },
-    { label: "GitHub", slug: "github", href: "https://github.com/cookmytech" },
     { label: "X", slug: "x", href: "https://x.com/cookmytech" },
   ];
 
