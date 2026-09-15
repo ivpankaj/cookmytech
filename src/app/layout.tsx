@@ -121,6 +121,24 @@ export default function RootLayout({
       lang="en"
       className={`${syne.variable} ${jetbrainsMono.variable} h-full antialiased`}
     >
+      <head>
+        {/* Google tag (gtag.js) */}
+        <script
+          async
+          src="https://www.googletagmanager.com/gtag/js?id=G-FS6QPT5ZZE"
+        />
+        <script
+          id="google-tag"
+          dangerouslySetInnerHTML={{
+            __html: `
+              window.dataLayer = window.dataLayer || [];
+              function gtag(){dataLayer.push(arguments);}
+              gtag('js', new Date());
+              gtag('config', 'G-FS6QPT5ZZE');
+            `,
+          }}
+        />
+      </head>
       <body className="min-h-full flex flex-col bg-white text-black font-mono">
         <Analytics />
         {children}
