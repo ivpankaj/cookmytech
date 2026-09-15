@@ -21,7 +21,7 @@ export const metadata = constructMetadata({
 });
 
 export default function ApiDevelopmentPage() {
-  const serviceUrl = "https://www.cookmytech.site/services/api-development";
+  const serviceUrl = "https://www.cookmytech.in/services/api-development";
   const serviceSchema = generateServiceSchema({
     name: "API Development Services",
     description: "Self-documenting REST and GraphQL API engineering, webhook orchestrations, and high-concurrency API gateways.",

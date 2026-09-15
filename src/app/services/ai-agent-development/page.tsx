@@ -21,7 +21,7 @@ export const metadata = constructMetadata({
 });
 
 export default function AiAgentDevelopmentPage() {
-  const serviceUrl = "https://www.cookmytech.site/services/ai-agent-development";
+  const serviceUrl = "https://www.cookmytech.in/services/ai-agent-development";
   const serviceSchema = generateServiceSchema({
     name: "AI Agent Development Services",
     description: "Engineering autonomous AI agents with function calling, external tool integration, memory systems, and multi-agent coordination.",

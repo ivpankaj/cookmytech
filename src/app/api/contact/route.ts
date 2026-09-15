@@ -12,9 +12,9 @@ export async function POST(request: Request) {
       );
     }
 
-    const recipient = "hello@cookmytech.site";
+    const recipient = "hello@cookmytech.in";
 
-    // Submit to FormSubmit endpoint to deliver email to hello@cookmytech.site
+    // Submit to FormSubmit endpoint to deliver email to hello@cookmytech.in
     const response = await fetch(`https://formsubmit.co/ajax/${recipient}`, {
       method: "POST",
       headers: {

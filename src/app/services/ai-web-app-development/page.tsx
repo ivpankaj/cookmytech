@@ -21,7 +21,7 @@ export const metadata = constructMetadata({
 });
 
 export default function AiWebAppDevelopmentPage() {
-  const serviceUrl = "https://www.cookmytech.site/services/ai-web-app-development";
+  const serviceUrl = "https://www.cookmytech.in/services/ai-web-app-development";
   const serviceSchema = generateServiceSchema({
     name: "AI Web Application Development",
     description: "Interactive AI web applications, generative UI, real-time streaming, and intuitive web dashboards powered by AI models.",

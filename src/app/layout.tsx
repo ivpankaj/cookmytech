@@ -18,7 +18,7 @@ const jetbrainsMono = JetBrains_Mono({
 const siteUrl =
   process.env.NEXT_PUBLIC_SITE_URL ||
   process.env.SITE_URL ||
-  "https://www.cookmytech.site";
+  "https://www.cookmytech.in";
 
 export const viewport: Viewport = {
   themeColor: "#000000",

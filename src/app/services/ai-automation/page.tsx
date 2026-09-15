@@ -20,7 +20,7 @@ export const metadata = constructMetadata({
 });
 
 export default function AiAutomationPage() {
-  const serviceUrl = "https://www.cookmytech.site/services/ai-automation";
+  const serviceUrl = "https://www.cookmytech.in/services/ai-automation";
   const serviceSchema = generateServiceSchema({
     name: "AI Automation Development Services",
     description: "End-to-end intelligent workflow automation, automated data extraction pipelines, and background AI queue engineering.",

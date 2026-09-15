@@ -9,7 +9,7 @@ export const metadata: Metadata = {
   description:
     "Complete structured navigation index and HTML sitemap for CookMyTech services, tech stack, capabilities, and resources.",
   alternates: {
-    canonical: "https://www.cookmytech.site/html-sitemap",
+    canonical: "https://www.cookmytech.in/html-sitemap",
   },
 };
 

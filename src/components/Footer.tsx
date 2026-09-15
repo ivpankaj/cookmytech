@@ -28,7 +28,7 @@ export default function Footer() {
   ];
 
   const socials = [
-    { label: "Email", slug: "gmail", href: "mailto:hello@cookmytech.site" },
+    { label: "Email", slug: "gmail", href: "mailto:hello@cookmytech.in" },
     { label: "LinkedIn", slug: "linkedin", href: "https://linkedin.com/company/cookmytech" },
     { label: "X", slug: "x", href: "https://x.com/cookmytech" },
   ];
@@ -65,8 +65,8 @@ export default function Footer() {
             <div className="text-xs text-gray-400 space-y-1">
               <div>
                 <span className="text-white font-bold">Email:</span>{" "}
-                <a href="mailto:hello@cookmytech.site" className="hover:text-white underline">
-                  hello@cookmytech.site
+                <a href="mailto:hello@cookmytech.in" className="hover:text-white underline">
+                  hello@cookmytech.in
                 </a>
               </div>
               <div>

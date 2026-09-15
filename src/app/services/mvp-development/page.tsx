@@ -21,7 +21,7 @@ export const metadata = constructMetadata({
 });
 
 export default function MvpDevelopmentPage() {
-  const serviceUrl = "https://www.cookmytech.site/services/mvp-development";
+  const serviceUrl = "https://www.cookmytech.in/services/mvp-development";
   const serviceSchema = generateServiceSchema({
     name: "MVP Development Services",
     description: "Rapid production-grade minimum viable product engineering for tech startups and venture-backed founders.",

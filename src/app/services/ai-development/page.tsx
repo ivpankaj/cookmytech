@@ -22,7 +22,7 @@ export const metadata = constructMetadata({
 });
 
 export default function AiDevelopmentPage() {
-  const serviceUrl = "https://www.cookmytech.site/services/ai-development";
+  const serviceUrl = "https://www.cookmytech.in/services/ai-development";
   const serviceSchema = generateServiceSchema({
     name: "AI Development Services",
     description:

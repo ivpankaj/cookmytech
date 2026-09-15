@@ -22,7 +22,7 @@ export const metadata = constructMetadata({
 });
 
 export default function SaasDevelopmentPage() {
-  const serviceUrl = "https://www.cookmytech.site/services/saas-development";
+  const serviceUrl = "https://www.cookmytech.in/services/saas-development";
   const serviceSchema = generateServiceSchema({
     name: "SaaS Development Services",
     description: "End-to-end multi-tenant SaaS application engineering, subscription billing, cloud infrastructure, and user onboarding.",

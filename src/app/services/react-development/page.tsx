@@ -20,7 +20,7 @@ export const metadata = constructMetadata({
 });
 
 export default function ReactDevelopmentPage() {
-  const serviceUrl = "https://www.cookmytech.site/services/react-development";
+  const serviceUrl = "https://www.cookmytech.in/services/react-development";
   const serviceSchema = generateServiceSchema({
     name: "React Development Services",
     description: "Custom React frontend development, complex interactive web applications, state management, and UI component systems.",

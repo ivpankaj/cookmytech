@@ -21,7 +21,7 @@ export const metadata = constructMetadata({
 });
 
 export default function LlmDevelopmentPage() {
-  const serviceUrl = "https://www.cookmytech.site/services/llm-development";
+  const serviceUrl = "https://www.cookmytech.in/services/llm-development";
   const serviceSchema = generateServiceSchema({
     name: "LLM Application Development Services",
     description: "Custom Large Language Model application development, API integration, prompt architecture, and model fine-tuning.",

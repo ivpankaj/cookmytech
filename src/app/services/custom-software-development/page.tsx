@@ -21,7 +21,7 @@ export const metadata = constructMetadata({
 });
 
 export default function CustomSoftwareDevelopmentPage() {
-  const serviceUrl = "https://www.cookmytech.site/services/custom-software-development";
+  const serviceUrl = "https://www.cookmytech.in/services/custom-software-development";
   const serviceSchema = generateServiceSchema({
     name: "Custom Software Development Services",
     description: "Bespoke software development for complex business requirements, legacy modernization, and tailored cloud systems.",

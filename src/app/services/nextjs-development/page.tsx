@@ -21,7 +21,7 @@ export const metadata = constructMetadata({
 });
 
 export default function NextjsDevelopmentPage() {
-  const serviceUrl = "https://www.cookmytech.site/services/nextjs-development";
+  const serviceUrl = "https://www.cookmytech.in/services/nextjs-development";
   const serviceSchema = generateServiceSchema({
     name: "Next.js Development Services",
     description: "Production Next.js application development, App Router architecture, Server Components, Turbopack, and Core Web Vitals optimization.",

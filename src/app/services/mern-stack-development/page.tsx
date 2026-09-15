@@ -21,7 +21,7 @@ export const metadata = constructMetadata({
 });
 
 export default function MernStackDevelopmentPage() {
-  const serviceUrl = "https://www.cookmytech.site/services/mern-stack-development";
+  const serviceUrl = "https://www.cookmytech.in/services/mern-stack-development";
   const serviceSchema = generateServiceSchema({
     name: "MERN Stack Development Services",
     description: "Production web applications engineered with MongoDB, Express.js, React, and Node.js.",

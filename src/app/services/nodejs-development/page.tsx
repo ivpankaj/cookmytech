@@ -20,7 +20,7 @@ export const metadata = constructMetadata({
 });
 
 export default function NodejsDevelopmentPage() {
-  const serviceUrl = "https://www.cookmytech.site/services/nodejs-development";
+  const serviceUrl = "https://www.cookmytech.in/services/nodejs-development";
   const serviceSchema = generateServiceSchema({
     name: "Node.js Backend Development Services",
     description: "High-concurrency Node.js server architecture, microservices, Express/NestJS APIs, and database engineering.",

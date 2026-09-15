@@ -21,7 +21,7 @@ export const metadata = constructMetadata({
 });
 
 export default function AiSaasDevelopmentPage() {
-  const serviceUrl = "https://www.cookmytech.site/services/ai-saas-development";
+  const serviceUrl = "https://www.cookmytech.in/services/ai-saas-development";
   const serviceSchema = generateServiceSchema({
     name: "AI SaaS Development Services",
     description: "Multi-tenant software-as-a-service architecture engineered for AI products, subscription billing, and usage metering.",

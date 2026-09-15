@@ -24,7 +24,7 @@ export function generateOrganizationSchema() {
     },
     contactPoint: {
       "@type": "ContactPoint",
-      email: "hello@cookmytech.site",
+      email: "hello@cookmytech.in",
       telephone: "+918929517046",
       contactType: "customer service",
       availableLanguage: ["English"],

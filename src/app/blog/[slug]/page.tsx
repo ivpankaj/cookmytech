@@ -42,7 +42,7 @@ export default async function BlogPostDetailPage({ params }: Props) {
   }
 
   const customArticle = customBlogArticles[post.slug];
-  const postUrl = `https://www.cookmytech.site/blog/${post.slug}`;
+  const postUrl = `https://www.cookmytech.in/blog/${post.slug}`;
   const articleSchema = generateArticleSchema({
     title: post.title,
     description: post.description,

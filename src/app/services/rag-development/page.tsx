@@ -21,7 +21,7 @@ export const metadata = constructMetadata({
 });
 
 export default function RagDevelopmentPage() {
-  const serviceUrl = "https://www.cookmytech.site/services/rag-development";
+  const serviceUrl = "https://www.cookmytech.in/services/rag-development";
   const serviceSchema = generateServiceSchema({
     name: "RAG Development Services",
     description: "Enterprise Retrieval-Augmented Generation, vector embedding pipelines, hybrid search, and semantic knowledge retrieval systems.",

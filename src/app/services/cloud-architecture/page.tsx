@@ -21,7 +21,7 @@ export const metadata = constructMetadata({
 });
 
 export default function CloudArchitecturePage() {
-  const serviceUrl = "https://www.cookmytech.site/services/cloud-architecture";
+  const serviceUrl = "https://www.cookmytech.in/services/cloud-architecture";
   const serviceSchema = generateServiceSchema({
     name: "Cloud Architecture Services",
     description: "Cloud infrastructure design, Docker containerization, Kubernetes cluster orchestration, and automated DevOps deployment pipelines.",

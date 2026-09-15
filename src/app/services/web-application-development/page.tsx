@@ -20,7 +20,7 @@ export const metadata = constructMetadata({
 });
 
 export default function WebApplicationDevelopmentPage() {
-  const serviceUrl = "https://www.cookmytech.site/services/web-application-development";
+  const serviceUrl = "https://www.cookmytech.in/services/web-application-development";
   const serviceSchema = generateServiceSchema({
     name: "Web Application Development Services",
     description: "Production web application engineering, modern UI/UX execution, database optimization, and high availability.",

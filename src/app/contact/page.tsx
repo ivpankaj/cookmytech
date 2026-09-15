@@ -41,8 +41,8 @@ export default function ContactPage() {
           <div className="lg:col-span-4 space-y-6 text-xs text-gray-700">
             <div className="p-6 border border-black bg-gray-50">
               <h2 className="font-display text-sm font-bold uppercase mb-2">Direct Email</h2>
-              <a href="mailto:hello@cookmytech.site" className="font-bold underline text-black">
-                hello@cookmytech.site
+              <a href="mailto:hello@cookmytech.in" className="font-bold underline text-black">
+                hello@cookmytech.in
               </a>
             </div>
 
