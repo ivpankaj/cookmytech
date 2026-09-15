@@ -3,6 +3,9 @@ import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import Link from "next/link";
 import { blogPostsData } from "@/app/blog/page";
+import { caseStudiesData } from "@/app/case-studies/page";
+import { serviceCategories } from "@/app/services/page";
+import { industriesData } from "@/app/industries/page";
 
 export const metadata: Metadata = {
   title: "HTML Sitemap",
@@ -21,18 +24,48 @@ export default function HtmlSitemapPage() {
       desc: "Main landing page showcasing studio services, capabilities, and contact form.",
     },
     {
-      name: "HTML Sitemap",
-      href: "/html-sitemap",
-      desc: "User-friendly structured page and section index (this page).",
+      name: "About CookMyTech",
+      href: "/about",
+      desc: "Our engineering philosophy, senior studio structure, and team background.",
     },
     {
-      name: "XML Sitemap",
+      name: "Contact & Inquiries",
+      href: "/contact",
+      desc: "Direct project inquiry form, response SLAs, and confidential engineering consultation.",
+    },
+    {
+      name: "Services Hub Directory",
+      href: "/services",
+      desc: "Full overview of our 19 dedicated AI, full-stack, and SaaS engineering capabilities.",
+    },
+    {
+      name: "Industry Solutions",
+      href: "/industries",
+      desc: "Targeted software and AI architectures for startups, SaaS brands, and e-commerce.",
+    },
+    {
+      name: "Case Studies & Builds",
+      href: "/case-studies",
+      desc: "In-depth technical architecture breakdowns of high-scale production systems we delivered.",
+    },
+    {
+      name: "Technical Guides (Blog)",
+      href: "/blog",
+      desc: "Engineering guides on Next.js 16, AI agents, RAG pipelines, and development costs.",
+    },
+    {
+      name: "HTML Sitemap Index",
+      href: "/html-sitemap",
+      desc: "Complete visual sitemap directory of all pages and services (this page).",
+    },
+    {
+      name: "XML Sitemap Feed",
       href: "/sitemap.xml",
       desc: "Machine-readable XML sitemap file for search engine indexing.",
       external: true,
     },
     {
-      name: "Robots.txt",
+      name: "Robots.txt Directives",
       href: "/robots.txt",
       desc: "Search engine crawler directives and index control instructions.",
       external: true,
@@ -207,6 +240,109 @@ export default function HtmlSitemapPage() {
                     </span>
                   </div>
                   <p className="text-xs text-gray-600 mt-1">{section.desc}</p>
+                </li>
+              ))}
+            </ul>
+          </div>
+        </div>
+
+        {/* SERVICES DIRECTORY (19 DEDICATED SERVICE PAGES) */}
+        <div className="border border-black p-6 mb-12 space-y-8">
+          <div className="flex flex-wrap items-center justify-between border-b border-black pb-3 gap-2">
+            <h2 className="font-display text-xl font-bold uppercase">
+              // Dedicated Service Landing Pages (19)
+            </h2>
+            <Link
+              href="/services"
+              className="text-xs uppercase tracking-widest bg-black text-white px-3 py-1 font-bold hover:bg-gray-800 transition-colors"
+            >
+              All Services Overview →
+            </Link>
+          </div>
+          <div className="space-y-8">
+            {serviceCategories.map((cat) => (
+              <div key={cat.category} className="space-y-3">
+                <h3 className="text-xs font-bold uppercase tracking-widest text-gray-500 border-b border-gray-200 pb-1">
+                  {cat.category} ({cat.services.length})
+                </h3>
+                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-3">
+                  {cat.services.map((srv) => (
+                    <div key={srv.href} className="p-3 border border-gray-200 bg-gray-50 flex flex-col justify-between hover:border-black transition-colors">
+                      <div>
+                        <Link href={srv.href} className="font-bold text-xs hover:underline block mb-1">
+                          {srv.title} →
+                        </Link>
+                        <p className="text-[11px] text-gray-600 line-clamp-2">{srv.desc}</p>
+                      </div>
+                      <span className="text-[10px] text-gray-400 font-mono mt-2">{srv.href}</span>
+                    </div>
+                  ))}
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+
+        {/* TWO COLUMN GRID: INDUSTRIES & CASE STUDIES */}
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-10 mb-12">
+          {/* INDUSTRIES */}
+          <div className="border border-black p-6 space-y-6">
+            <div className="flex items-center justify-between border-b border-black pb-3">
+              <h2 className="font-display text-xl font-bold uppercase">
+                // Industry Solutions ({industriesData.length})
+              </h2>
+              <Link
+                href="/industries"
+                className="text-xs uppercase tracking-widest bg-black text-white px-3 py-1 font-bold hover:bg-gray-800 transition-colors"
+              >
+                Industries Hub →
+              </Link>
+            </div>
+            <ul className="space-y-4">
+              {industriesData.map((ind) => (
+                <li key={ind.href} className="p-3 border border-gray-200 bg-gray-50 hover:border-black transition-colors">
+                  <div className="flex items-center justify-between gap-2">
+                    <Link href={ind.href} className="font-bold text-xs hover:underline">
+                      {ind.title} →
+                    </Link>
+                    <span className="text-[10px] text-gray-400 font-mono bg-gray-100 px-1.5 py-0.5 border border-gray-200">
+                      {ind.href}
+                    </span>
+                  </div>
+                  <p className="text-[11px] text-gray-600 mt-1">{ind.desc}</p>
+                </li>
+              ))}
+            </ul>
+          </div>
+
+          {/* CASE STUDIES */}
+          <div className="border border-black p-6 space-y-6">
+            <div className="flex items-center justify-between border-b border-black pb-3">
+              <h2 className="font-display text-xl font-bold uppercase">
+                // Production Case Studies ({caseStudiesData.length})
+              </h2>
+              <Link
+                href="/case-studies"
+                className="text-xs uppercase tracking-widest bg-black text-white px-3 py-1 font-bold hover:bg-gray-800 transition-colors"
+              >
+                Case Studies Hub →
+              </Link>
+            </div>
+            <ul className="space-y-4">
+              {caseStudiesData.map((cs) => (
+                <li key={cs.slug} className="p-3 border border-gray-200 bg-gray-50 hover:border-black transition-colors">
+                  <div className="flex items-center justify-between gap-2 mb-1">
+                    <span className="text-[9px] bg-black text-white px-1.5 py-0.5 font-bold uppercase">
+                      {cs.category}
+                    </span>
+                    <span className="text-[10px] text-gray-400 font-mono bg-gray-100 px-1.5 py-0.5 border border-gray-200">
+                      /case-studies/{cs.slug}
+                    </span>
+                  </div>
+                  <Link href={`/case-studies/${cs.slug}`} className="font-bold text-xs hover:underline block mb-1">
+                    {cs.title} →
+                  </Link>
+                  <p className="text-[11px] text-gray-600 line-clamp-2">{cs.description}</p>
                 </li>
               ))}
             </ul>

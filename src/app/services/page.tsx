@@ -20,8 +20,7 @@ export const metadata = constructMetadata({
   ],
 });
 
-export default function ServicesHubPage() {
-  const serviceCategories = [
+export const serviceCategories = [
     {
       category: "AI & Machine Learning Engineering",
       services: [
@@ -134,6 +133,7 @@ export default function ServicesHubPage() {
     },
   ];
 
+export default function ServicesHubPage() {
   return (
     <div className="bg-white text-black min-h-screen font-mono flex flex-col">
       <Navbar />

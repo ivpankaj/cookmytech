@@ -18,29 +18,31 @@ export const metadata = constructMetadata({
   ],
 });
 
+export const industriesData = [
+  {
+    title: "Software Engineering for Startups",
+    href: "/industries/startups",
+    desc: "Fast MVP builds, senior technical leadership, and scalable software architecture for ambitious founders and venture-backed startups.",
+  },
+  {
+    title: "Software Engineering for SaaS Companies",
+    href: "/industries/saas",
+    desc: "Multi-tenant cloud architecture, Stripe subscription engines, AI integrations, and infrastructure scaling for SaaS founders.",
+  },
+  {
+    title: "High-Load E-Commerce Core Systems",
+    href: "/industries/ecommerce",
+    desc: "Custom checkout systems, inventory sync engines, high-concurrency microservices, and headless e-commerce architectures.",
+  },
+  {
+    title: "Enterprise Business Automation",
+    href: "/industries/business-automation",
+    desc: "AI agent workflows, document processing pipelines, automated data extraction, and internal business tools.",
+  },
+];
+
 export default function IndustriesHubPage() {
-  const industries = [
-    {
-      title: "Software Engineering for Startups",
-      href: "/industries/startups",
-      desc: "Fast MVP builds, senior technical leadership, and scalable software architecture for ambitious founders and venture-backed startups.",
-    },
-    {
-      title: "Software Engineering for SaaS Companies",
-      href: "/industries/saas",
-      desc: "Multi-tenant cloud architecture, Stripe subscription engines, AI integrations, and infrastructure scaling for SaaS founders.",
-    },
-    {
-      title: "High-Load E-Commerce Core Systems",
-      href: "/industries/ecommerce",
-      desc: "Custom checkout systems, inventory sync engines, high-concurrency microservices, and headless e-commerce architectures.",
-    },
-    {
-      title: "Enterprise Business Automation",
-      href: "/industries/business-automation",
-      desc: "AI agent workflows, document processing pipelines, automated data extraction, and internal business tools.",
-    },
-  ];
+  const industries = industriesData;
 
   return (
     <div className="bg-white text-black min-h-screen font-mono flex flex-col">
