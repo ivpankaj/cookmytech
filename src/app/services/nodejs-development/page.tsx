@@ -1,4 +1,4 @@
-import React from "react";
+﻿import React from "react";
 import Link from "next/link";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
@@ -20,7 +20,7 @@ export const metadata = constructMetadata({
 });
 
 export default function NodejsDevelopmentPage() {
-  const serviceUrl = "https://www.cookmytech.in/services/nodejs-development";
+  const serviceUrl = "https://www.cookmytech.com/services/nodejs-development";
   const serviceSchema = generateServiceSchema({
     name: "Node.js Backend Development Services",
     description: "High-concurrency Node.js server architecture, microservices, Express/NestJS APIs, and database engineering.",

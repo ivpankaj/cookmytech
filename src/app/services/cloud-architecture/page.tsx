@@ -1,4 +1,4 @@
-import React from "react";
+﻿import React from "react";
 import Link from "next/link";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
@@ -21,7 +21,7 @@ export const metadata = constructMetadata({
 });
 
 export default function CloudArchitecturePage() {
-  const serviceUrl = "https://www.cookmytech.in/services/cloud-architecture";
+  const serviceUrl = "https://www.cookmytech.com/services/cloud-architecture";
   const serviceSchema = generateServiceSchema({
     name: "Cloud Architecture Services",
     description: "Cloud infrastructure design, Docker containerization, Kubernetes cluster orchestration, and automated DevOps deployment pipelines.",

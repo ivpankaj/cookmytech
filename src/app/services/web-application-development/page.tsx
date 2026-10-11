@@ -1,4 +1,4 @@
-import React from "react";
+﻿import React from "react";
 import Link from "next/link";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
@@ -20,7 +20,7 @@ export const metadata = constructMetadata({
 });
 
 export default function WebApplicationDevelopmentPage() {
-  const serviceUrl = "https://www.cookmytech.in/services/web-application-development";
+  const serviceUrl = "https://www.cookmytech.com/services/web-application-development";
   const serviceSchema = generateServiceSchema({
     name: "Web Application Development Services",
     description: "Production web application engineering, modern UI/UX execution, database optimization, and high availability.",

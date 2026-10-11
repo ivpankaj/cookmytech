@@ -18,7 +18,7 @@ const jetbrainsMono = JetBrains_Mono({
 const siteUrl =
   process.env.NEXT_PUBLIC_SITE_URL ||
   process.env.SITE_URL ||
-  "https://www.cookmytech.in";
+  "https://www.cookmytech.com";
 
 export const viewport: Viewport = {
   themeColor: "#000000",
@@ -125,7 +125,7 @@ export default function RootLayout({
         {/* Google tag (gtag.js) */}
         <script
           async
-          src="https://www.googletagmanager.com/gtag/js?id=G-FS6QPT5ZZE"
+          src="https://www.googletagmanager.com/gtag/js?id=G-MQXYFSR2PD"
         />
         <script
           id="google-tag"
@@ -134,7 +134,7 @@ export default function RootLayout({
               window.dataLayer = window.dataLayer || [];
               function gtag(){dataLayer.push(arguments);}
               gtag('js', new Date());
-              gtag('config', 'G-FS6QPT5ZZE');
+              gtag('config', 'G-MQXYFSR2PD');
             `,
           }}
         />

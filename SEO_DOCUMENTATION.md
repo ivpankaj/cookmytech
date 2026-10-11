@@ -1,4 +1,4 @@
-# CookMyTech — Technical SEO Documentation & Search Console Guide
+﻿# CookMyTech — Technical SEO Documentation & Search Console Guide
 
 This document contains complete operational details for CookMyTech's technical SEO architecture, indexing directives, structured data schemas, Search Console setup instructions, and future growth strategies.
 
@@ -6,10 +6,10 @@ This document contains complete operational details for CookMyTech's technical S
 
 ## 1. Key SEO Locations & Files
 
-- **Base Production Domain**: `https://www.cookmytech.in`
-- **XML Sitemap**: `https://www.cookmytech.in/sitemap.xml` (Generated dynamically via `src/app/sitemap.ts`)
-- **Robots.txt**: `https://www.cookmytech.in/robots.txt` (Generated dynamically via `src/app/robots.ts`)
-- **HTML Sitemap Index**: `https://www.cookmytech.in/html-sitemap`
+- **Base Production Domain**: `https://www.cookmytech.com`
+- **XML Sitemap**: `https://www.cookmytech.com/sitemap.xml` (Generated dynamically via `src/app/sitemap.ts`)
+- **Robots.txt**: `https://www.cookmytech.com/robots.txt` (Generated dynamically via `src/app/robots.ts`)
+- **HTML Sitemap Index**: `https://www.cookmytech.com/html-sitemap`
 - **Centralized Metadata Helper**: `src/lib/metadata.ts`
 - **Schema.org JSON-LD Helper**: `src/lib/schema.ts`
 - **Breadcrumb Component**: `src/components/Breadcrumbs.tsx`
@@ -51,7 +51,7 @@ This document contains complete operational details for CookMyTech's technical S
 ### Step 1: Add Domain Property to Google Search Console
 1. Log into [Google Search Console](https://search.google.com/search-console).
 2. Click **Add Property**.
-3. Choose **Domain** property type and enter `cookmytech.in` (or URL prefix `https://www.cookmytech.in`).
+3. Choose **Domain** property type and enter `cookmytech.com` (or URL prefix `https://www.cookmytech.com`).
 4. Copy the Google verification TXT record (or HTML meta tag).
 5. If using HTML tag verification, add the verification string to your `.env.local` file:
    ```env
@@ -67,15 +67,15 @@ This document contains complete operational details for CookMyTech's technical S
 ### Step 3: Request Indexing for Key Target Landing Pages
 1. Use the **URL Inspection** tool at the top of Search Console.
 2. Enter the following key commercial URLs one by one:
-   - `https://www.cookmytech.in/`
-   - `https://www.cookmytech.in/services`
-   - `https://www.cookmytech.in/services/ai-development`
-   - `https://www.cookmytech.in/services/ai-agent-development`
-   - `https://www.cookmytech.in/services/rag-development`
-   - `https://www.cookmytech.in/services/saas-development`
-   - `https://www.cookmytech.in/services/full-stack-development`
-   - `https://www.cookmytech.in/services/mern-stack-development`
-   - `https://www.cookmytech.in/services/nextjs-development`
+   - `https://www.cookmytech.com/`
+   - `https://www.cookmytech.com/services`
+   - `https://www.cookmytech.com/services/ai-development`
+   - `https://www.cookmytech.com/services/ai-agent-development`
+   - `https://www.cookmytech.com/services/rag-development`
+   - `https://www.cookmytech.com/services/saas-development`
+   - `https://www.cookmytech.com/services/full-stack-development`
+   - `https://www.cookmytech.com/services/mern-stack-development`
+   - `https://www.cookmytech.com/services/nextjs-development`
 3. Click **Request Indexing** for each priority URL.
 
 ### Step 4: Monitor Search Console Reports (Weekly / Monthly)

@@ -1,4 +1,4 @@
-import React from "react";
+﻿import React from "react";
 import Link from "next/link";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
@@ -21,7 +21,7 @@ export const metadata = constructMetadata({
 });
 
 export default function FullStackDevelopmentPage() {
-  const serviceUrl = "https://www.cookmytech.in/services/full-stack-development";
+  const serviceUrl = "https://www.cookmytech.com/services/full-stack-development";
   const serviceSchema = generateServiceSchema({
     name: "Full-Stack Development Services",
     description: "End-to-end full-stack web application engineering, database design, modern frontends, high-performance backends, and cloud deployment.",

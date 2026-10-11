@@ -1,4 +1,4 @@
-import React from "react";
+﻿import React from "react";
 import Link from "next/link";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
@@ -22,7 +22,7 @@ export const metadata = constructMetadata({
 });
 
 export default function AiDevelopmentPage() {
-  const serviceUrl = "https://www.cookmytech.in/services/ai-development";
+  const serviceUrl = "https://www.cookmytech.com/services/ai-development";
   const serviceSchema = generateServiceSchema({
     name: "AI Development Services",
     description:

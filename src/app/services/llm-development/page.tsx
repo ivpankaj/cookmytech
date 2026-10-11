@@ -1,4 +1,4 @@
-import React from "react";
+﻿import React from "react";
 import Link from "next/link";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
@@ -21,7 +21,7 @@ export const metadata = constructMetadata({
 });
 
 export default function LlmDevelopmentPage() {
-  const serviceUrl = "https://www.cookmytech.in/services/llm-development";
+  const serviceUrl = "https://www.cookmytech.com/services/llm-development";
   const serviceSchema = generateServiceSchema({
     name: "LLM Application Development Services",
     description: "Custom Large Language Model application development, API integration, prompt architecture, and model fine-tuning.",

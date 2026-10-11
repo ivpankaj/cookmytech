@@ -1,4 +1,4 @@
-import React from "react";
+﻿import React from "react";
 import Link from "next/link";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
@@ -20,7 +20,7 @@ export const metadata = constructMetadata({
 });
 
 export default function ReactDevelopmentPage() {
-  const serviceUrl = "https://www.cookmytech.in/services/react-development";
+  const serviceUrl = "https://www.cookmytech.com/services/react-development";
   const serviceSchema = generateServiceSchema({
     name: "React Development Services",
     description: "Custom React frontend development, complex interactive web applications, state management, and UI component systems.",
