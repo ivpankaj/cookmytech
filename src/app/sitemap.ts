@@ -4,6 +4,7 @@ import { blogPostsData } from "@/app/blog/page";
 import { caseStudiesData } from "@/app/case-studies/page";
 import { serviceCategories } from "@/app/services/page";
 import { industriesData } from "@/app/industries/page";
+import { locationsData } from "@/app/locations/page";
 
 export default function sitemap(): MetadataRoute.Sitemap {
   const now = new Date();
@@ -18,6 +19,12 @@ export default function sitemap(): MetadataRoute.Sitemap {
     },
     {
       url: `${SITE_URL}/services`,
+      lastModified: now,
+      changeFrequency: "weekly",
+      priority: 0.9,
+    },
+    {
+      url: `${SITE_URL}/locations`,
       lastModified: now,
       changeFrequency: "weekly",
       priority: 0.9,
@@ -53,6 +60,18 @@ export default function sitemap(): MetadataRoute.Sitemap {
       priority: 0.8,
     },
     {
+      url: `${SITE_URL}/privacy-policy`,
+      lastModified: now,
+      changeFrequency: "yearly",
+      priority: 0.5,
+    },
+    {
+      url: `${SITE_URL}/terms`,
+      lastModified: now,
+      changeFrequency: "yearly",
+      priority: 0.5,
+    },
+    {
       url: `${SITE_URL}/html-sitemap`,
       lastModified: now,
       changeFrequency: "weekly",
@@ -60,7 +79,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     },
   ];
 
-  // 19 Dedicated Service Landing Pages
+  // 22 Dedicated Service Landing Pages
   const servicePages: MetadataRoute.Sitemap = serviceCategories.flatMap((category) =>
     category.services.map((service) => ({
       url: `${SITE_URL}${service.href}`,
@@ -69,6 +88,14 @@ export default function sitemap(): MetadataRoute.Sitemap {
       priority: 0.9,
     }))
   );
+
+  // 4 Regional & Local Market Landing Pages
+  const locationPages: MetadataRoute.Sitemap = locationsData.map((loc) => ({
+    url: `${SITE_URL}${loc.href}`,
+    lastModified: now,
+    changeFrequency: "weekly" as const,
+    priority: 0.9,
+  }));
 
   // 4 Industry Solution Pages
   const industryPages: MetadataRoute.Sitemap = industriesData.map((industry) => ({
@@ -97,6 +124,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
   return [
     ...mainPages,
     ...servicePages,
+    ...locationPages,
     ...industryPages,
     ...caseStudyPages,
     ...blogPages,

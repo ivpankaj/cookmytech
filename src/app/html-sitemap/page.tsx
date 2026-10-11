@@ -6,11 +6,12 @@ import { blogPostsData } from "@/app/blog/page";
 import { caseStudiesData } from "@/app/case-studies/page";
 import { serviceCategories } from "@/app/services/page";
 import { industriesData } from "@/app/industries/page";
+import { locationsData } from "@/app/locations/page";
 
 export const metadata: Metadata = {
   title: "HTML Sitemap",
   description:
-    "Complete structured navigation index and HTML sitemap for CookMyTech services, tech stack, capabilities, and resources.",
+    "Complete structured navigation index and HTML sitemap for CookMyTech services, locations, tech stack, capabilities, and resources.",
   alternates: {
     canonical: "https://www.cookmytech.com/html-sitemap",
   },
@@ -36,7 +37,12 @@ export default function HtmlSitemapPage() {
     {
       name: "Services Hub Directory",
       href: "/services",
-      desc: "Full overview of our 19 dedicated AI, full-stack, and SaaS engineering capabilities.",
+      desc: "Full overview of our 22 dedicated AI, full-stack, and SaaS engineering capabilities.",
+    },
+    {
+      name: "Locations & Regional Hubs",
+      href: "/locations",
+      desc: "Engineering coverage across Noida, Greater Noida, Delhi NCR, and India.",
     },
     {
       name: "Industry Solutions",
@@ -54,9 +60,19 @@ export default function HtmlSitemapPage() {
       desc: "Engineering guides on Next.js 16, AI agents, RAG pipelines, and development costs.",
     },
     {
+      name: "Privacy Policy",
+      href: "/privacy-policy",
+      desc: "Data protection standards, security practices, and client confidentiality terms.",
+    },
+    {
+      name: "Terms of Service",
+      href: "/terms",
+      desc: "Intellectual property ownership guarantees, code delivery warranties, and consulting terms.",
+    },
+    {
       name: "HTML Sitemap Index",
       href: "/html-sitemap",
-      desc: "Complete visual sitemap directory of all pages and services (this page).",
+      desc: "Complete visual sitemap directory of all pages, services, and locations (this page).",
     },
     {
       name: "XML Sitemap Feed",
@@ -246,11 +262,11 @@ export default function HtmlSitemapPage() {
           </div>
         </div>
 
-        {/* SERVICES DIRECTORY (19 DEDICATED SERVICE PAGES) */}
+        {/* SERVICES DIRECTORY (22 DEDICATED SERVICE PAGES) */}
         <div className="border border-black p-6 mb-12 space-y-8">
           <div className="flex flex-wrap items-center justify-between border-b border-black pb-3 gap-2">
             <h2 className="font-display text-xl font-bold uppercase">
-              // Dedicated Service Landing Pages (19)
+              // Dedicated Service Landing Pages (22)
             </h2>
             <Link
               href="/services"
@@ -278,6 +294,37 @@ export default function HtmlSitemapPage() {
                     </div>
                   ))}
                 </div>
+              </div>
+            ))}
+          </div>
+        </div>
+
+        {/* REGIONAL LOCATIONS & HUBS */}
+        <div className="border border-black p-6 mb-12 space-y-6">
+          <div className="flex flex-wrap items-center justify-between border-b border-black pb-3 gap-2">
+            <h2 className="font-display text-xl font-bold uppercase">
+              // Regional Engineering Hubs ({locationsData.length})
+            </h2>
+            <Link
+              href="/locations"
+              className="text-xs uppercase tracking-widest bg-black text-white px-3 py-1 font-bold hover:bg-gray-800 transition-colors"
+            >
+              Locations Overview →
+            </Link>
+          </div>
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
+            {locationsData.map((loc) => (
+              <div key={loc.slug} className="p-4 border border-gray-200 bg-gray-50 flex flex-col justify-between hover:border-black transition-colors">
+                <div>
+                  <span className="text-[9px] uppercase tracking-widest bg-black text-white px-2 py-0.5 font-bold inline-block mb-2">
+                    {loc.name}
+                  </span>
+                  <Link href={loc.href} className="font-bold text-xs hover:underline block mb-1">
+                    {loc.title} →
+                  </Link>
+                  <p className="text-[11px] text-gray-600 line-clamp-3">{loc.desc}</p>
+                </div>
+                <span className="text-[10px] text-gray-400 font-mono mt-3">{loc.href}</span>
               </div>
             ))}
           </div>

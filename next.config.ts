@@ -7,6 +7,20 @@ const nextConfig: NextConfig = {
     formats: ["image/avif", "image/webp"],
     minimumCacheTTL: 60,
   },
+  async redirects() {
+    return [
+      {
+        source: "/portfolio",
+        destination: "/case-studies",
+        permanent: true,
+      },
+      {
+        source: "/portfolio/:slug*",
+        destination: "/case-studies/:slug*",
+        permanent: true,
+      },
+    ];
+  },
   async headers() {
     return [
       {

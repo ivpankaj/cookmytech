@@ -60,6 +60,21 @@ export const serviceCategories = [
           desc: "Retrieval-Augmented Generation, vector embeddings, Pinecone indexing, and internal document search engines.",
         },
         {
+          title: "AI Application Development",
+          href: "/services/ai-application-development",
+          desc: "Custom AI web applications, predictive intelligence platforms, and high-concurrency machine learning systems.",
+        },
+        {
+          title: "AI Chatbot Development",
+          href: "/services/ai-chatbot-development",
+          desc: "Enterprise conversational AI assistants, multi-channel customer support bots, and internal RAG knowledge agents.",
+        },
+        {
+          title: "LLM Integration",
+          href: "/services/llm-integration",
+          desc: "Connect OpenAI, Claude, Llama 3, and private LLMs into existing software, databases, and APIs.",
+        },
+        {
           title: "AI Automation",
           href: "/services/ai-automation",
           desc: "End-to-end business process automation powered by custom AI pipelines and background workers.",

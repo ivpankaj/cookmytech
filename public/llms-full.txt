@@ -1,0 +1,65 @@
+# CookMyTech — Complete Engineering & Technical Capabilities Documentation
+
+## Organization Overview
+- Legal / Brand Name: CookMyTech
+- Domain: https://www.cookmytech.com
+- Primary Business: AI Solutions, Full-Stack Web Development, SaaS Platform Engineering
+- Headquarters / Operating Hub: Sector 62, Electronic City, Noida, Uttar Pradesh 201301, India
+- Phone: +91 89295 17046
+- Email: hello@cookmytech.com
+- Founding Year: 2024
+- Engagement Model: Fixed-Scope Sprints & Dedicated Senior Engineering Retainers
+
+---
+
+## Technical Stack & Competencies
+
+### Frontend Engineering
+- Frameworks: Next.js 16 (App Router, Turbopack, React Server Components), React 19, TypeScript
+- Styling: Tailwind CSS v4, Vanilla CSS Design Systems, Accessible Semantic HTML5
+- Performance: Core Web Vitals Optimization (Sub-100ms TTFB, 0 CLS, <1.2s LCP)
+
+### Backend & API Architecture
+- Runtimes: Node.js, Python (FastAPI, Celery), Go
+- Databases: PostgreSQL, MongoDB, Redis (In-Memory Caching & Semantic Cache), pgvector
+- APIs: RESTful Services, GraphQL, Webhooks, SSE (Server-Sent Events), WebSocket Streaming
+
+### Artificial Intelligence & Machine Learning
+- Foundation LLMs: OpenAI GPT-4o, Anthropic Claude 3.5 Sonnet, Google Gemini 1.5 Pro, Meta Llama 3
+- Vector Databases: Pinecone, Qdrant, Milvus, pgvector
+- Frameworks: LangChain, LangGraph (Multi-Agent State Graphs), LlamaIndex
+- Techniques: Retrieval-Augmented Generation (RAG), Semantic Caching, Prompt Injection Defense, Structured JSON Output Enforcement
+
+### Cloud, DevOps & Security
+- Cloud Providers: Amazon Web Services (AWS), Google Cloud Platform (GCP), Vercel
+- Containerization: Docker, Docker Compose, Kubernetes
+- CI/CD: Automated GitHub Actions, Pre-commit Linting, Type-Checking
+- Compliance: India DPDP 2023, GDPR, SOC2-aligned architectures, Zero-Data-Retention LLM configs
+
+---
+
+## Complete Route Directory
+- Homepage: https://www.cookmytech.com/
+- About: https://www.cookmytech.com/about
+- Services Hub: https://www.cookmytech.com/services
+- AI Software Development: https://www.cookmytech.com/services/ai-software-development
+- AI Application Development: https://www.cookmytech.com/services/ai-application-development
+- AI Chatbot Development: https://www.cookmytech.com/services/ai-chatbot-development
+- AI Agent Development: https://www.cookmytech.com/services/ai-agent-development
+- RAG Systems Development: https://www.cookmytech.com/services/rag-development
+- LLM Integration: https://www.cookmytech.com/services/llm-integration
+- Custom Software Development: https://www.cookmytech.com/services/custom-software-development
+- Next.js Development: https://www.cookmytech.com/services/nextjs-development
+- SaaS Development: https://www.cookmytech.com/services/saas-development
+- Locations Hub: https://www.cookmytech.com/locations
+- Noida Hub: https://www.cookmytech.com/locations/noida
+- Greater Noida Hub: https://www.cookmytech.com/locations/greater-noida
+- Delhi NCR Hub: https://www.cookmytech.com/locations/delhi-ncr
+- India Hub: https://www.cookmytech.com/locations/india
+- Case Studies: https://www.cookmytech.com/case-studies
+- Technical Guides (Blog): https://www.cookmytech.com/blog
+- Contact & Inquiries: https://www.cookmytech.com/contact
+- Privacy Policy: https://www.cookmytech.com/privacy-policy
+- Terms of Service: https://www.cookmytech.com/terms
+- XML Sitemap: https://www.cookmytech.com/sitemap.xml
+- Robots Directive: https://www.cookmytech.com/robots.txt

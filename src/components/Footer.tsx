@@ -20,9 +20,10 @@ export default function Footer() {
 
   const companyLinks = [
     { label: "Services Hub", href: "/services" },
+    { label: "Regional Hubs", href: "/locations" },
     { label: "Industries", href: "/industries" },
     { label: "Case Studies", href: "/case-studies" },
-    { label: "Blog", href: "/blog" },
+    { label: "Blog & Guides", href: "/blog" },
     { label: "About CookMyTech", href: "/about" },
     { label: "Contact Us", href: "/contact" },
   ];
@@ -140,11 +141,44 @@ export default function Footer() {
         </div>
       </div>
 
+      {/* REGIONAL HUBS STRIP */}
+      <div className="max-w-screen-xl mx-auto px-6 py-4 border-b border-gray-800 text-xs text-gray-400 flex flex-wrap items-center justify-between gap-4">
+        <div className="flex flex-wrap items-center gap-2">
+          <span className="text-white font-bold uppercase tracking-wider text-[11px]">// Regional Hubs:</span>
+          <Link href="/locations/noida" className="hover:text-white underline underline-offset-2">
+            Noida
+          </Link>
+          <span className="text-gray-700">•</span>
+          <Link href="/locations/greater-noida" className="hover:text-white underline underline-offset-2">
+            Greater Noida
+          </Link>
+          <span className="text-gray-700">•</span>
+          <Link href="/locations/delhi-ncr" className="hover:text-white underline underline-offset-2">
+            Delhi NCR
+          </Link>
+          <span className="text-gray-700">•</span>
+          <Link href="/locations/india" className="hover:text-white underline underline-offset-2">
+            India (Pan-India)
+          </Link>
+        </div>
+        <Link href="/locations" className="text-[11px] uppercase tracking-widest text-gray-400 hover:text-white">
+          All Locations Hub →
+        </Link>
+      </div>
+
       {/* BOTTOM BAR */}
       <div className="max-w-screen-xl mx-auto px-6 py-6 flex flex-col md:flex-row justify-between items-center gap-4 text-xs text-gray-500">
         <div className="flex flex-wrap items-center gap-3">
           <span>© {currentYear} CookMyTech. All rights reserved.</span>
           <span className="text-gray-800 font-bold">|</span>
+          <Link href="/privacy-policy" className="hover:text-white underline underline-offset-2">
+            Privacy Policy
+          </Link>
+          <span className="text-gray-800 font-bold">•</span>
+          <Link href="/terms" className="hover:text-white underline underline-offset-2">
+            Terms of Service
+          </Link>
+          <span className="text-gray-800 font-bold">•</span>
           <Link href="/html-sitemap" className="hover:text-white underline underline-offset-2">
             HTML Sitemap
           </Link>

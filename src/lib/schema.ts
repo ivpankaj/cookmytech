@@ -11,23 +11,59 @@ export function generateOrganizationSchema() {
     "@type": "ProfessionalService",
     "@id": `${SITE_URL}/#organization`,
     name: "CookMyTech",
+    legalName: "CookMyTech Software Studio",
     url: SITE_URL,
     logo: `${SITE_URL}/logo.png`,
     image: `${SITE_URL}/logo.png`,
     description:
-      "CookMyTech is a full-stack & AI software engineering studio building production web applications, AI agents, RAG systems, LLM integrations, SaaS platforms, and cloud architecture.",
+      "CookMyTech is a premier full-stack & AI software engineering studio building production web applications, autonomous AI agents, enterprise RAG systems, LLM integrations, SaaS platforms, and cloud architecture.",
     foundingDate: "2024",
     priceRange: "$$$",
+    telephone: "+918929517046",
+    email: "hello@cookmytech.com",
     address: {
       "@type": "PostalAddress",
-      addressCountry: "Worldwide",
+      streetAddress: "Sector 62, Electronic City",
+      addressLocality: "Noida",
+      addressRegion: "Uttar Pradesh",
+      postalCode: "201301",
+      addressCountry: "IN",
     },
+    geo: {
+      "@type": "GeoCoordinates",
+      latitude: "28.5355",
+      longitude: "77.3910",
+    },
+    areaServed: [
+      { "@type": "City", name: "Noida" },
+      { "@type": "City", name: "Greater Noida" },
+      { "@type": "AdministrativeArea", name: "Delhi NCR" },
+      { "@type": "Country", name: "India" },
+      { "@type": "AdministrativeArea", name: "Worldwide" },
+    ],
+    currenciesAccepted: "INR, USD, EUR, GBP",
+    paymentAccepted: "Bank Transfer, Stripe, Wire Transfer",
+    openingHoursSpecification: [
+      {
+        "@type": "OpeningHoursSpecification",
+        dayOfWeek: [
+          "Monday",
+          "Tuesday",
+          "Wednesday",
+          "Thursday",
+          "Friday",
+          "Saturday",
+        ],
+        opens: "09:00",
+        closes: "20:00",
+      },
+    ],
     contactPoint: {
       "@type": "ContactPoint",
       email: "hello@cookmytech.com",
       telephone: "+918929517046",
       contactType: "customer service",
-      availableLanguage: ["English"],
+      availableLanguage: ["English", "Hindi"],
     },
     sameAs: [
       "https://github.com/cookmytech",
@@ -53,6 +89,52 @@ export function generateOrganizationSchema() {
       "API Development",
       "Cloud Architecture",
     ],
+  };
+}
+
+export function generateLocalBusinessSchema({
+  locationName,
+  description,
+  url,
+  locality = "Noida",
+  region = "Uttar Pradesh",
+  postalCode = "201301",
+  country = "IN",
+}: {
+  locationName: string;
+  description: string;
+  url: string;
+  locality?: string;
+  region?: string;
+  postalCode?: string;
+  country?: string;
+}) {
+  return {
+    "@context": "https://schema.org",
+    "@type": "ProfessionalService",
+    "@id": `${url}/#localbusiness`,
+    name: `CookMyTech - ${locationName}`,
+    url,
+    logo: `${SITE_URL}/logo.png`,
+    image: `${SITE_URL}/logo.png`,
+    description,
+    telephone: "+918929517046",
+    email: "hello@cookmytech.com",
+    priceRange: "$$$",
+    address: {
+      "@type": "PostalAddress",
+      addressLocality: locality,
+      addressRegion: region,
+      postalCode: postalCode,
+      addressCountry: country,
+    },
+    areaServed: {
+      "@type": "AdministrativeArea",
+      name: locationName,
+    },
+    parentOrganization: {
+      "@id": `${SITE_URL}/#organization`,
+    },
   };
 }
 
