@@ -17,24 +17,24 @@ export default function Hero() {
 
   return (
     <section className="pt-14 min-h-screen border-b border-black flex flex-col bg-white text-black font-mono">
-      <div className="flex-1 max-w-screen-xl mx-auto px-6 pt-16 pb-12 grid grid-cols-1 lg:grid-cols-12 gap-0">
+      <div className="flex-1 max-w-screen-xl mx-auto px-4 sm:px-6 pt-10 sm:pt-16 pb-10 sm:pb-12 grid grid-cols-1 lg:grid-cols-12 gap-0">
         <div className="lg:col-span-8 lg:border-r border-black lg:pr-12 flex flex-col justify-between">
           <div>
-            <div className="text-xs uppercase tracking-widest mb-8 fade-up fade-up-delay-1">
-              <span className="bg-black text-white px-2 py-0.5 mr-2 font-bold">
+            <div className="text-xs uppercase tracking-wider sm:tracking-widest mb-6 sm:mb-8 fade-up fade-up-delay-1 flex flex-wrap items-center gap-2">
+              <span className="bg-black text-white px-2 py-0.5 font-bold">
                 EST. 2026
               </span>
-              AI & Full-Stack Software Engineering Studio
+              <span>AI & Full-Stack Software Engineering Studio</span>
             </div>
             
             <h1
-              className="font-display leading-none mb-8 fade-up fade-up-delay-2"
+              className="font-display leading-tight sm:leading-none mb-6 sm:mb-8 fade-up fade-up-delay-2"
               style={{ fontWeight: 800 }}
             >
-              <span className="block text-[clamp(2rem,4.5vw,4.5rem)] tracking-tight mb-2">
+              <span className="block text-[clamp(1.75rem,5.5vw,4.5rem)] tracking-tight mb-2">
                 AI & FULL-STACK
               </span>
-              <span className="block text-[clamp(1.8rem,4.1vw,4.1rem)] tracking-tighter bg-black inline-block px-3.5 py-1 mb-2 max-w-full">
+              <span className="text-[clamp(1.5rem,5vw,4.1rem)] tracking-tight sm:tracking-tighter bg-black inline-block px-3 py-1 mb-2 max-w-full">
                 {[
                   { char: "S", color: "#FF453A" },
                   { char: "O", color: "#FF9F0A" },
@@ -50,7 +50,7 @@ export default function Hero() {
                   </span>
                 ))}
               </span>
-              <span className="block text-[clamp(2rem,4.5vw,4.5rem)] tracking-tight">
+              <span className="block text-[clamp(1.55rem,5.2vw,4.5rem)] tracking-tight break-words">
                 DEVELOPMENT STUDIO.
               </span>
             </h1>
@@ -60,25 +60,25 @@ export default function Hero() {
             </p>
           </div>
 
-          <div className="flex flex-col sm:flex-row gap-4 fade-up fade-up-delay-4 mb-8 lg:mb-0">
+          <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 fade-up fade-up-delay-4 mb-8 lg:mb-0">
             <Link
               href="/contact"
-              className="bg-black text-white text-xs uppercase tracking-widest px-8 py-4 border border-black hover:bg-white hover:text-black transition-colors duration-150 text-center font-bold"
+              className="bg-black text-white text-xs uppercase tracking-wider sm:tracking-widest px-6 sm:px-8 py-3.5 sm:py-4 border border-black hover:bg-white hover:text-black transition-colors duration-150 text-center font-bold"
             >
               Start Your Project →
             </Link>
             <Link
               href="/services"
-              className="bg-white text-black text-xs uppercase tracking-widest px-8 py-4 border border-black hover:bg-black hover:text-white transition-colors duration-150 text-center font-bold"
+              className="bg-white text-black text-xs uppercase tracking-wider sm:tracking-widest px-6 sm:px-8 py-3.5 sm:py-4 border border-black hover:bg-black hover:text-white transition-colors duration-150 text-center font-bold"
             >
               Explore 19 Services
             </Link>
           </div>
         </div>
 
-        <div className="lg:col-span-4 lg:pl-12 flex flex-col justify-end mt-12 lg:mt-0">
-          <div className="border border-black p-6 mb-6 bg-gray-50">
-            <h2 className="text-xs uppercase tracking-widest text-gray-500 mb-4 font-bold">
+        <div className="lg:col-span-4 lg:pl-12 flex flex-col justify-end mt-8 lg:mt-0">
+          <div className="border border-black p-4 sm:p-6 mb-6 bg-gray-50">
+            <h2 className="text-xs uppercase tracking-wider sm:tracking-widest text-gray-500 mb-4 font-bold">
               // Currently cooking
             </h2>
             <div className="space-y-4">
@@ -118,11 +118,11 @@ export default function Hero() {
             {stats.map((stat, i) => (
               <div
                 key={stat.label}
-                className={`p-5 border border-black bg-white ${
+                className={`p-3.5 sm:p-5 border border-black bg-white ${
                   i % 2 === 1 ? "ml-[-1px]" : ""
                 } ${i > 1 ? "mt-[-1px]" : ""}`}
               >
-                <div className="font-display text-2xl font-bold mb-1">
+                <div className="font-display text-xl sm:text-2xl font-bold mb-1">
                   {stat.val}
                 </div>
                 <div className="text-xs text-gray-600 leading-tight">

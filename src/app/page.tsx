@@ -45,23 +45,23 @@ export default function CookMyTechLanding() {
           <TechStack />
           <ProjectCarousel />
           <section
-            className="border-b border-black bg-black text-white py-20 font-mono text-center"
+            className="border-b border-black bg-black text-white py-14 sm:py-20 font-mono text-center"
             aria-label="Call to Action"
           >
-            <div className="max-w-screen-xl mx-auto px-6">
+            <div className="max-w-screen-xl mx-auto px-4 sm:px-6">
               <h2
-                className="font-display text-[clamp(2rem,8vw,6rem)] font-bold leading-none mb-8"
+                className="font-display text-[clamp(1.75rem,7vw,6rem)] font-bold leading-tight sm:leading-none mb-6 sm:mb-8 break-words"
                 style={{ fontWeight: 800 }}
               >
                 <span className="block">READY TO BUILD YOUR</span>
                 <span className="block text-gray-500">SOFTWARE PRODUCT?</span>
               </h2>
-              <p className="text-sm text-gray-400 mb-10 max-w-md mx-auto leading-relaxed">
+              <p className="text-sm text-gray-400 mb-8 sm:mb-10 max-w-md mx-auto leading-relaxed">
                 Send us your project specifications. Our senior engineering team will respond within 24 hours with an actionable technical plan and fixed estimate.
               </p>
               <a
                 href="#contact"
-                className="inline-block bg-white text-black text-xs uppercase tracking-widest px-12 py-4 border border-white hover:bg-transparent hover:text-white transition-colors duration-150 font-bold"
+                className="inline-block bg-white text-black text-xs uppercase tracking-wider sm:tracking-widest px-8 sm:px-12 py-3.5 sm:py-4 border border-white hover:bg-transparent hover:text-white transition-colors duration-150 font-bold max-w-full"
               >
                 Get in Touch →
               </a>

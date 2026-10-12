@@ -26,13 +26,13 @@ export default function Process() {
 
   return (
     <section id="process" className="border-b border-black bg-white font-mono">
-      <div className="max-w-screen-xl mx-auto px-6 pb-16">
-        <div className="py-16 border-b border-black">
-          <div className="text-xs uppercase tracking-widest text-gray-500 mb-4">
+      <div className="max-w-screen-xl mx-auto px-4 sm:px-6 pb-12 sm:pb-16">
+        <div className="py-10 sm:py-16 border-b border-black">
+          <div className="text-xs uppercase tracking-wider sm:tracking-widest text-gray-500 mb-2 sm:mb-4">
             Methodology & Execution
           </div>
           <h2
-            className="font-display text-[clamp(2rem,6vw,5rem)] font-bold leading-none"
+            className="font-display text-[clamp(1.75rem,6vw,5rem)] font-bold leading-none break-words"
             style={{ fontWeight: 800 }}
           >
             OUR PROCESS
@@ -43,7 +43,7 @@ export default function Process() {
           {steps.map((item, i) => (
             <div
               key={item.step}
-              className={`process-item p-8 border-b border-black ${
+              className={`process-item p-5 sm:p-8 border-b border-black ${
                 i < steps.length - 1 ? "lg:border-r" : ""
               } ${i > 0 ? "lg:ml-[-1px]" : ""}`}
             >

@@ -68,13 +68,13 @@ export default function ContactForm() {
 
   return (
     <section id="contact" className="border-b border-black bg-white font-mono">
-      <div className="max-w-screen-xl mx-auto px-6">
-        <div className="py-16 border-b border-black">
-          <div className="text-xs uppercase tracking-widest text-gray-500 mb-4">
+      <div className="max-w-screen-xl mx-auto px-4 sm:px-6">
+        <div className="py-10 sm:py-16 border-b border-black">
+          <div className="text-xs uppercase tracking-wider sm:tracking-widest text-gray-500 mb-2 sm:mb-4">
             Get In Touch
           </div>
           <h2
-            className="font-display text-[clamp(2rem,6vw,5rem)] font-bold leading-none"
+            className="font-display text-[clamp(1.75rem,6vw,5rem)] font-bold leading-none break-words"
             style={{ fontWeight: 800 }}
           >
             START A PROJECT
@@ -83,16 +83,16 @@ export default function ContactForm() {
 
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-0">
           {/* FORM */}
-          <div className="py-12 lg:pr-12 lg:border-r border-black">
+          <div className="py-8 sm:py-12 lg:pr-12 lg:border-r border-black">
             {submitted ? (
-              <div className="p-8 border border-black bg-gray-50 text-center space-y-4">
-                <h3 className="font-display text-2xl font-bold">MESSAGE RECEIVED</h3>
+              <div className="p-5 sm:p-8 border border-black bg-gray-50 text-center space-y-4">
+                <h3 className="font-display text-xl sm:text-2xl font-bold">MESSAGE RECEIVED</h3>
                 <p className="text-sm text-gray-600">
                   Thank you for reaching out! Our engineering team will review your project brief and respond within 24 hours.
                 </p>
                 <button
                   onClick={() => setSubmitted(false)}
-                  className="bg-black text-white text-xs uppercase tracking-widest px-6 py-3 border border-black hover:bg-white hover:text-black transition-colors font-bold"
+                  className="bg-black text-white text-xs uppercase tracking-wider sm:tracking-widest px-6 py-3 border border-black hover:bg-white hover:text-black transition-colors font-bold"
                 >
                   Send Another Message
                 </button>
@@ -195,9 +195,9 @@ export default function ContactForm() {
           </div>
 
           {/* CONTACT INFO */}
-          <div className="py-12 lg:pl-12 flex flex-col justify-between">
+          <div className="py-8 sm:py-12 lg:pl-12 flex flex-col justify-between">
             <div>
-              <p className="text-sm text-gray-600 leading-loose mb-10 max-w-sm">
+              <p className="text-sm text-gray-600 leading-relaxed sm:leading-loose mb-8 sm:mb-10 max-w-sm">
                 We typically respond within one business day. If you have an urgent launch deadline, let us know — we match your team's urgency.
               </p>
 
@@ -211,18 +211,18 @@ export default function ContactForm() {
                 ].map((item) => (
                   <div
                     key={item.label}
-                    className="flex justify-between items-center py-4 border-b border-black text-sm"
+                    className="flex flex-col sm:flex-row sm:justify-between sm:items-center py-3.5 sm:py-4 border-b border-black text-sm gap-1 sm:gap-4"
                   >
-                    <span className="text-gray-500 text-xs uppercase tracking-widest font-mono">
+                    <span className="text-gray-500 text-xs uppercase tracking-wider sm:tracking-widest font-mono">
                       {item.label}
                     </span>
-                    <span className="font-mono font-medium">{item.value}</span>
+                    <span className="font-mono font-medium break-all sm:break-normal">{item.value}</span>
                   </div>
                 ))}
               </div>
             </div>
 
-            <div className="mt-10 flex flex-wrap gap-0">
+            <div className="mt-8 sm:mt-10 flex flex-wrap gap-2 sm:gap-0">
               {socialLinks.map((s, i) => (
                 <a
                   key={s.label}
@@ -230,8 +230,8 @@ export default function ContactForm() {
                   target="_blank"
                   rel="noopener noreferrer"
                   aria-label={`Visit CookMyTech on ${s.label}`}
-                  className={`flex items-center gap-2 text-xs uppercase tracking-widest px-4 py-3 border border-black hover:bg-black hover:text-white transition-colors duration-150 group ${
-                    i > 0 ? "ml-[-1px]" : ""
+                  className={`flex items-center gap-2 text-xs uppercase tracking-wider sm:tracking-widest px-3.5 sm:px-4 py-2.5 sm:py-3 border border-black hover:bg-black hover:text-white transition-colors duration-150 group ${
+                    i > 0 ? "sm:ml-[-1px]" : ""
                   }`}
                 >
                   <TechIcon name={s.slug} size={16} />

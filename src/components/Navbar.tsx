@@ -28,7 +28,7 @@ export default function Navbar() {
       style={{ borderBottomWidth: scrollY > 10 ? "2px" : "1px" }}
     >
       <nav aria-label="Main Navigation">
-        <div className="max-w-screen-xl mx-auto px-6 h-14 flex items-center justify-between">
+        <div className="max-w-screen-xl mx-auto px-4 sm:px-6 h-14 flex items-center justify-between">
           <Link
             href="/"
             className="flex items-center gap-2 hover:opacity-90 transition-opacity"
@@ -37,11 +37,11 @@ export default function Navbar() {
             <img
               src="/logo.png"
               alt="CookMyTech Logo"
-              width={40}
-              height={40}
-              className="h-10 w-10 object-contain bg-black border border-black"
+              width={36}
+              height={36}
+              className="h-9 w-9 object-contain bg-black border border-black"
             />
-            <span className="font-display font-extrabold text-sm tracking-tight hidden sm:inline-block">
+            <span className="font-display font-extrabold text-xs sm:text-sm tracking-tight inline-block">
               COOKMYTECH
             </span>
           </Link>

@@ -30,13 +30,13 @@ export default function FaqSection() {
 
   return (
     <section id="faq" className="border-b border-black bg-white font-mono">
-      <div className="max-w-screen-xl mx-auto px-6 pb-16">
-        <div className="py-16 border-b border-black">
-          <div className="text-xs uppercase tracking-widest text-gray-500 mb-4">
+      <div className="max-w-screen-xl mx-auto px-4 sm:px-6 pb-12 sm:pb-16">
+        <div className="py-10 sm:py-16 border-b border-black">
+          <div className="text-xs uppercase tracking-wider sm:tracking-widest text-gray-500 mb-2 sm:mb-4">
             Frequently Asked Questions
           </div>
           <h2
-            className="font-display text-[clamp(2rem,6vw,5rem)] font-bold leading-none"
+            className="font-display text-[clamp(1.75rem,6vw,5rem)] font-bold leading-none break-words"
             style={{ fontWeight: 800 }}
           >
             QUESTIONS & ANSWERS
@@ -49,12 +49,12 @@ export default function FaqSection() {
             return (
               <div key={faq.q} className="group">
                 <button
-                  className="w-full py-6 flex justify-between items-center text-left hover:bg-gray-50 px-4 transition-colors font-mono"
+                  className="w-full py-5 sm:py-6 flex justify-between items-center text-left hover:bg-gray-50 px-2 sm:px-4 transition-colors font-mono"
                   onClick={() => setOpenIndex(isOpen ? null : i)}
                   aria-expanded={isOpen}
                   aria-controls={`faq-answer-${i}`}
                 >
-                  <span className="font-display font-bold text-lg pr-4 text-black">
+                  <span className="font-display font-bold text-base sm:text-lg pr-3 sm:pr-4 text-black break-words">
                     {faq.q}
                   </span>
                   <span className="text-xl font-bold flex-shrink-0">
@@ -65,7 +65,7 @@ export default function FaqSection() {
                 {isOpen && (
                   <div
                     id={`faq-answer-${i}`}
-                    className="px-4 pb-6 text-sm text-gray-600 leading-relaxed max-w-3xl"
+                    className="px-2 sm:px-4 pb-5 sm:pb-6 text-xs sm:text-sm text-gray-600 leading-relaxed max-w-3xl"
                   >
                     {faq.a}
                   </div>

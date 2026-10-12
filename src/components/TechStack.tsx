@@ -23,20 +23,20 @@ export default function TechStack() {
 
   return (
     <section id="stack" className="border-b border-black bg-white font-mono">
-      <div className="max-w-screen-xl mx-auto px-6 pb-16">
-        <div className="py-16 border-b border-black grid grid-cols-1 lg:grid-cols-2 gap-12 items-end">
+      <div className="max-w-screen-xl mx-auto px-4 sm:px-6 pb-12 sm:pb-16">
+        <div className="py-10 sm:py-16 border-b border-black grid grid-cols-1 lg:grid-cols-2 gap-8 sm:gap-12 items-end">
           <div>
-            <div className="text-xs uppercase tracking-widest text-gray-500 mb-4">
+            <div className="text-xs uppercase tracking-wider sm:tracking-widest text-gray-500 mb-2 sm:mb-4">
               Proven Engineering Stack
             </div>
             <h2
-              className="font-display text-[clamp(2rem,6vw,5rem)] font-bold leading-none"
+              className="font-display text-[clamp(1.75rem,6vw,5rem)] font-bold leading-none break-words"
               style={{ fontWeight: 800 }}
             >
               TECH STACK
             </h2>
           </div>
-          <p className="text-sm text-gray-600 leading-loose max-w-md">
+          <p className="text-sm text-gray-600 leading-relaxed sm:leading-loose max-w-md">
             We build with battle-tested software frameworks and cloud services designed for speed, security, search engine indexability, and long-term maintainability.
           </p>
         </div>
@@ -45,16 +45,16 @@ export default function TechStack() {
           {stack.map((item, i) => (
             <div
               key={item.name}
-              className={`p-5 border-b border-black group hover:bg-black hover:text-white transition-colors duration-150 ${
+              className={`p-3.5 sm:p-5 border-b border-black group hover:bg-black hover:text-white transition-colors duration-150 ${
                 i % 2 === 1 ? "border-l ml-[-1px]" : ""
               } ${i % 4 > 1 ? "sm:border-l sm:ml-[-1px]" : ""}`}
             >
-              <div className="flex flex-col items-center gap-3 text-center">
+              <div className="flex flex-col items-center gap-2.5 sm:gap-3 text-center">
                 <div className="flex items-center justify-center h-8 w-8 group-hover:brightness-200 transition-all duration-150">
                   <TechIcon name={item.name} size={32} />
                 </div>
                 <div>
-                  <h3 className="text-xs uppercase tracking-widest leading-tight font-bold">
+                  <h3 className="text-[11px] sm:text-xs uppercase tracking-wider leading-tight font-bold break-words">
                     {item.name}
                   </h3>
                   <span className="sr-only">{item.desc}</span>

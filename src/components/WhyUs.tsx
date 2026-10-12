@@ -26,18 +26,18 @@ export default function WhyUs() {
 
   return (
     <section id="why-us" className="border-b border-black bg-black text-white font-mono">
-      <div className="max-w-screen-xl mx-auto px-6 py-20">
+      <div className="max-w-screen-xl mx-auto px-4 sm:px-6 py-14 sm:py-20">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-0">
           <div className="lg:border-r border-gray-800 lg:pr-12">
-            <div className="text-xs uppercase tracking-widest text-gray-400 mb-6">
+            <div className="text-xs uppercase tracking-wider sm:tracking-widest text-gray-400 mb-4 sm:mb-6">
               Why Partner With Us
             </div>
             <h2
-              className="font-display text-4xl lg:text-5xl font-bold leading-tight mb-8"
+              className="font-display text-2xl sm:text-4xl lg:text-5xl font-bold leading-tight mb-6 sm:mb-8 break-words"
               style={{ fontWeight: 800 }}
             >
-              WE'RE NOT AN AGENCY.<br />
-              WE'RE AN ENGINEERING<br />
+              WE'RE NOT AN AGENCY.<br className="hidden sm:inline" />{" "}
+              WE'RE AN ENGINEERING<br className="hidden sm:inline" />{" "}
               <span className="text-gray-500">KITCHEN.</span>
             </h2>
             <p className="text-sm leading-loose text-gray-400 max-w-md">
@@ -45,11 +45,11 @@ export default function WhyUs() {
             </p>
           </div>
 
-          <div className="lg:pl-12 mt-12 lg:mt-0">
+          <div className="lg:pl-12 mt-10 lg:mt-0">
             {highlights.map((item, i) => (
               <div
                 key={item.title}
-                className={`flex gap-6 p-6 border-t border-gray-800 hover:border-gray-400 transition-colors duration-200 ${
+                className={`flex gap-4 sm:gap-6 p-4 sm:p-6 border-t border-gray-800 hover:border-gray-400 transition-colors duration-200 ${
                   i === 0 ? "border-t-0" : ""
                 }`}
               >

@@ -100,14 +100,14 @@ export default function ProjectCarousel() {
       onMouseEnter={() => setIsPaused(true)}
       onMouseLeave={() => setIsPaused(false)}
     >
-      <div className="max-w-screen-xl mx-auto px-6 py-16">
-        <div className="flex flex-col md:flex-row md:items-end justify-between mb-12 pb-6 border-b border-black gap-6">
+      <div className="max-w-screen-xl mx-auto px-4 sm:px-6 py-12 sm:py-16">
+        <div className="flex flex-col sm:flex-row sm:items-end justify-between mb-8 sm:mb-12 pb-6 border-b border-black gap-4 sm:gap-6">
           <div>
-            <div className="text-xs uppercase tracking-widest text-gray-500 mb-2">
+            <div className="text-xs uppercase tracking-wider sm:tracking-widest text-gray-500 mb-2">
               Featured Case Studies
             </div>
             <h2
-              className="font-display text-[clamp(2rem,5vw,4.5rem)] font-bold leading-none"
+              className="font-display text-[clamp(1.65rem,5.5vw,4.5rem)] font-bold leading-none break-words"
               style={{ fontWeight: 800 }}
             >
               PROJECT SHOWCASE
@@ -115,50 +115,50 @@ export default function ProjectCarousel() {
           </div>
 
           <div className="flex items-center gap-4">
-            <span className="text-xs font-bold font-mono tracking-widest mr-4">
+            <span className="text-xs font-bold font-mono tracking-widest mr-2 sm:mr-4">
               {current.number}
             </span>
             <button
               onClick={prevSlide}
               aria-label="Previous Slide"
-              className="w-12 h-12 border border-black flex items-center justify-center text-lg hover:bg-black hover:text-white transition-colors duration-150 font-bold"
+              className="w-10 h-10 sm:w-12 sm:h-12 border border-black flex items-center justify-center text-lg hover:bg-black hover:text-white transition-colors duration-150 font-bold"
             >
               ←
             </button>
             <button
               onClick={nextSlide}
               aria-label="Next Slide"
-              className="w-12 h-12 border border-black flex items-center justify-center text-lg hover:bg-black hover:text-white transition-colors duration-150 font-bold"
+              className="w-10 h-10 sm:w-12 sm:h-12 border border-black flex items-center justify-center text-lg hover:bg-black hover:text-white transition-colors duration-150 font-bold"
             >
               →
             </button>
           </div>
         </div>
 
-        <div className="border border-black p-8 md:p-12 bg-gray-50 relative overflow-hidden transition-all duration-300">
+        <div className="border border-black p-5 sm:p-8 md:p-12 bg-gray-50 relative overflow-hidden transition-all duration-300">
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-stretch">
             <div className="lg:col-span-7 flex flex-col justify-between">
               <div>
-                <div className="inline-block bg-black text-white text-xs px-3 py-1 uppercase tracking-widest font-bold mb-6">
+                <div className="inline-block bg-black text-white text-xs px-3 py-1 uppercase tracking-wider sm:tracking-widest font-bold mb-4 sm:mb-6">
                   {current.category}
                 </div>
-                <h3 className="font-display text-2xl md:text-4xl font-bold mb-6 leading-tight">
+                <h3 className="font-display text-xl sm:text-2xl md:text-4xl font-bold mb-4 sm:mb-6 leading-tight break-words">
                   {current.title}
                 </h3>
-                <p className="text-sm text-gray-700 leading-relaxed mb-8 max-w-xl">
+                <p className="text-sm text-gray-700 leading-relaxed mb-6 sm:mb-8 max-w-xl">
                   {current.description}
                 </p>
               </div>
 
               <div>
-                <div className="text-xs uppercase tracking-widest text-gray-400 mb-3 font-bold">
+                <div className="text-xs uppercase tracking-wider sm:tracking-widest text-gray-400 mb-3 font-bold">
                   Technologies Used
                 </div>
                 <div className="flex flex-wrap gap-2">
                   {current.tags.map((tag) => (
                     <span
                       key={tag}
-                      className="text-xs border border-black bg-white px-3 py-1 font-mono uppercase"
+                      className="text-xs border border-black bg-white px-2.5 sm:px-3 py-1 font-mono uppercase"
                     >
                       {tag}
                     </span>
@@ -167,20 +167,20 @@ export default function ProjectCarousel() {
               </div>
             </div>
 
-            <div className="lg:col-span-5 flex flex-col justify-between border-t lg:border-t-0 lg:border-l border-black pt-8 lg:pt-0 lg:pl-8">
-              <div className="text-xs uppercase tracking-widest text-gray-500 mb-6 font-bold">
+            <div className="lg:col-span-5 flex flex-col justify-between border-t lg:border-t-0 lg:border-l border-black pt-6 sm:pt-8 lg:pt-0 lg:pl-8">
+              <div className="text-xs uppercase tracking-wider sm:tracking-widest text-gray-500 mb-4 sm:mb-6 font-bold">
                 Impact & Metrics
               </div>
-              <div className="space-y-4 mb-8">
+              <div className="space-y-3 sm:space-y-4 mb-6 sm:mb-8">
                 {current.metrics.map((m) => (
                   <div
                     key={m.label}
-                    className="p-4 border border-black bg-white flex justify-between items-center"
+                    className="p-3.5 sm:p-4 border border-black bg-white flex flex-col sm:flex-row sm:justify-between sm:items-center gap-1"
                   >
-                    <span className="text-xs text-gray-600 uppercase font-mono">
+                    <span className="text-[11px] sm:text-xs text-gray-600 uppercase font-mono break-words">
                       {m.label}
                     </span>
-                    <span className="font-display text-xl font-bold text-black">
+                    <span className="font-display text-lg sm:text-xl font-bold text-black">
                       {m.value}
                     </span>
                   </div>

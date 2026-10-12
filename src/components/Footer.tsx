@@ -41,8 +41,8 @@ export default function Footer() {
   return (
     <footer className="bg-black text-white border-t border-black font-mono">
       {/* TOP SECTION */}
-      <div className="max-w-screen-xl mx-auto px-6 pt-16 pb-12 border-b border-gray-800">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-12 gap-12">
+      <div className="max-w-screen-xl mx-auto px-4 sm:px-6 pt-12 sm:pt-16 pb-10 sm:pb-12 border-b border-gray-800">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-12 gap-8 sm:gap-12">
           
           {/* BRAND COLUMN (4 cols) */}
           <div className="lg:col-span-4 space-y-6">
@@ -50,11 +50,11 @@ export default function Footer() {
               <img
                 src="/logo.png"
                 alt="CookMyTech Official Logo"
-                width={48}
-                height={48}
-                className="h-12 w-12 object-contain bg-black border border-white/20 p-1"
+                width={44}
+                height={44}
+                className="h-11 w-11 object-contain bg-black border border-white/20 p-1"
               />
-              <span className="font-display text-2xl tracking-tight font-extrabold text-white">
+              <span className="font-display text-xl sm:text-2xl tracking-tight font-extrabold text-white">
                 COOKMYTECH
               </span>
             </div>
@@ -66,7 +66,7 @@ export default function Footer() {
             <div className="text-xs text-gray-400 space-y-1">
               <div>
                 <span className="text-white font-bold">Email:</span>{" "}
-                <a href="mailto:hello@cookmytech.com" className="hover:text-white underline">
+                <a href="mailto:hello@cookmytech.com" className="hover:text-white underline break-all">
                   hello@cookmytech.com
                 </a>
               </div>
@@ -81,7 +81,7 @@ export default function Footer() {
 
           {/* CORE SERVICES (4 cols) */}
           <div className="lg:col-span-4 space-y-4">
-            <h3 className="text-xs uppercase tracking-widest text-gray-500 font-bold">
+            <h3 className="text-xs uppercase tracking-wider sm:tracking-widest text-gray-500 font-bold">
               // Commercial Services
             </h3>
             <ul className="grid grid-cols-1 sm:grid-cols-2 gap-2 text-xs text-gray-300">
@@ -100,7 +100,7 @@ export default function Footer() {
 
           {/* COMPANY & RESOURCES (2 cols) */}
           <div className="lg:col-span-2 space-y-4">
-            <h3 className="text-xs uppercase tracking-widest text-gray-500 font-bold">
+            <h3 className="text-xs uppercase tracking-wider sm:tracking-widest text-gray-500 font-bold">
               // Navigation
             </h3>
             <ul className="space-y-2 text-xs text-gray-300">
@@ -119,7 +119,7 @@ export default function Footer() {
 
           {/* CONNECT (2 cols) */}
           <div className="lg:col-span-2 space-y-4">
-            <h3 className="text-xs uppercase tracking-widest text-gray-500 font-bold">
+            <h3 className="text-xs uppercase tracking-wider sm:tracking-widest text-gray-500 font-bold">
               // Connect
             </h3>
             <div className="flex flex-col gap-2">
@@ -142,7 +142,7 @@ export default function Footer() {
       </div>
 
       {/* REGIONAL HUBS STRIP */}
-      <div className="max-w-screen-xl mx-auto px-6 py-4 border-b border-gray-800 text-xs text-gray-400 flex flex-wrap items-center justify-between gap-4">
+      <div className="max-w-screen-xl mx-auto px-4 sm:px-6 py-4 border-b border-gray-800 text-xs text-gray-400 flex flex-wrap items-center justify-between gap-4">
         <div className="flex flex-wrap items-center gap-2">
           <span className="text-white font-bold uppercase tracking-wider text-[11px]">// Regional Hubs:</span>
           <Link href="/locations/noida" className="hover:text-white underline underline-offset-2">
@@ -167,7 +167,7 @@ export default function Footer() {
       </div>
 
       {/* BOTTOM BAR */}
-      <div className="max-w-screen-xl mx-auto px-6 py-6 flex flex-col md:flex-row justify-between items-center gap-4 text-xs text-gray-500">
+      <div className="max-w-screen-xl mx-auto px-4 sm:px-6 py-6 flex flex-col md:flex-row justify-between items-center gap-4 text-xs text-gray-500">
         <div className="flex flex-wrap items-center gap-3">
           <span>© {currentYear} CookMyTech. All rights reserved.</span>
           <span className="text-gray-800 font-bold">|</span>

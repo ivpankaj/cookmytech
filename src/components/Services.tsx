@@ -55,14 +55,14 @@ export default function Services() {
 
   return (
     <section id="services" className="border-b border-black bg-white font-mono">
-      <div className="max-w-screen-xl mx-auto px-6 pb-16">
-        <div className="py-16 border-b border-black flex flex-col md:flex-row md:items-end justify-between gap-6">
+      <div className="max-w-screen-xl mx-auto px-4 sm:px-6 pb-12 sm:pb-16">
+        <div className="py-10 sm:py-16 border-b border-black flex flex-col sm:flex-row sm:items-end justify-between gap-4 sm:gap-6">
           <div>
-            <div className="text-xs uppercase tracking-widest text-gray-500 mb-4">
+            <div className="text-xs uppercase tracking-wider sm:tracking-widest text-gray-500 mb-2 sm:mb-4">
               Core Capabilities
             </div>
             <h2
-              className="font-display text-[clamp(2rem,6vw,5rem)] font-bold leading-none"
+              className="font-display text-[clamp(1.75rem,6vw,5rem)] font-bold leading-none break-words"
               style={{ fontWeight: 800 }}
             >
               OUR SERVICES
@@ -70,7 +70,7 @@ export default function Services() {
           </div>
           <Link
             href="/services"
-            className="inline-block bg-black text-white text-xs uppercase tracking-widest px-6 py-3 border border-black hover:bg-gray-800 transition-colors font-bold whitespace-nowrap"
+            className="inline-block bg-black text-white text-xs uppercase tracking-wider sm:tracking-widest px-6 py-3 border border-black hover:bg-gray-800 transition-colors font-bold text-center"
           >
             Explore All 19 Services →
           </Link>
@@ -80,12 +80,12 @@ export default function Services() {
           {services.map((s, i) => (
             <article
               key={s.number}
-              className={`service-card p-8 border-b border-black flex flex-col justify-between group ${
+              className={`service-card p-5 sm:p-8 border-b border-black flex flex-col justify-between group ${
                 i % 2 === 1 ? "md:border-l md:ml-[-1px]" : ""
               }`}
             >
               <div>
-                <div className="flex justify-between items-start mb-6">
+                <div className="flex justify-between items-start mb-4 sm:mb-6">
                   <span className="text-xs text-gray-400 font-mono">
                     {s.number}
                   </span>
@@ -98,7 +98,7 @@ export default function Services() {
                   </Link>
                 </div>
                 <h3
-                  className="font-display text-2xl font-bold mb-4"
+                  className="font-display text-xl sm:text-2xl font-bold mb-3 sm:mb-4 break-words"
                   style={{ fontWeight: 700 }}
                 >
                   <Link href={s.link} className="hover:underline">
