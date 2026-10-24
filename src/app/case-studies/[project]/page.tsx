@@ -5,6 +5,7 @@ import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import Breadcrumbs from "@/components/Breadcrumbs";
 import { constructMetadata } from "@/lib/metadata";
+import { generateArticleSchema } from "@/lib/schema";
 import { caseStudiesData, CaseStudyItem } from "../page";
 
 interface Props {
@@ -23,10 +24,9 @@ export async function generateMetadata({ params }: Props) {
   if (!cs) return {};
 
   return constructMetadata({
-    title: `${cs.title} | Case Study`,
+    title: `${cs.title} | Production Case Study`,
     description: cs.description,
     path: `/case-studies/${cs.slug}`,
-    keywords: cs.tags,
   });
 }
 
@@ -38,8 +38,23 @@ export default async function CaseStudyDetailPage({ params }: Props) {
     notFound();
   }
 
+  const caseStudyUrl = `https://www.cookmytech.com/case-studies/${cs.slug}`;
+  const caseStudySchema = generateArticleSchema({
+    title: `${cs.title} - Production Case Study`,
+    description: cs.description,
+    url: caseStudyUrl,
+    datePublished: "2025-11-15",
+    authorName: "CookMyTech Engineering Group",
+  });
+
+  const otherCaseStudies = caseStudiesData.filter((item) => item.slug !== cs.slug);
+
   return (
     <div className="bg-white text-black min-h-screen font-mono flex flex-col">
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(caseStudySchema) }}
+      />
       <Navbar />
       <main id="main-content" className="flex-1 max-w-screen-xl mx-auto px-6 py-16 w-full">
         <Breadcrumbs
@@ -100,6 +115,49 @@ export default async function CaseStudyDetailPage({ params }: Props) {
               <li>✔ Implementing strict cryptographic logging and RBAC permissions.</li>
               <li>✔ Automated CI/CD integration and zero-downtime rolling updates.</li>
             </ul>
+          </div>
+        </section>
+
+        {/* RELATED PRODUCTION BUILDS CROSS-LINKING */}
+        <section className="py-12 border-b border-black">
+          <div className="flex items-center justify-between mb-6">
+            <h2 className="font-display text-xl font-bold uppercase">
+              // Other Production Case Studies
+            </h2>
+            <Link
+              href="/case-studies"
+              className="text-xs uppercase tracking-widest bg-black text-white px-3 py-1 font-bold hover:bg-gray-800 transition-colors"
+            >
+              All Case Studies →
+            </Link>
+          </div>
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+            {otherCaseStudies.map((other) => (
+              <div
+                key={other.slug}
+                className="p-5 border border-black bg-gray-50 flex flex-col justify-between hover:bg-black hover:text-white transition-colors group"
+              >
+                <div>
+                  <span className="text-[10px] bg-black text-white group-hover:bg-white group-hover:text-black px-2 py-0.5 font-bold uppercase mb-2 inline-block">
+                    {other.category}
+                  </span>
+                  <h3 className="font-display text-base font-bold mb-2">
+                    <Link href={`/case-studies/${other.slug}`} className="hover:underline">
+                      {other.title}
+                    </Link>
+                  </h3>
+                  <p className="text-xs text-gray-600 group-hover:text-gray-300 line-clamp-3 mb-4">
+                    {other.description}
+                  </p>
+                </div>
+                <Link
+                  href={`/case-studies/${other.slug}`}
+                  className="text-xs font-bold uppercase tracking-wider underline group-hover:text-white"
+                >
+                  View Case Study →
+                </Link>
+              </div>
+            ))}
           </div>
         </section>
 

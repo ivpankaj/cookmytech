@@ -30,25 +30,11 @@ export const viewport: Viewport = {
 export const metadata: Metadata = {
   metadataBase: new URL(siteUrl),
   title: {
-    default: "CookMyTech | Production Web Apps & AI Software Studio",
+    default: "CookMyTech | AI & Software Development Services",
     template: "%s | CookMyTech",
   },
   description:
-    "CookMyTech is a premier full-stack engineering studio specializing in production web applications, custom AI software, LLM integrations, cloud architecture, and high-concurrency API engineering.",
-  keywords: [
-    "CookMyTech",
-    "Full-Stack Development Studio",
-    "AI Software Engineering",
-    "Next.js Development",
-    "TypeScript Engineers",
-    "LLM Integration",
-    "RAG Pipelines",
-    "System Architecture",
-    "Cloud Infrastructure",
-    "React Developers",
-    "Custom Web Applications",
-    "API Integrations",
-  ],
+    "Build custom AI applications, AI agents, RAG systems, SaaS platforms and scalable web applications with CookMyTech. Explore our engineering services and discuss your software project.",
   authors: [{ name: "CookMyTech Team", url: siteUrl }],
   creator: "CookMyTech",
   publisher: "CookMyTech",
@@ -60,6 +46,9 @@ export const metadata: Metadata = {
   },
   alternates: {
     canonical: siteUrl,
+    types: {
+      "application/rss+xml": `${siteUrl}/feed.xml`,
+    },
   },
   openGraph: {
     title: "CookMyTech | Production Web Apps & AI Software Studio",

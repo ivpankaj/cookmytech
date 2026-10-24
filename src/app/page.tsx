@@ -8,26 +8,16 @@ import WhyUs from "@/components/WhyUs";
 import Process from "@/components/Process";
 import TechStack from "@/components/TechStack";
 import ProjectCarousel from "@/components/ProjectCarousel";
+import FeaturedGuides from "@/components/FeaturedGuides";
 import FaqSection from "@/components/FaqSection";
 import ContactForm from "@/components/ContactForm";
 import Footer from "@/components/Footer";
 
 export const metadata = constructMetadata({
-  title: "AI & Full-Stack Software Development Studio",
+  title: "CookMyTech | AI & Software Development Services",
   description:
-    "CookMyTech is a premier AI & full-stack software development studio. We build custom AI software, autonomous AI agents, enterprise RAG applications, SaaS platforms, Next.js apps, MERN stack solutions, and cloud architectures.",
+    "Build custom AI applications, AI agents, RAG systems, SaaS platforms and scalable web applications with CookMyTech. Explore our engineering services and discuss your software project.",
   path: "/",
-  keywords: [
-    "CookMyTech",
-    "AI Development Studio",
-    "Full-Stack Development Studio",
-    "AI Software Engineering",
-    "SaaS Development Company",
-    "AI Agent Development",
-    "RAG Systems",
-    "Next.js Development",
-    "MERN Stack Studio",
-  ],
 });
 
 export default function CookMyTechLanding() {
@@ -44,6 +34,7 @@ export default function CookMyTechLanding() {
           <Process />
           <TechStack />
           <ProjectCarousel />
+          <FeaturedGuides />
           <section
             className="border-b border-black bg-black text-white py-14 sm:py-20 font-mono text-center"
             aria-label="Call to Action"

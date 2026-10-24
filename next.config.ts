@@ -19,6 +19,37 @@ const nextConfig: NextConfig = {
         destination: "/case-studies/:slug*",
         permanent: true,
       },
+      // Legacy blog article permanent 301 redirects to canonical in-depth guides
+      {
+        source: "/blog/ai-software-development-cost-guide",
+        destination: "/blog/software-development-cost-comparisons",
+        permanent: true,
+      },
+      {
+        source: "/blog/how-to-build-an-ai-saas-product",
+        destination: "/blog/how-to-build-a-saas-mvp",
+        permanent: true,
+      },
+      {
+        source: "/blog/ai-agent-vs-traditional-automation",
+        destination: "/blog/what-are-ai-agents-and-how-do-they-work",
+        permanent: true,
+      },
+      {
+        source: "/blog/enterprise-rag-architecture-explained",
+        destination: "/blog/how-to-build-a-rag-application",
+        permanent: true,
+      },
+      {
+        source: "/blog/mern-stack-vs-nextjs-for-saas",
+        destination: "/blog/nextjs-vs-react-for-production-applications",
+        permanent: true,
+      },
+      {
+        source: "/blog/custom-ai-software-vs-off-the-shelf-tools",
+        destination: "/blog/custom-software-vs-off-the-shelf-software",
+        permanent: true,
+      },
     ];
   },
   async headers() {

@@ -51,12 +51,12 @@ export default function Hero() {
                 ))}
               </span>
               <span className="block text-[clamp(1.55rem,5.2vw,4.5rem)] tracking-tight break-words">
-                DEVELOPMENT STUDIO.
+                ENGINEERING FOR GROWING BUSINESSES.
               </span>
             </h1>
 
             <p className="text-sm leading-relaxed max-w-xl text-gray-700 fade-up fade-up-delay-3 mb-8">
-              CookMyTech is a specialized software development studio. We build production-ready AI software, autonomous AI agents, enterprise RAG systems, custom SaaS platforms, MERN & Next.js applications, and scalable cloud architectures for startups, founders, and growing businesses worldwide.
+              CookMyTech is an AI and full-stack software engineering studio. We build custom AI applications, autonomous AI agents, enterprise RAG systems, SaaS platforms, and scalable web applications for startups, founders, and growing businesses worldwide.
             </p>
           </div>
 
@@ -71,7 +71,7 @@ export default function Hero() {
               href="/services"
               className="bg-white text-black text-xs uppercase tracking-wider sm:tracking-widest px-6 sm:px-8 py-3.5 sm:py-4 border border-black hover:bg-black hover:text-white transition-colors duration-150 text-center font-bold"
             >
-              Explore 19 Services
+              Explore All Services
             </Link>
           </div>
         </div>

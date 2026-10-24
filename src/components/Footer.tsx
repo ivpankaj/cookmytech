@@ -22,10 +22,37 @@ export default function Footer() {
     { label: "Services Hub", href: "/services" },
     { label: "Regional Hubs", href: "/locations" },
     { label: "Industries", href: "/industries" },
-    { label: "Case Studies", href: "/case-studies" },
-    { label: "Blog & Guides", href: "/blog" },
+    { label: "Case Studies Hub", href: "/case-studies" },
+    { label: "Blog & Guides Hub", href: "/blog" },
     { label: "About CookMyTech", href: "/about" },
     { label: "Contact Us", href: "/contact" },
+  ];
+
+  const featuredBuilds = [
+    {
+      label: "Global Payment Routing Engine",
+      href: "/case-studies/global-payment-routing-engine",
+    },
+    {
+      label: "Enterprise RAG & Agent Pipeline",
+      href: "/case-studies/enterprise-rag-agent-pipeline",
+    },
+    {
+      label: "Autonomous AI Agents Guide",
+      href: "/blog/autonomous-ai-agents-langchain-langgraph-guide",
+    },
+    {
+      label: "Next.js 16 Production Architecture",
+      href: "/blog/nextjs-16-turbopack-production-architecture-guide",
+    },
+    {
+      label: "Software Cost Comparisons (India vs US)",
+      href: "/blog/software-development-cost-comparisons",
+    },
+    {
+      label: "How to Build a RAG Application",
+      href: "/blog/how-to-build-a-rag-application",
+    },
   ];
 
   const socials = [
@@ -33,10 +60,6 @@ export default function Footer() {
     { label: "LinkedIn", slug: "linkedin", href: "https://linkedin.com/company/cookmytech" },
     { label: "X", slug: "x", href: "https://x.com/cookmytech" },
   ];
-
-  const scrollToTop = () => {
-    window.scrollTo({ top: 0, behavior: "smooth" });
-  };
 
   return (
     <footer className="bg-black text-white border-t border-black font-mono">
@@ -141,6 +164,21 @@ export default function Footer() {
         </div>
       </div>
 
+      {/* FEATURED BUILDS & GUIDES STRIP (DIRECT CRAWLER ACCESS) */}
+      <div className="max-w-screen-xl mx-auto px-4 sm:px-6 py-4 border-b border-gray-800 text-xs text-gray-400 flex flex-wrap items-center justify-between gap-3">
+        <div className="flex flex-wrap items-center gap-2">
+          <span className="text-white font-bold uppercase tracking-wider text-[11px]">// Featured Builds & Guides:</span>
+          {featuredBuilds.map((fb, idx) => (
+            <React.Fragment key={fb.href}>
+              <Link href={fb.href} className="hover:text-white underline underline-offset-2">
+                {fb.label}
+              </Link>
+              {idx < featuredBuilds.length - 1 && <span className="text-gray-700">•</span>}
+            </React.Fragment>
+          ))}
+        </div>
+      </div>
+
       {/* REGIONAL HUBS STRIP */}
       <div className="max-w-screen-xl mx-auto px-4 sm:px-6 py-4 border-b border-gray-800 text-xs text-gray-400 flex flex-wrap items-center justify-between gap-4">
         <div className="flex flex-wrap items-center gap-2">
@@ -204,16 +242,11 @@ export default function Footer() {
           </a>
         </div>
 
-        <div className="uppercase tracking-widest text-[11px] text-gray-400">
-          Built for top technical performance<span className="cursor-blink ml-0.5" aria-hidden="true">_</span>
-        </div>
-
         <button
-          onClick={scrollToTop}
-          className="hover:text-white transition-colors border border-gray-800 hover:border-white px-3 py-1.5 uppercase tracking-widest text-[11px]"
-          aria-label="Scroll back to top"
+          onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
+          className="text-gray-400 hover:text-white uppercase tracking-widest text-[11px] font-bold"
         >
-          Back to Top ↑
+          [Back to Top ↑]
         </button>
       </div>
     </footer>

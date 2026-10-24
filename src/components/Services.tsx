@@ -72,7 +72,7 @@ export default function Services() {
             href="/services"
             className="inline-block bg-black text-white text-xs uppercase tracking-wider sm:tracking-widest px-6 py-3 border border-black hover:bg-gray-800 transition-colors font-bold text-center"
           >
-            Explore All 19 Services →
+            Explore All Services →
           </Link>
         </div>
 

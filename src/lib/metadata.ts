@@ -20,7 +20,7 @@ export function constructMetadata({
   title,
   description,
   path,
-  keywords = [],
+  keywords: _keywords = [],
   ogType = "website",
   publishedTime,
   modifiedTime,
@@ -28,31 +28,14 @@ export function constructMetadata({
 }: GenerateMetadataOptions): Metadata {
   const cleanPath = path.startsWith("/") ? path : `/${path}`;
   const canonicalUrl = `${SITE_URL}${cleanPath === "/" ? "" : cleanPath}`;
-
-  const defaultKeywords = [
-    "CookMyTech",
-    "AI Software Development",
-    "Full-Stack Software Engineering",
-    "SaaS Development",
-    "AI Agent Development",
-    "RAG Applications",
-    "LLM Integration",
-    "Next.js Development Studio",
-    "MERN Stack Development",
-    "Custom Software Engineering",
-  ];
-
-  const mergedKeywords = Array.from(
-    new Set([...keywords, ...defaultKeywords])
-  );
+  const fullTitle = title.includes("CookMyTech") ? title : `${title} | CookMyTech`;
 
   return {
     metadataBase: new URL(SITE_URL),
     title: {
-      absolute: `${title} | CookMyTech`,
+      absolute: fullTitle,
     },
     description,
-    keywords: mergedKeywords,
     authors: [{ name: "CookMyTech Engineering Team", url: SITE_URL }],
     creator: "CookMyTech",
     publisher: "CookMyTech",
@@ -66,7 +49,7 @@ export function constructMetadata({
       canonical: canonicalUrl,
     },
     openGraph: {
-      title: `${title} | CookMyTech`,
+      title: fullTitle,
       description,
       url: canonicalUrl,
       siteName: "CookMyTech",
@@ -85,7 +68,7 @@ export function constructMetadata({
     },
     twitter: {
       card: "summary_large_image",
-      title: `${title} | CookMyTech`,
+      title: fullTitle,
       description,
       creator: "@cookmytech",
       images: [`${SITE_URL}/logo.png`],
