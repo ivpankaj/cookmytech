@@ -45,7 +45,6 @@ export const metadata: Metadata = {
     telephone: false,
   },
   alternates: {
-    canonical: siteUrl,
     types: {
       "application/rss+xml": `${siteUrl}/feed.xml`,
     },

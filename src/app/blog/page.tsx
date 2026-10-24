@@ -4,6 +4,7 @@ import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import Breadcrumbs from "@/components/Breadcrumbs";
 import { constructMetadata } from "@/lib/metadata";
+import { generateBlogSchema, generateBreadcrumbSchema } from "@/lib/schema";
 
 export const metadata = constructMetadata({
   title: "Technical Engineering Guides & AI Architecture Insights",
@@ -259,8 +260,22 @@ export const blogPostsData: BlogPostItem[] = [
 ];
 
 export default function BlogHubPage() {
+  const blogSchema = generateBlogSchema();
+  const breadcrumbSchema = generateBreadcrumbSchema([
+    { name: "Home", item: "/" },
+    { name: "Technical Guides", item: "/blog" },
+  ]);
+
   return (
     <div className="bg-white text-black min-h-screen font-mono flex flex-col">
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(blogSchema) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }}
+      />
       <Navbar />
       <main id="main-content" className="flex-1 max-w-screen-xl mx-auto px-6 py-16 w-full">
         <Breadcrumbs items={[{ name: "Home", item: "/" }, { name: "Technical Guides", item: "/blog" }]} />

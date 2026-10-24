@@ -101,6 +101,11 @@ The blog architecture is partitioned into four domain-specific engineering clust
    - `/blog/mern-stack-vs-nextjs-for-saas` → `/blog/nextjs-vs-react-for-production-applications`
    - `/blog/custom-ai-software-vs-off-the-shelf-tools` → `/blog/custom-software-vs-off-the-shelf-software`
 3. **Google SEO Compliance**: Completely removed `<meta name="keywords">` across all pages (Google does not use it for web rankings).
+4. **Resolution for "Duplicate, Google chose different canonical than user"**:
+   - **Legacy Redirects**: `/blog/ai-software-development-cost-guide` is a permanent redirect to `/blog/software-development-cost-comparisons`. Google correctly canonicalizes to the target destination.
+   - **Root Layout Canonical Decoupling**: Removed hardcoded `canonical: siteUrl` fallback from `RootLayout` in [layout.tsx](file:///c:/personal/cookmytech/src/app/layout.tsx) so sub-routes only advertise their own distinct self-referencing canonicals.
+   - **Thin Content Remediation**: Expanded all industry solution pages (`/industries/ecommerce`, `/industries/saas`, `/industries/business-automation`, `/industries/startups`) with deep technical architecture sections, performance benchmarks, Schema.org `Service` and `FAQPage` markup to prevent Google's deduplication clustering.
+   - **Blog Hub Schema**: Added Schema.org `Blog` and `BreadcrumbList` structured data to [blog/page.tsx](file:///c:/personal/cookmytech/src/app/blog/page.tsx).
 
 ---
 

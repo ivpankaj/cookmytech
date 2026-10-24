@@ -64,6 +64,7 @@ assert(schemaContent.includes('postalCode: "201301"'), "Schema.org Organization 
 assert(schemaContent.includes("generateLocalBusinessSchema"), "Schema.org helper includes generateLocalBusinessSchema");
 assert(schemaContent.includes("generateBreadcrumbSchema"), "Schema.org helper includes generateBreadcrumbSchema");
 assert(schemaContent.includes("generateArticleSchema"), "Schema.org helper includes generateArticleSchema");
+assert(schemaContent.includes("generateBlogSchema"), "Schema.org helper includes generateBlogSchema");
 
 // 5. Locations Directory & Pages
 console.log("\n--- 5. Regional & Local Location Landing Pages ---");
@@ -183,8 +184,30 @@ legalPaths.forEach((relPath) => {
   }
 });
 
-// 12. AI Generative Discovery Files
-console.log("\n--- 12. AI Generative Discovery Files (llms.txt) ---");
+// 12. Industry Solution Landing Pages
+console.log("\n--- 12. Industry Solution Landing Pages ---");
+const industryPaths = [
+  "src/app/industries/ecommerce/page.tsx",
+  "src/app/industries/saas/page.tsx",
+  "src/app/industries/business-automation/page.tsx",
+  "src/app/industries/startups/page.tsx",
+];
+
+industryPaths.forEach((relPath) => {
+  const fullPath = path.join(rootDir, relPath);
+  const exists = fs.existsSync(fullPath);
+  assert(exists, `Industry route exists: ${relPath}`);
+  if (exists) {
+    const content = fs.readFileSync(fullPath, "utf-8");
+    assert(content.includes("generateServiceSchema"), `${relPath} implements Schema.org Service markup`);
+    assert(content.includes("generateFaqSchema"), `${relPath} implements Schema.org FAQPage markup`);
+    assert(content.includes("constructMetadata"), `${relPath} generates self-referencing canonical metadata`);
+    assert(content.includes("<h1"), `${relPath} contains an H1 heading`);
+  }
+});
+
+// 13. AI Generative Discovery Files
+console.log("\n--- 13. AI Generative Discovery Files (llms.txt) ---");
 const llmsTxtFile = path.join(rootDir, "public/llms.txt");
 const llmsFullFile = path.join(rootDir, "public/llms-full.txt");
 assert(fs.existsSync(llmsTxtFile), "public/llms.txt exists");

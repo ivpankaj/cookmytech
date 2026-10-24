@@ -257,3 +257,29 @@ export function generateArticleSchema({
     image: `${SITE_URL}/logo.png`,
   };
 }
+
+export function generateBlogSchema({
+  url = `${SITE_URL}/blog`,
+  name = "Technical Engineering Guides & AI Architecture Insights",
+  description = "In-depth technical guides on AI development costs, SaaS architecture, RAG systems, AI agent workflows, Next.js engineering, cloud benchmarks, and custom software economics.",
+}: {
+  url?: string;
+  name?: string;
+  description?: string;
+} = {}) {
+  return {
+    "@context": "https://schema.org",
+    "@type": "Blog",
+    "@id": `${url}/#blog`,
+    name,
+    description,
+    url,
+    publisher: {
+      "@type": "Organization",
+      name: "CookMyTech",
+      url: SITE_URL,
+      logo: `${SITE_URL}/logo.png`,
+    },
+  };
+}
+
